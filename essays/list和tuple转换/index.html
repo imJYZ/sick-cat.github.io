@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="SickCat的博客">
 <meta property="og:description" content="list 相当于数组    tuple 相当于一个只读数组">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-10T17:21:46.000Z">
+<meta property="og:updated_time" content="2019-07-11T14:05:26.966Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="list和tuple转换">
 <meta name="twitter:description" content="list 相当于数组    tuple 相当于一个只读数组">
@@ -65,7 +65,7 @@
 	        
 				<li><a href="/archives/index.html">归档</a></li>
 	        
-				<li><a href="/tags/随笔">随笔</a></li>
+				<li><a href="/tags/essays">随笔</a></li>
 	        
 				<li><a href="/categories/算法">算法题</a></li>
 	        
@@ -151,7 +151,7 @@
 		        
 					<li style="width: 20%"><a href="/archives/index.html">归档</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/随笔">随笔</a></li>
+					<li style="width: 20%"><a href="/tags/essays">随笔</a></li>
 		        
 					<li style="width: 20%"><a href="/categories/算法">算法题</a></li>
 		        
@@ -182,12 +182,46 @@
   
 
         
-        <a href="/essays/list和tuple转换/" class="archive-article-date">
+        
+	<!-- 不蒜子统计 -->
+	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+<a href="/essays/list和tuple转换/" class="archive-article-date">
   	<time datetime="2019-07-11T01:10:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
 </a>
         
       </header>
     
+    <!-- 目录内容 -->
+    
+      <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+            <span class="btn-bg"></span>
+            <span class="btn-text">文章导航</span>
+            </p>
+      <div id="toc-article" class="toc-article">
+          <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+          <strong class="toc-title">文章目录</strong>
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#具体看代码"><span class="toc-number">1.</span> <span class="toc-text">具体看代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输出结果："><span class="toc-number">2.</span> <span class="toc-text">输出结果：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结"><span class="toc-number">3.</span> <span class="toc-text">总结</span></a></li></ol>
+          </div>
+    <script type="text/javascript">
+      function showToc(){
+          var toc_article = document.getElementById("toc-article");
+          var show_toc_btn = document.getElementById("show-toc-btn");
+          toc_article.setAttribute("style","display:block");
+          show_toc_btn.setAttribute("style","display:none");
+          };
+      function showBtn(){
+          var toc_article = document.getElementById("toc-article");
+          var show_toc_btn = document.getElementById("show-toc-btn");
+          toc_article.setAttribute("style","display:none");
+          show_toc_btn.setAttribute("style","display:block");
+          };
+    </script>
+        
+    <!-- 目录内容结束 -->
+
     <div class="article-entry" itemprop="articleBody">
       
         <font color="#FFA500"> 
@@ -195,10 +229,14 @@ list 相当于数组
 tuple 相当于一个只读数组
 </font>
 <a id="more"></a>
-- 强制类型转换：
-  - list---->tuple    tuple(list_content)
-  - tuple--->list     list(tuple_content)
 
+<ul>
+<li>强制类型转换：<ul>
+<li>list—-&gt;tuple    tuple(list_content)</li>
+<li>tuple—&gt;list     list(tuple_content)</li>
+</ul>
+</li>
+</ul>
 <h4 id="具体看代码"><a href="#具体看代码" class="headerlink" title="具体看代码"></a>具体看代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#要进行赋值，不然原变量内容和类型不变</span><br><span class="line">s = &apos;adkshfkjahkjadhjf&apos;</span><br><span class="line">print(list(s))</span><br><span class="line">print(tuple(s))</span><br><span class="line">#未进行赋值操作，s内容和类型不变</span><br><span class="line">print(s)</span><br><span class="line">print(type(s))</span><br><span class="line"></span><br><span class="line">print(&quot;\n----list-----&quot;)</span><br><span class="line">s = list(s)</span><br><span class="line">print(type(s))</span><br><span class="line">print(s)</span><br><span class="line"></span><br><span class="line">print(&quot;\n----tuple-----&quot;)</span><br><span class="line">s = tuple(s)</span><br><span class="line">print(type(s))</span><br><span class="line">print(s)</span><br></pre></td></tr></table></figure>
 
 <h4 id="输出结果："><a href="#输出结果：" class="headerlink" title="输出结果："></a>输出结果：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[&apos;a&apos;, &apos;d&apos;, &apos;k&apos;, &apos;s&apos;, &apos;h&apos;, &apos;f&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;h&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;d&apos;, &apos;h&apos;, &apos;j&apos;, &apos;f&apos;]</span><br><span class="line">(&apos;a&apos;, &apos;d&apos;, &apos;k&apos;, &apos;s&apos;, &apos;h&apos;, &apos;f&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;h&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;d&apos;, &apos;h&apos;, &apos;j&apos;, &apos;f&apos;)</span><br><span class="line">adkshfkjahkjadhjf</span><br><span class="line">&lt;class &apos;str&apos;&gt;</span><br><span class="line"></span><br><span class="line">----list-----</span><br><span class="line">&lt;class &apos;list&apos;&gt;</span><br><span class="line">[&apos;a&apos;, &apos;d&apos;, &apos;k&apos;, &apos;s&apos;, &apos;h&apos;, &apos;f&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;h&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;d&apos;, &apos;h&apos;, &apos;j&apos;, &apos;f&apos;]</span><br><span class="line"></span><br><span class="line">----tuple-----</span><br><span class="line">&lt;class &apos;tuple&apos;&gt;</span><br><span class="line">(&apos;a&apos;, &apos;d&apos;, &apos;k&apos;, &apos;s&apos;, &apos;h&apos;, &apos;f&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;h&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;d&apos;, &apos;h&apos;, &apos;j&apos;, &apos;f&apos;)</span><br></pre></td></tr></table></figure>
@@ -322,6 +360,15 @@ tuple 相当于一个只读数组
   
 <nav id="article-nav">
   
+    <a href="/essays/free函数/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          free函数
+        
+      </div>
+    </a>
+  
   
     <a href="/essays/findall/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">findall</div>
@@ -343,19 +390,6 @@ tuple 相当于一个只读数组
             </div>
         </div>
         
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#具体看代码"><span class="toc-number">1.</span> <span class="toc-text">具体看代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输出结果："><span class="toc-number">2.</span> <span class="toc-text">输出结果：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结"><span class="toc-number">3.</span> <span class="toc-text">总结</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
         
     </div>
 </aside>
@@ -387,6 +421,17 @@ tuple 相当于一个只读数组
       	</div>
     </div>
   </div>
+  
+	  <!-- 不蒜子统计 -->
+	  <span id="busuanzi_container_site_pv">
+			  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+	  </span>
+	  <span class="post-meta-divider">|</span>
+	  <span id="busuanzi_container_site_uv" style='display:none'>
+			  本站访客数<span id="busuanzi_value_site_uv"></span>人
+	  </span>
+	  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
 </footer>
     </div>
     <script>
@@ -463,11 +508,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">剑指offer</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">剑指offer</a>
               </li>
              
               <li class="article-tag-list-item">

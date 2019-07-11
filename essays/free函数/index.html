@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>Tag: 随笔 | SickCat的博客</title>
+  <title>free函数 | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一直在跑路的菜鸡">
-<meta name="keywords" content="java开发,安全,爬虫,程序员,码农,sickcat">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SickCat的博客">
-<meta property="og:url" content="http://sick-cat.github.io/tags/随笔/index.html">
+  <meta name="description" content="头文件：loc.h或stdlib.h作 用：释放malloc(或calloc、realloc)函数给指针变量分配的内存空间的函数">
+<meta name="keywords" content="essays">
+<meta property="og:type" content="article">
+<meta property="og:title" content="free函数">
+<meta property="og:url" content="http://sick-cat.github.io/essays/free函数/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="一直在跑路的菜鸡">
+<meta property="og:description" content="头文件：loc.h或stdlib.h作 用：释放malloc(或calloc、realloc)函数给指针变量分配的内存空间的函数">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-11T13:58:54.990Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SickCat的博客">
-<meta name="twitter:description" content="一直在跑路的菜鸡">
+<meta name="twitter:title" content="free函数">
+<meta name="twitter:description" content="头文件：loc.h或stdlib.h作 用：释放malloc(或calloc、realloc)函数给指针变量分配的内存空间的函数">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -64,7 +65,7 @@
 	        
 				<li><a href="/archives/index.html">归档</a></li>
 	        
-				<li><a href="/tags/随笔">随笔</a></li>
+				<li><a href="/tags/essays">随笔</a></li>
 	        
 				<li><a href="/categories/算法">算法题</a></li>
 	        
@@ -150,7 +151,7 @@
 		        
 					<li style="width: 20%"><a href="/archives/index.html">归档</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/随笔">随笔</a></li>
+					<li style="width: 20%"><a href="/tags/essays">随笔</a></li>
 		        
 					<li style="width: 20%"><a href="/categories/算法">算法题</a></li>
 		        
@@ -169,71 +170,203 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-free函数" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/essays/xpath和beautifulsoup/" class="archive-article-date">
-  	<time datetime="2019-07-10T00:43:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/essays/xpath和beautifulsoup/">xpath和beautifulsoup</a>
+    <h1 class="article-title" itemprop="name">
+      free函数
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        
+	<!-- 不蒜子统计 -->
+	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+<a href="/essays/free函数/" class="archive-article-date">
+  	<time datetime="2019-07-11T20:48:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
+</a>
+        
+      </header>
+    
+    <!-- 目录内容 -->
+    
+    <!-- 目录内容结束 -->
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><b>头文件：loc.h或stdlib.h<br>作 用：释放malloc(或calloc、realloc)函数给指针变量分配的内存空间的函数</b></p>
+<hr>
+<a id="more"></a>
+
+<h3 id="示例代码如下："><a href="#示例代码如下：" class="headerlink" title="示例代码如下："></a>示例代码如下：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> *str=<span class="literal">NULL</span>;</span><br><span class="line"> </span><br><span class="line">    str=(<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="number">100</span>);</span><br><span class="line">     <span class="keyword">if</span>(str!=<span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%p\n"</span>, str);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">free</span>(str);</span><br><span class="line">    <span class="keyword">if</span>(str!=<span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%p\n"</span>, str);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><ol>
+<li>free只是释放了malloc所申请的内存，并不改变指针的值；</li>
+<li>由于指针所指向的内存已经被释放，所以其它代码有机会改写其中的内容，相当于该指针从此指  向了自己无法控制的地方，也称为野指针；</li>
+<li>为了避免失误，最好在free之后，将指针指向NULL；</li>
+</ol>
+<blockquote>
+<p>内核通过一个红黑树来记录了空闲的内存，malloc就是从树中查找一块大小适合的内存并把地址给你，然后把这个节点从树中摘除，避免被别人分配到产生冲突。这个内存现在归你一个人用了。<br>free函数是把你的这个内存重新放回到红黑树中，让别人可以申请到这个内存。从逻辑上来说，你现在不能在使用这个内存了，因为它已经不属于你。但是系统的实现上目前没有做到，所以你还是能访问这个地址。<br>另外，系统也不会帮你覆盖内存中的数据，因为做这一个操作浪费时间，没有必要。</p>
+</blockquote>
+<blockquote>
+<p><b>举个例子。你租了一套房子，后来租期到了，房子回到房东手里，或者又转租给别人。但是你拿着原来的钥匙还是能进入那套房子，虽然这个是不合法的。</b></p>
+</blockquote>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/txpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">essays</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/essays//" class="article-tag-list-link color2">essays</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/essays/free函数/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/essays/list和tuple转换/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">list和tuple转换</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -250,15 +383,26 @@
       	</div>
     </div>
   </div>
+  
+	  <!-- 不蒜子统计 -->
+	  <span id="busuanzi_container_site_pv">
+			  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+	  </span>
+	  <span class="post-meta-divider">|</span>
+	  <span id="busuanzi_container_site_uv" style='display:none'>
+			  本站访客数<span id="busuanzi_value_site_uv"></span>人
+	  </span>
+	  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
 </footer>
     </div>
     <script>
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -326,11 +470,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">剑指offer</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">剑指offer</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
   <title>标识符与运算符 | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="标识符标识符：凡是让我们起名字的地方，统称都叫做标识符，是区分大小写的。">
+  <meta name="description" content="标识符 标识符：凡是让我们起名字的地方，统称都叫做标识符，是区分大小写的。">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="标识符与运算符">
 <meta property="og:url" content="http://sick-cat.github.io/java/base/基础语法/标识符与运算符/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="标识符标识符：凡是让我们起名字的地方，统称都叫做标识符，是区分大小写的。">
+<meta property="og:description" content="标识符 标识符：凡是让我们起名字的地方，统称都叫做标识符，是区分大小写的。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-11T02:41:26.134Z">
+<meta property="og:updated_time" content="2019-07-11T13:49:18.837Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="标识符与运算符">
-<meta name="twitter:description" content="标识符标识符：凡是让我们起名字的地方，统称都叫做标识符，是区分大小写的。">
+<meta name="twitter:description" content="标识符 标识符：凡是让我们起名字的地方，统称都叫做标识符，是区分大小写的。">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -65,7 +65,7 @@
 	        
 				<li><a href="/archives/index.html">归档</a></li>
 	        
-				<li><a href="/tags/随笔">随笔</a></li>
+				<li><a href="/tags/essays">随笔</a></li>
 	        
 				<li><a href="/categories/算法">算法题</a></li>
 	        
@@ -151,7 +151,7 @@
 		        
 					<li style="width: 20%"><a href="/archives/index.html">归档</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/随笔">随笔</a></li>
+					<li style="width: 20%"><a href="/tags/essays">随笔</a></li>
 		        
 					<li style="width: 20%"><a href="/categories/算法">算法题</a></li>
 		        
@@ -182,15 +182,50 @@
   
 
         
-        <a href="/java/base/基础语法/标识符与运算符/" class="archive-article-date">
+        
+	<!-- 不蒜子统计 -->
+	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+<a href="/java/base/基础语法/标识符与运算符/" class="archive-article-date">
   	<time datetime="2019-07-10T01:21:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
 </a>
         
       </header>
     
+    <!-- 目录内容 -->
+    
+      <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+            <span class="btn-bg"></span>
+            <span class="btn-text">文章导航</span>
+            </p>
+      <div id="toc-article" class="toc-article">
+          <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+          <strong class="toc-title">文章目录</strong>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#标识符"><span class="toc-number">1.</span> <span class="toc-text">标识符</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#规范（驼峰命名法）："><span class="toc-number">1.0.1.</span> <span class="toc-text">规范（驼峰命名法）：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#规则："><span class="toc-number">1.0.2.</span> <span class="toc-text">规则：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#组成："><span class="toc-number">1.0.3.</span> <span class="toc-text">组成：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符"><span class="toc-number">2.</span> <span class="toc-text">运算符</span></a></li></ol>
+          </div>
+    <script type="text/javascript">
+      function showToc(){
+          var toc_article = document.getElementById("toc-article");
+          var show_toc_btn = document.getElementById("show-toc-btn");
+          toc_article.setAttribute("style","display:block");
+          show_toc_btn.setAttribute("style","display:none");
+          };
+      function showBtn(){
+          var toc_article = document.getElementById("toc-article");
+          var show_toc_btn = document.getElementById("show-toc-btn");
+          toc_article.setAttribute("style","display:none");
+          show_toc_btn.setAttribute("style","display:block");
+          };
+    </script>
+        
+    <!-- 目录内容结束 -->
+
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><h5 id="标识符：凡是让我们起名字的地方，统称都叫做标识符，是区分大小写的。"><a href="#标识符：凡是让我们起名字的地方，统称都叫做标识符，是区分大小写的。" class="headerlink" title="标识符：凡是让我们起名字的地方，统称都叫做标识符，是区分大小写的。"></a>标识符：凡是让我们起名字的地方，统称都叫做标识符，是区分大小写的。</h5><a id="more"></a>    
+        <h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p><b> 标识符：凡是让我们起名字的地方，统称都叫做标识符，是区分大小写的。 </b></p>
+<a id="more"></a>    
 <h5 id="规范（驼峰命名法）："><a href="#规范（驼峰命名法）：" class="headerlink" title="规范（驼峰命名法）："></a>规范（驼峰命名法）：</h5><pre><code>常量名： XXX  XXX_YYY_ZZZ
 变量名： xxx   xxxYyyZyy  名词
 方法名： xxx   xxxYyyZyy    动词
@@ -369,19 +404,6 @@
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#标识符"><span class="toc-number">1.</span> <span class="toc-text">标识符</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#标识符：凡是让我们起名字的地方，统称都叫做标识符，是区分大小写的。"><span class="toc-number">1.0.1.</span> <span class="toc-text">标识符：凡是让我们起名字的地方，统称都叫做标识符，是区分大小写的。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#规范（驼峰命名法）："><span class="toc-number">1.0.2.</span> <span class="toc-text">规范（驼峰命名法）：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#规则："><span class="toc-number">1.0.3.</span> <span class="toc-text">规则：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#组成："><span class="toc-number">1.0.4.</span> <span class="toc-text">组成：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符"><span class="toc-number">2.</span> <span class="toc-text">运算符</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
     </div>
 </aside>
 
@@ -412,6 +434,17 @@
       	</div>
     </div>
   </div>
+  
+	  <!-- 不蒜子统计 -->
+	  <span id="busuanzi_container_site_pv">
+			  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+	  </span>
+	  <span class="post-meta-divider">|</span>
+	  <span id="busuanzi_container_site_uv" style='display:none'>
+			  本站访客数<span id="busuanzi_value_site_uv"></span>人
+	  </span>
+	  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
 </footer>
     </div>
     <script>
@@ -488,11 +521,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">剑指offer</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">剑指offer</a>
               </li>
              
               <li class="article-tag-list-item">

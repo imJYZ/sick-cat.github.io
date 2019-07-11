@@ -65,7 +65,7 @@
 	        
 				<li><a href="/archives/index.html">归档</a></li>
 	        
-				<li><a href="/tags/随笔">随笔</a></li>
+				<li><a href="/tags/essays">随笔</a></li>
 	        
 				<li><a href="/categories/算法">算法题</a></li>
 	        
@@ -151,7 +151,7 @@
 		        
 					<li style="width: 20%"><a href="/archives/index.html">归档</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/随笔">随笔</a></li>
+					<li style="width: 20%"><a href="/tags/essays">随笔</a></li>
 		        
 					<li style="width: 20%"><a href="/categories/算法">算法题</a></li>
 		        
@@ -182,12 +182,46 @@
   
 
         
-        <a href="/essays/findall/" class="archive-article-date">
+        
+	<!-- 不蒜子统计 -->
+	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+<a href="/essays/findall/" class="archive-article-date">
   	<time datetime="2019-07-11T01:10:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
 </a>
         
       </header>
     
+    <!-- 目录内容 -->
+    
+      <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+            <span class="btn-bg"></span>
+            <span class="btn-text">文章导航</span>
+            </p>
+      <div id="toc-article" class="toc-article">
+          <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+          <strong class="toc-title">文章目录</strong>
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#代码："><span class="toc-number">1.</span> <span class="toc-text">代码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输出结果："><span class="toc-number">2.</span> <span class="toc-text">输出结果：</span></a></li></ol>
+          </div>
+    <script type="text/javascript">
+      function showToc(){
+          var toc_article = document.getElementById("toc-article");
+          var show_toc_btn = document.getElementById("show-toc-btn");
+          toc_article.setAttribute("style","display:block");
+          show_toc_btn.setAttribute("style","display:none");
+          };
+      function showBtn(){
+          var toc_article = document.getElementById("toc-article");
+          var show_toc_btn = document.getElementById("show-toc-btn");
+          toc_article.setAttribute("style","display:none");
+          show_toc_btn.setAttribute("style","display:block");
+          };
+    </script>
+        
+    <!-- 目录内容结束 -->
+
     <div class="article-entry" itemprop="articleBody">
       
         <p><font color="FFA500">findall 返回一个list列表，但当正则有多个分组时，list列表中的元素为tuple元组</font></p>
@@ -344,19 +378,6 @@
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#代码："><span class="toc-number">1.</span> <span class="toc-text">代码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输出结果："><span class="toc-number">2.</span> <span class="toc-text">输出结果：</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
     </div>
 </aside>
 
@@ -387,6 +408,17 @@
       	</div>
     </div>
   </div>
+  
+	  <!-- 不蒜子统计 -->
+	  <span id="busuanzi_container_site_pv">
+			  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+	  </span>
+	  <span class="post-meta-divider">|</span>
+	  <span id="busuanzi_container_site_uv" style='display:none'>
+			  本站访客数<span id="busuanzi_value_site_uv"></span>人
+	  </span>
+	  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
 </footer>
     </div>
     <script>
@@ -463,11 +495,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">剑指offer</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">剑指offer</a>
               </li>
              
               <li class="article-tag-list-item">
