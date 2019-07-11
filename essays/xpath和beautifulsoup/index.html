@@ -24,7 +24,8 @@
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <!-- <link rel="icon" href="/favicon.png"> -->
+    <link rel="icon" href="/img/favicon.ico">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -62,11 +63,13 @@
 			
 				<li><a href="/">主页</a></li>
 	        
+				<li><a href="/archives/index.html">归档</a></li>
+	        
 				<li><a href="/tags/随笔">随笔</a></li>
 	        
-				<li><a href="/category/剑指offer">算法题</a></li>
+				<li><a href="/categories/算法">算法题</a></li>
 	        
-				<li><a href="/java基础/">java基础</a></li>
+				<li><a href="/base">java成长路线</a></li>
 	        
 			</ul>
 		</nav>
@@ -124,6 +127,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -142,13 +147,15 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="/">主页</a></li>
+					<li style="width: 20%"><a href="/">主页</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/随笔">随笔</a></li>
+					<li style="width: 20%"><a href="/archives/index.html">归档</a></li>
 		        
-					<li style="width: 25%"><a href="/category/剑指offer">算法题</a></li>
+					<li style="width: 20%"><a href="/tags/随笔">随笔</a></li>
 		        
-					<li style="width: 25%"><a href="/java基础/">java基础</a></li>
+					<li style="width: 20%"><a href="/categories/算法">算法题</a></li>
+		        
+					<li style="width: 20%"><a href="/base">java成长路线</a></li>
 		        
 				</ul>
 			</nav>
@@ -194,6 +201,37 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">from bs4 import BeautifulSoup</span><br><span class="line"></span><br><span class="line">html_doc = &quot;&quot;&quot;</span><br><span class="line">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&apos;s story&lt;/title&gt;&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span><br><span class="line">&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span><br><span class="line">&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span><br><span class="line">&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span><br><span class="line">and they lived at the bottom of a well.&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">#进行类型转换</span><br><span class="line">soup = BeautifulSoup(html_doc,features=&quot;lxml&quot;)</span><br><span class="line">#print(soup)</span><br><span class="line"></span><br><span class="line">result = soup.title</span><br><span class="line">result = soup.title.string</span><br><span class="line">result = soup.title.name</span><br><span class="line"></span><br><span class="line">result = soup.p</span><br><span class="line">#获取p标签的class属性，返回值为list， 通过.p只能访问到第一个p标签</span><br><span class="line">result = soup.p[&apos;class&apos;]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#find  返回符合条件的 第一个标签</span><br><span class="line">result = soup.find(name=&apos;p&apos;)</span><br><span class="line">result = soup.find(attrs=&#123;&quot;class&quot;:&quot;sister&quot;&#125;)</span><br><span class="line">result = soup.find(</span><br><span class="line">    name=&apos;a&apos;,</span><br><span class="line">    attrs=&#123;&quot;class&quot;:&quot;sister&quot;&#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">#find_all  返回所有符合条件的标签 返回值为list</span><br><span class="line">result = soup.find_all(name=&apos;a&apos;)</span><br><span class="line">result = soup.find_all(attrs=&#123;&quot;class&quot;:&quot;sister&quot;&#125;,limit=1)</span><br><span class="line"></span><br><span class="line">#select_one  css选择器 返回符合条件的第一个标签</span><br><span class="line">result = soup.select_one(&apos;.sister&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#select  css选择器  返回值为list</span><br><span class="line">result = soup.select(&apos;.sister&apos;) #类选择</span><br><span class="line">result = soup.select(&apos;#link1&apos;)  #id选择</span><br><span class="line">result = soup.select(&apos;.title,title&apos;)    #组合选择</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#标签包裹内容</span><br><span class="line">result = soup.select(&apos;b&apos;)[0].get_text()</span><br><span class="line"></span><br><span class="line">#标签的属性</span><br><span class="line">result = soup.select(&apos;a&apos;)[0].get(&apos;href&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(type(result))</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/txpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -285,7 +323,7 @@
   
 <nav id="article-nav">
   
-    <a href="/java基础/java介绍/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/java/base/基础语法/java介绍/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -295,7 +333,7 @@
     </a>
   
   
-    <a href="/essays/二维数组查找/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/算法/二维数组查找/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">二维数组查找</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -315,6 +353,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -414,11 +465,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color2">essays</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">剑指offer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
