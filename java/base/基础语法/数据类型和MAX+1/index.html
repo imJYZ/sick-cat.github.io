@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>数据类型与声明 | SickCat的博客</title>
+  <title>数据类型和Max+1 | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="java基本数据类型整数类型">
-<meta name="keywords" content="java,数据类型,short,int,long,byte,取值范围,int大小">
+<meta name="keywords" content="java,数据类型,short,int,long,byte,取值范围,int大小,max+1,max加一">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据类型与声明">
-<meta property="og:url" content="http://sick-cat.github.io/java/base/基础语法/数据类型与声明/index.html">
+<meta property="og:title" content="数据类型和Max+1">
+<meta property="og:url" content="http://sick-cat.github.io/java/base/基础语法/数据类型和MAX+1/index.html">
 <meta property="og:site_name" content="SickCat的博客">
 <meta property="og:description" content="java基本数据类型整数类型">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-15T03:00:38.755Z">
+<meta property="og:updated_time" content="2019-07-15T11:48:22.702Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据类型与声明">
+<meta name="twitter:title" content="数据类型和Max+1">
 <meta name="twitter:description" content="java基本数据类型整数类型">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
@@ -38,7 +38,7 @@
   
 
   
-    <meta name="keywords" content="java,数据类型,short,int,long,byte,取值范围,int大小,java开发,安全,爬虫,程序员,码农,sickcat">
+    <meta name="keywords" content="java,数据类型,short,int,long,byte,取值范围,int大小,max+1,max加一,java开发,安全,爬虫,程序员,码农,sickcat">
   
 </head>
 </html>
@@ -176,14 +176,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-数据类型与声明" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-数据类型和MAX+1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      数据类型与声明
+      数据类型和Max+1
     </h1>
   
 
@@ -195,7 +195,7 @@
                 </span>
 
 
-<a href="/java/base/基础语法/数据类型与声明/" class="archive-article-date">
+<a href="/java/base/基础语法/数据类型和MAX+1/" class="archive-article-date">
   	<time datetime="2019-07-10T01:22:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
 </a>
         
@@ -242,7 +242,7 @@
 <td>long</td>
 <td>8字节</td>
 <td>64bit</td>
-<td>-9223372036854774808~9223372036854774807</td>
+<td>-9223372036854775808~9223372036854775807</td>
 <td></td>
 </tr>
 </tbody></table>
@@ -305,7 +305,36 @@
 <h4 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h4><blockquote>
 <p><font color="#FFA500">赋值从右往左进行，会把右边的常量当做默认类型，赋值给左边变量</font></p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这样写会报错</span></span><br><span class="line"><span class="keyword">long</span> l = <span class="number">123456789012</span>    <span class="comment">//数值太大，超出int范围</span></span><br><span class="line"><span class="keyword">float</span> f = <span class="number">1.23</span>          <span class="comment">//double类型赋值给float类型，损失精度</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//正确写法</span></span><br><span class="line"><span class="keyword">long</span> l = <span class="number">123456789012L</span></span><br><span class="line"><span class="keyword">float</span> f = <span class="number">1.23f</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这样写会报错</span></span><br><span class="line"><span class="comment">//数值太大，超出int范围</span></span><br><span class="line"><span class="keyword">long</span> l = <span class="number">123456789012</span></span><br><span class="line"><span class="comment">//double类型赋值给float类型，损失精度</span></span><br><span class="line"><span class="keyword">float</span> f = <span class="number">1.23</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//正确写法</span></span><br><span class="line"><span class="keyword">long</span> l = <span class="number">123456789012L</span></span><br><span class="line"><span class="keyword">float</span> f = <span class="number">1.23f</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// int 与 long运算，自动转换为long类型</span></span><br><span class="line"><span class="keyword">long</span> n = <span class="number">2147483647</span> + <span class="number">1L</span>;</span><br><span class="line">System.out.println(n);      <span class="comment">// print  2147483648</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// java中数字默认是 int 类型，运算结果为int类型 然后复制给long</span></span><br><span class="line">n = <span class="number">2147483647</span> + <span class="number">1</span>;</span><br><span class="line">System.out.println(n);      <span class="comment">// print  -2147483648</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="数值运算-max-1-min"><a href="#数值运算-max-1-min" class="headerlink" title="数值运算 max + 1 = min"></a>数值运算 max + 1 = min</h4><h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> l = <span class="number">9223372036854775807L</span> + <span class="number">1</span>;</span><br><span class="line">System.out.println(<span class="string">"long_Max + 1 = "</span> + l);</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> i = <span class="number">2147483647</span> + <span class="number">1</span>;</span><br><span class="line">System.out.println(<span class="string">"int_Max + 1 = "</span> + i);</span><br><span class="line"></span><br><span class="line"><span class="keyword">short</span> s = (<span class="keyword">short</span>) (<span class="number">32767</span> + <span class="number">1</span>);</span><br><span class="line">System.out.println(<span class="string">"short_Max + 1 = "</span> + s);</span><br><span class="line"></span><br><span class="line"><span class="keyword">byte</span> b = (<span class="keyword">byte</span>) (<span class="number">127</span> + <span class="number">1</span>);</span><br><span class="line">System.out.println(<span class="string">"byte_Max + 1 = "</span> + b);</span><br></pre></td></tr></table></figure>
+
+<h5 id="结果："><a href="#结果：" class="headerlink" title="结果："></a>结果：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">long_Max + <span class="number">1</span> = -<span class="number">9223372036854775808</span></span><br><span class="line">int_Max + <span class="number">1</span> = -<span class="number">2147483648</span></span><br><span class="line">short_Max + <span class="number">1</span> = -<span class="number">32768</span></span><br><span class="line">byte_Max + <span class="number">1</span> = -<span class="number">128</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><blockquote>
+<p>以 int 类型数据运算为例<br>&emsp; 01111111111111111111111111111111<br>+<br>&emsp; 00000000000000000000000000000001<br>&emsp; -----------------------------------<br>&emsp; 10000000000000000000000000000000  </p>
+</blockquote>
+<blockquote>
+<p>是不是觉得最高位为 符号位，10000000000000000000000000000000的十进制应该是 -0 ，但是结果却是-2147483648。<br>因为计算机以补码的形式来存储负数。<br>为什么呢？为了方便运算   </p>
+<blockquote>
+<p>如果以原码形式存储运算是这样的：<br>&emsp; 0000 0001<br>+<br>&emsp; 1000 0001<br>&emsp; --------------<br>&emsp; 1000 0010   &emsp; 即 -2，结果是不对的  </p>
+</blockquote>
+<blockquote>
+<p>后来又引入了反码，但是反码并不能对 -0 很好的表示，使得二进制与十进制的互换不再是一一对应的关系。所以被舍弃了，引入了反码   </p>
+</blockquote>
+<blockquote>
+<p>原码 —&gt; 补码<br>原码 —符号位不动取反—&gt; 反码 —加一—&gt; 补码<br>补码 —&gt; 原码<br>补码 —减一—&gt; 反码 —符号位不变取反—&gt; 原码<br>但是这种临界点，被人为规定了其代表值(代替了-0)<br>-2147483648 —&gt; 1000 0000 0000 0000 0000 0000 0000 0000<br>-32768 —&gt; 1000 0000 0000 0000<br>-128 —&gt; 1000 0000</p>
+</blockquote>
+</blockquote>
+<h5 id="结论："><a href="#结论：" class="headerlink" title="结论："></a>结论：</h5><font color="#FFA500">
+
+<blockquote>
+<p>可以简单的认为，某数据类型表示的范围是一个首尾相连的闭环（eg: min —&gt; 0 —&gt; max —&gt; min）</p>
+</blockquote>
+</font>
+
+
+
       
 
       <!-- 版权开始 -->
@@ -318,7 +347,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          http://sick-cat.github.io/java/base/基础语法/数据类型与声明/
+          http://sick-cat.github.io/java/base/基础语法/数据类型和MAX+1/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -448,7 +477,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/java/base/基础语法/数据类型与声明/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/java/base/基础语法/数据类型和MAX+1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -500,7 +529,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#java基本数据类型"><span class="toc-number">1.</span> <span class="toc-text">java基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#整数类型"><span class="toc-number">1.1.</span> <span class="toc-text">整数类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#浮点类型"><span class="toc-number">1.2.</span> <span class="toc-text">浮点类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符类型"><span class="toc-number">1.3.</span> <span class="toc-text">字符类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#布尔类型"><span class="toc-number">1.4.</span> <span class="toc-text">布尔类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自动类型转换"><span class="toc-number">2.</span> <span class="toc-text">自动类型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#强制类型转换"><span class="toc-number">3.</span> <span class="toc-text">强制类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#赋值"><span class="toc-number">3.1.</span> <span class="toc-text">赋值</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#java基本数据类型"><span class="toc-number">1.</span> <span class="toc-text">java基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#整数类型"><span class="toc-number">1.1.</span> <span class="toc-text">整数类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#浮点类型"><span class="toc-number">1.2.</span> <span class="toc-text">浮点类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符类型"><span class="toc-number">1.3.</span> <span class="toc-text">字符类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#布尔类型"><span class="toc-number">1.4.</span> <span class="toc-text">布尔类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自动类型转换"><span class="toc-number">2.</span> <span class="toc-text">自动类型转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#强制类型转换"><span class="toc-number">3.</span> <span class="toc-text">强制类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#赋值"><span class="toc-number">3.1.</span> <span class="toc-text">赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数值运算-max-1-min"><span class="toc-number">3.2.</span> <span class="toc-text">数值运算 max + 1 = min</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#代码："><span class="toc-number">3.2.1.</span> <span class="toc-text">代码：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#结果："><span class="toc-number">3.2.2.</span> <span class="toc-text">结果：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#原因："><span class="toc-number">3.2.3.</span> <span class="toc-text">原因：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#结论："><span class="toc-number">3.2.4.</span> <span class="toc-text">结论：</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
