@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="SickCat的博客">
 <meta property="og:description" content="java基本数据类型整数类型">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-13T15:39:24.968Z">
+<meta property="og:updated_time" content="2019-07-15T02:56:59.233Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据类型与声明">
 <meta name="twitter:description" content="java基本数据类型整数类型">
@@ -284,11 +284,21 @@
 </thead>
 <tbody><tr>
 <td>boolean</td>
-<td>未知</td>
+<td>不确定</td>
 <td>false/true</td>
 </tr>
 </tbody></table>
-<hr>
+<font color="#FFA500">
+
+<blockquote>
+<p>jvm中没有任何供boolean值专用的字节码指令<br>boolean值，在编译之后都使用Java虚拟机中的int数据类型 — 4字节<br>boolean数组将会被编码成Java虚拟机的byte数组 — 1字节<br>原因：   </p>
+<blockquote>
+<p>对于当下32位的CPU，一次处理数据是32位（这里是指的是指CPU硬件层面，不是操作系统），具有高效存取的特点。</p>
+</blockquote>
+</blockquote>
+</font>
+---
+
 <h3 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换"></a>自动类型转换</h3><blockquote>
 <p>char byte short –&gt; int –&gt; long –&gt; float –&gt; double   </p>
 </blockquote>
