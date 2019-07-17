@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>SickCat的博客</title>
+  <title>javaGC | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一直在跑路的菜鸡">
-<meta name="keywords" content="java开发,安全,爬虫,程序员,码农,sickcat">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SickCat的博客">
-<meta property="og:url" content="http://sick-cat.github.io/index.html">
+  <meta name="description" content="jdk1.8环境下，有不对的地方望指正">
+<meta name="keywords" content="javaGC,java垃圾回收">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javaGC">
+<meta property="og:url" content="http://sick-cat.github.io/java/javaGC/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="一直在跑路的菜鸡">
+<meta property="og:description" content="jdk1.8环境下，有不对的地方望指正">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://sick-cat.github.io/images/javaGC.jpg">
+<meta property="og:updated_time" content="2019-07-17T13:47:34.302Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SickCat的博客">
-<meta name="twitter:description" content="一直在跑路的菜鸡">
+<meta name="twitter:title" content="javaGC">
+<meta name="twitter:description" content="jdk1.8环境下，有不对的地方望指正">
+<meta name="twitter:image" content="http://sick-cat.github.io/images/javaGC.jpg">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -37,7 +40,7 @@
   
 
   
-    <meta name="keywords" content="java开发,安全,爬虫,程序员,码农,sickcat">
+    <meta name="keywords" content="javaGC,java垃圾回收,java开发,安全,爬虫,程序员,码农,sickcat">
   
 </head>
 </html>
@@ -175,21 +178,23 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-javaGC" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-javaGC" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/java/javaGC/">javaGC</a>
+    <h1 class="article-title" itemprop="name">
+      javaGC
     </h1>
   
 
         
         <!-- 不蒜子统计 -->
+  
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+                </span>
 
 
 <a href="/java/javaGC/" class="archive-article-date">
@@ -204,18 +209,84 @@
         <blockquote>
 <p>jdk1.8环境下，有不对的地方望指正</p>
 </blockquote>
-        
-          <a class="article-more-a" href="/java/javaGC/#more">more >></a>
-        
+<a id="more"></a>
+<h2 id="先上图"><a href="#先上图" class="headerlink" title="先上图"></a>先上图</h2><p><img src="/images/javaGC.jpg" alt="javaGC"></p>
+<h2 id="java-GC"><a href="#java-GC" class="headerlink" title="java GC"></a>java GC</h2><blockquote>
+<p>给每个对象分为两个阶段（新生代，老年代）<br>新生代分为 Eden 和 Survivor 区<br>Survivor 又分为 From 和 To 区<br>新生代占 1/3 堆空间，老年代占 2/3 堆空间</p>
+</blockquote>
+<h2 id="对象回收过程"><a href="#对象回收过程" class="headerlink" title="对象回收过程"></a>对象回收过程</h2><blockquote>
+<p>对象被创建，进入 Eden 区。当 Eden 区不足以分配空间时，会发起 Minor GC（第一次GC），把还存活的对象复制到 Survivor 区，并清空 Eden 区。（大对象将直接进入老年代 Old ） </p>
+</blockquote>
+<blockquote>
+<p>假设 对象被复制到 Survivor 区的 From 区（如果From区空间不够，直接进入老年代）。第一次 GC 时，会清空 Eden 区和 To 区，把存活对象复制到 From区   </p>
+<blockquote>
+<p>每一次 Minor GC，From 和 To 区的职责互换，这时 Eden 和 From 区中的存活对象会复制到 To 区，如此反复<br>jvm 给每一个对象都定义了 对象年(Age)计数器，每一次 Minor GC 都会 Age + 1 ，当 Age = 15 时，转移到老年代。<br>动态对象年龄，如果 Survivor 空间中，相同年龄所有对象的总和大于 From/To 区空间，年龄大于等于该年龄的对象就可以直接进入老年代   </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>经历过 16 次 Minor GC 的对象、大对象、动态年龄对象会一直在老年代里累计，空间不够时，将发起 Major GC，清理时将触发 STW(stop the world)。</p>
+</blockquote>
+<blockquote>
+<p>Minor GC 复制清理算法<br>Major GC 标记整理算法</p>
+</blockquote>
+
       
 
       <!-- 版权开始 -->
       
       
-        <div class="declare" hidden="hidden"></div>
+        <div class="declare">
+          <strong>本文作者：</strong>
+          
+            Sick Cat
+          
+          <br>
+          <strong>本文链接：</strong>
+          http://sick-cat.github.io/java/javaGC/
+          <br>
+          <strong>版权声明：</strong>
+          本作品采用
+          <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+          进行许可。转载请注明出处！
+          <!-- 
+            <br/>
+            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+           -->
+        </div>
       
       <!-- 版权结束 -->
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/txpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -246,16 +317,75 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/java/javaGC/">阅读全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/java/javaGC/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/java/base/局部变量与成员变量/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">局部变量与成员变量</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -270,704 +400,48 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-局部变量与成员变量" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/java/base/局部变量与成员变量/">局部变量与成员变量</a>
-    </h1>
-  
-
-        
-        <!-- 不蒜子统计 -->
-
-
-<a href="/java/base/局部变量与成员变量/" class="archive-article-date">
-  	<time datetime="2019-07-16T22:45:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-16</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h2><blockquote>
-<p>定义在<font color="#FFA500">方法</font>中的变量
-        
-          <a class="article-more-a" href="/java/base/局部变量与成员变量/#more">more >></a>
-        
-      
-
-      <!-- 版权开始 -->
-      
-      
-        <div class="declare" hidden="hidden"></div>
-      
-      <!-- 版权结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/base//" class="article-tag-list-link color5">base</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/java/base/局部变量与成员变量/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#先上图"><span class="toc-number">1.</span> <span class="toc-text">先上图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java-GC"><span class="toc-number">2.</span> <span class="toc-text">java GC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象回收过程"><span class="toc-number">3.</span> <span class="toc-text">对象回收过程</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-free函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/essays/free函数/">free函数</a>
-    </h1>
-  
-
-        
-        <!-- 不蒜子统计 -->
-
-
-<a href="/essays/free函数/" class="archive-article-date">
-  	<time datetime="2019-07-11T20:48:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><b>头文件：loc.h或stdlib.h<br>作 用：释放malloc(或calloc、realloc)函数给指针变量分配的内存空间的函数</b></p>
-<hr>
-        
-          <a class="article-more-a" href="/essays/free函数/#more">more >></a>
-        
-      
-
-      <!-- 版权开始 -->
-      
-      
-        <div class="declare" hidden="hidden"></div>
-      
-      <!-- 版权结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">essays</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/essays/free函数/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-list和tuple转换" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/essays/list和tuple转换/">list和tuple转换</a>
-    </h1>
-  
-
-        
-        <!-- 不蒜子统计 -->
-
-
-<a href="/essays/list和tuple转换/" class="archive-article-date">
-  	<time datetime="2019-07-11T01:10:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font color="#FFA500"> 
-list 相当于数组   
-tuple 相当于一个只读数组
-</font>
-        
-          <a class="article-more-a" href="/essays/list和tuple转换/#more">more >></a>
-        
-      
-
-      <!-- 版权开始 -->
-      
-      
-        <div class="declare" hidden="hidden"></div>
-      
-      <!-- 版权结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">essays</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/essays/list和tuple转换/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-findall" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/essays/findall/">findall</a>
-    </h1>
-  
-
-        
-        <!-- 不蒜子统计 -->
-
-
-<a href="/essays/findall/" class="archive-article-date">
-  	<time datetime="2019-07-11T01:10:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><font color="FFA500">findall 返回一个list列表，但当正则有多个分组时，list列表中的元素为tuple元组</font></p>
-        
-          <a class="article-more-a" href="/essays/findall/#more">more >></a>
-        
-      
-
-      <!-- 版权开始 -->
-      
-      
-        <div class="declare" hidden="hidden"></div>
-      
-      <!-- 版权结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">essays</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/essays/findall/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-java new File路径" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/java/java new File路径/">java new File路径</a>
-    </h1>
-  
-
-        
-        <!-- 不蒜子统计 -->
-
-
-<a href="/java/java new File路径/" class="archive-article-date">
-  	<time datetime="2019-07-11T00:55:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><b> Java项目中,相对路径的参照路径是<font color="#FFA500">Java项目根目录</font>，而不是Java源码文件所在目录</b></p>
-<h3 id="举个例子："><a href="#举个例子：" class="headerlink" title="举个例子："></a>举个例子：</h3>
-        
-          <a class="article-more-a" href="/java/java new File路径/#more">more >></a>
-        
-      
-
-      <!-- 版权开始 -->
-      
-      
-        <div class="declare" hidden="hidden"></div>
-      
-      <!-- 版权结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">essays</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/java/java new File路径/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-数据类型和MAX+1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/java/base/基础语法/数据类型和MAX+1/">数据类型和Max+1</a>
-    </h1>
-  
-
-        
-        <!-- 不蒜子统计 -->
-
-
-<a href="/java/base/基础语法/数据类型和MAX+1/" class="archive-article-date">
-  	<time datetime="2019-07-10T01:22:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="java基本数据类型"><a href="#java基本数据类型" class="headerlink" title="java基本数据类型"></a>java基本数据类型</h3><h4 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h4>
-        
-          <a class="article-more-a" href="/java/base/基础语法/数据类型和MAX+1/#more">more >></a>
-        
-      
-
-      <!-- 版权开始 -->
-      
-      
-        <div class="declare" hidden="hidden"></div>
-      
-      <!-- 版权结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/base//" class="article-tag-list-link color5">base</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/base/基础语法//" class="article-tag-list-link color5">基础语法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/java/base/基础语法/数据类型和MAX+1/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-标识符与运算符" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/java/base/基础语法/标识符与运算符/">标识符与运算符</a>
-    </h1>
-  
-
-        
-        <!-- 不蒜子统计 -->
-
-
-<a href="/java/base/基础语法/标识符与运算符/" class="archive-article-date">
-  	<time datetime="2019-07-10T01:21:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p><b> 标识符：凡是让我们起名字的地方，统称都叫做标识符，是区分大小写的。 </b></p>
-        
-          <a class="article-more-a" href="/java/base/基础语法/标识符与运算符/#more">more >></a>
-        
-      
-
-      <!-- 版权开始 -->
-      
-      
-        <div class="declare" hidden="hidden"></div>
-      
-      <!-- 版权结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/base//" class="article-tag-list-link color5">base</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/base/基础语法//" class="article-tag-list-link color5">基础语法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/java/base/基础语法/标识符与运算符/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="https://jjeejj.github.io/js/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "Wed Jul 17 2019 20:26:49 GMT+0000",
+  owner: 'sick-cat',
+  repo: 'sick-cat.github.io',
+  oauth: {
+    client_id: '2258b2b846d866f677f9',
+    client_secret: '4993de220a7d7849446b3ceb90aea004ce18e935',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
 
 
@@ -1025,8 +499,8 @@ tuple 相当于一个只读数组
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
