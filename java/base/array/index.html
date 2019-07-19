@@ -6,20 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>局部变量与成员变量 | SickCat的博客</title>
+  <title>数组在内存中的加载过程 | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="局部变量 定义在方法中的变量">
-<meta name="keywords" content="局部变量,成员变量,初始化,默认值">
+  <meta name="description" content="一维数组">
+<meta name="keywords" content="数组,内存,数组在内存中,数组创建过程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="局部变量与成员变量">
-<meta property="og:url" content="http://sick-cat.github.io/java/base/局部变量与成员变量/index.html">
+<meta property="og:title" content="数组在内存中的加载过程">
+<meta property="og:url" content="http://sick-cat.github.io/java/base/array/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="局部变量 定义在方法中的变量">
+<meta property="og:description" content="一维数组">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-17T12:16:44.506Z">
+<meta property="og:image" content="http://sick-cat.github.io/images/array1.jpg">
+<meta property="og:image" content="http://sick-cat.github.io/images/array2.jpg">
+<meta property="og:updated_time" content="2019-07-19T05:28:24.062Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="局部变量与成员变量">
-<meta name="twitter:description" content="局部变量 定义在方法中的变量">
+<meta name="twitter:title" content="数组在内存中的加载过程">
+<meta name="twitter:description" content="一维数组">
+<meta name="twitter:image" content="http://sick-cat.github.io/images/array1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -38,7 +41,7 @@
   
 
   
-    <meta name="keywords" content="局部变量,成员变量,初始化,默认值,java开发,安全,爬虫,程序员,码农,sickcat">
+    <meta name="keywords" content="数组,内存,数组在内存中,数组创建过程,java开发,安全,爬虫,程序员,码农,sickcat">
   
 </head>
 </html>
@@ -176,14 +179,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-局部变量与成员变量" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-array" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      局部变量与成员变量
+      数组在内存中的加载过程
     </h1>
   
 
@@ -195,8 +198,8 @@
                 </span>
 
 
-<a href="/java/base/局部变量与成员变量/" class="archive-article-date">
-  	<time datetime="2019-07-16T22:45:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-16</time>
+<a href="/java/base/array/" class="archive-article-date">
+  	<time datetime="2019-07-18T23:07:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-18</time>
 </a>
         
       </header>
@@ -204,30 +207,36 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h2><blockquote>
-<p>定义在<font color="#FFA500">方法</font>中的变量<a id="more"></a><br>属于方法，在栈内存的方法的栈帧中。<br>随方法的调用而产生，随方法的结束而消失<br><font color="#FFA500">没有默认的初始化值，必须手动赋值后，才能使用</font>    </p>
+        <h2 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h2><a id="more"></a>
+<p><img src="/images/array1.jpg" alt="一维数组"></p>
+<p><code>int[] arr1 = new int[3];</code></p>
+<blockquote>
+<p>先把 arr1 压进栈，然后在堆空间中开辟一个空间，并把值初始化为0（arr1为引用变量，但是内部数据是int类型，默认值为 0，具体请参照<a href="/java/base/局部变量与成员变量/">局部变量与成员变量</a>）,最后把<font color="#FFA500">开辟的堆空间地址</font>赋值给arr1   </p>
 </blockquote>
-<h3 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//正确写法</span></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">System.out.println(a);</span><br><span class="line"></span><br><span class="line"><span class="comment">//错误写法</span></span><br><span class="line"><span class="comment">// int a;</span></span><br><span class="line"><span class="comment">// long a;</span></span><br><span class="line"><span class="comment">// char a;</span></span><br><span class="line"><span class="keyword">long</span> a;</span><br><span class="line">System.out.println(a);</span><br></pre></td></tr></table></figure>
-
-<h3 id="错误写法抛出异常"><a href="#错误写法抛出异常" class="headerlink" title="错误写法抛出异常"></a>错误写法抛出异常</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Exception in thread <span class="string">"main"</span> java.lang.Error: Unresolved compilation problem:</span><br><span class="line">        The local variable a may not have been initialized</span><br></pre></td></tr></table></figure>
-
-<h2 id="成员变量"><a href="#成员变量" class="headerlink" title="成员变量"></a>成员变量</h2><blockquote>
-<p>定义在<font color="#FFA500">类</font>中成员位置的变量(类中方法外)<br>属于对象，在堆内存的对象中<br>随对象的创建而产生，随对象的消失而消失。<br><font color="#FFA500">有初始值</font></p>
-<ul>
-<li>基本数据类型<ul>
-<li>整数类型：0  </li>
-<li>小数类型：0.0  </li>
-<li>布尔类型：false  </li>
-<li>字符类型：’\u0000’ (Unicode值, 控制台输出的是空格)</li>
-</ul>
-</li>
-<li>引用数据类型：null</li>
-</ul>
+<p><code>int[] arr2 = arr1;</code></p>
+<blockquote>
+<p>把 arr1 中的<font color="#FFA500">地址</font>赋值给 arr2，此时 arr2 和 arr1 指向同一块空间。</p>
 </blockquote>
-<h3 id="测试代码-1"><a href="#测试代码-1" class="headerlink" title="测试代码"></a>测试代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 基本数据类型</span></span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">long</span> l;</span><br><span class="line">    <span class="keyword">byte</span> b;</span><br><span class="line">    <span class="keyword">char</span> c;</span><br><span class="line">    <span class="comment">// 引用类型</span></span><br><span class="line">    String s;</span><br><span class="line">    <span class="keyword">int</span>[] a;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 扩展，数组 new 之后，在堆中 int 类型自动初始化为 0 。</span></span><br><span class="line">    <span class="keyword">int</span>[] extend = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">outPut</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"int--"</span> + i);</span><br><span class="line">        System.out.println(<span class="string">"long--"</span> + l);</span><br><span class="line">        System.out.println(<span class="string">"byte--"</span> + b);</span><br><span class="line">        System.out.println(<span class="string">"char--"</span> + c + <span class="string">"占位专用"</span>);</span><br><span class="line">        System.out.println(<span class="string">"String--"</span> + s + <span class="string">"占位专用"</span>);</span><br><span class="line">        System.out.println(<span class="string">"数组--"</span> + a);</span><br><span class="line">        System.out.println(<span class="string">"数组 new 之后，堆中int类型初始化为0--"</span> + Arrays.toString(a));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试输出"><a href="#测试输出" class="headerlink" title="测试输出"></a>测试输出</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>--<span class="number">0</span></span><br><span class="line"><span class="keyword">long</span>--<span class="number">0</span></span><br><span class="line"><span class="keyword">byte</span>--<span class="number">0</span></span><br><span class="line"><span class="keyword">char</span>-- 占位专用</span><br><span class="line">String--<span class="keyword">null</span>占位专用</span><br><span class="line">数组--<span class="keyword">null</span></span><br><span class="line">数组 <span class="keyword">new</span> 之后，堆中<span class="keyword">int</span>类型初始化为<span class="number">0</span>--[<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>]</span><br></pre></td></tr></table></figure>
-
+<p><code>arr2[0] = 20;</code>   </p>
+<blockquote>
+<p>此时，arr1[0] 值为 20。</p>
+</blockquote>
+<h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2><p><img src="/images/array2.jpg" alt="二维数组"></p>
+<p><code>int[][] array = new int[3][];</code>   </p>
+<blockquote>
+<p>这条语句会先把 array 压栈，然后在堆中开辟一个空间，初始值为 null（array为引用变量，第一维同样是引用类型，具体请参照<a href="/java/base/局部变量与成员变量/">局部变量与成员变量</a>），最后把<font color="#FFA500">开辟的堆空间地址</font>赋值给 array。   </p>
+</blockquote>
+<p><code>array[0][] = new int[1]</code>   </p>
+<blockquote>
+<p>这条语句会在堆空间中开辟一个 只有一个 int 类型大小的空间，并初始化为 0 ，然后把<font color="#FFA500">自己的地址</font>赋值给array[0][]。    </p>
+</blockquote>
+<p><code>array[1][] = new int[2];</code><br><code>array[2][] = new int[3];</code>  </p>
+<blockquote>
+<p>这两条语句和上一条意义一样，就不在做解释</p>
+</blockquote>
+<blockquote>
+<p>语言表达能力有限，具体看图，有不对的地方请指正</p>
+</blockquote>
 
       
 
@@ -241,7 +250,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          http://sick-cat.github.io/java/base/局部变量与成员变量/
+          http://sick-cat.github.io/java/base/array/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -367,7 +376,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/java/base/局部变量与成员变量/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/java/base/array/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -381,18 +390,18 @@
   
 <nav id="article-nav">
   
-    <a href="/java/javaGC/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/java/base/类加载过程/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          javaGC
+          类加载过程
         
       </div>
     </a>
   
   
-    <a href="/essays/free函数/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">free函数</div>
+    <a href="/java/javaGC/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javaGC</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -419,7 +428,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#局部变量"><span class="toc-number">1.</span> <span class="toc-text">局部变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#测试代码"><span class="toc-number">1.1.</span> <span class="toc-text">测试代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#错误写法抛出异常"><span class="toc-number">1.2.</span> <span class="toc-text">错误写法抛出异常</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#成员变量"><span class="toc-number">2.</span> <span class="toc-text">成员变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#测试代码-1"><span class="toc-number">2.1.</span> <span class="toc-text">测试代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试输出"><span class="toc-number">2.2.</span> <span class="toc-text">测试输出</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一维数组"><span class="toc-number">1.</span> <span class="toc-text">一维数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二维数组"><span class="toc-number">2.</span> <span class="toc-text">二维数组</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -444,7 +453,7 @@
 <script src="https://jjeejj.github.io/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Tue Jul 16 2019 22:45:53 GMT+0000",
+  id: "Thu Jul 18 2019 23:07:42 GMT+0000",
   owner: 'sick-cat',
   repo: 'sick-cat.github.io',
   oauth: {

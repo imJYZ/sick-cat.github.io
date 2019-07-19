@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>java基础 | SickCat的博客</title>
+  <title>类加载过程 | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="目录第一阶段 1、基础语法 java介绍   数据类型和Max+1   标识符与运算符      2、面向对象 局部变量与成员变量">
-<meta name="keywords" content="java开发,安全,爬虫,程序员,码农,sickcat">
-<meta property="og:type" content="website">
-<meta property="og:title" content="java基础">
-<meta property="og:url" content="http://sick-cat.github.io/base/index.html">
+  <meta name="description" content="创建类加载过程 将创建对象所属类加载到方法区(如果对应类有父类将先加载父类) 如果对应类有父类将先加载父类 static 修饰的静态变量随着类的加载进方法区，直接在静态区开辟了存储静态变量的内存空间（堆）">
+<meta name="keywords" content="类加载过程,static">
+<meta property="og:type" content="article">
+<meta property="og:title" content="类加载过程">
+<meta property="og:url" content="http://sick-cat.github.io/java/base/类加载过程/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="目录第一阶段 1、基础语法 java介绍   数据类型和Max+1   标识符与运算符      2、面向对象 局部变量与成员变量">
+<meta property="og:description" content="创建类加载过程 将创建对象所属类加载到方法区(如果对应类有父类将先加载父类) 如果对应类有父类将先加载父类 static 修饰的静态变量随着类的加载进方法区，直接在静态区开辟了存储静态变量的内存空间（堆）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-17T14:26:22.854Z">
+<meta property="og:updated_time" content="2019-07-19T05:30:13.286Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java基础">
-<meta name="twitter:description" content="目录第一阶段 1、基础语法 java介绍   数据类型和Max+1   标识符与运算符      2、面向对象 局部变量与成员变量">
+<meta name="twitter:title" content="类加载过程">
+<meta name="twitter:description" content="创建类加载过程 将创建对象所属类加载到方法区(如果对应类有父类将先加载父类) 如果对应类有父类将先加载父类 static 修饰的静态变量随着类的加载进方法区，直接在静态区开辟了存储静态变量的内存空间（堆）">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -38,7 +38,7 @@
   
 
   
-    <meta name="keywords" content="java开发,安全,爬虫,程序员,码农,sickcat">
+    <meta name="keywords" content="类加载过程,static,java开发,安全,爬虫,程序员,码农,sickcat">
   
 </head>
 </html>
@@ -71,7 +71,7 @@
 	        
 				<li><a href="/categories/算法">算法题</a></li>
 	        
-				<li><a href="/base">java成长路线</a></li>
+				<li><a href="/java">java成长路线</a></li>
 	        
 			</ul>
 		</nav>
@@ -161,7 +161,7 @@
 		        
 					<li style="width: 20%"><a href="/categories/算法">算法题</a></li>
 		        
-					<li style="width: 20%"><a href="/base">java成长路线</a></li>
+					<li style="width: 20%"><a href="/java">java成长路线</a></li>
 		        
 				</ul>
 			</nav>
@@ -176,14 +176,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-类加载过程" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      java基础
+      类加载过程
     </h1>
   
 
@@ -195,8 +195,8 @@
                 </span>
 
 
-<a href="/base/index.html" class="archive-article-date">
-  	<time datetime="2019-07-10T09:44:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
+<a href="/java/base/类加载过程/" class="archive-article-date">
+  	<time datetime="2019-07-18T23:09:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-18</time>
 </a>
         
       </header>
@@ -204,18 +204,45 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><h3 id="第一阶段"><a href="#第一阶段" class="headerlink" title="第一阶段"></a>第一阶段</h3><ul>
-<li><h4 id="1、基础语法"><a href="#1、基础语法" class="headerlink" title="1、基础语法"></a>1、基础语法</h4><ul>
-<li><a href="..\java\base\java介绍">java介绍</a>  </li>
-<li><a href="..\java\base\数据类型和MAX+1">数据类型和Max+1</a>  </li>
-<li><a href="..\java\base\标识符与运算符">标识符与运算符</a>   </li>
+        <h2 id="创建类加载过程"><a href="#创建类加载过程" class="headerlink" title="创建类加载过程"></a>创建类加载过程</h2><ol>
+<li>将创建对象所属类加载到方法区(如果对应类有父类将先加载父类)<ul>
+<li>如果对应类有父类将先加载父类</li>
+<li>static 修饰的静态变量随着类的加载进方法区，直接在静态区开辟了存储静态变量的内存空间（堆）<a id="more"></a></li>
 </ul>
 </li>
-<li><h4 id="2、面向对象"><a href="#2、面向对象" class="headerlink" title="2、面向对象"></a>2、面向对象</h4><ul>
-<li><a href="..\java\base\局部变量与成员变量">局部变量与成员变量</a></li>
+<li>在占内存中创建对象的引用，用于存储对象的地址</li>
+<li>在堆内存中开辟内存空间，给成员变量分配内存</li>
+<li>执行构造代码块<ul>
+<li>构造代码块与构造方法绑定，每执行一次构造方法，执行一次构造代码块</li>
 </ul>
 </li>
+<li>给成员变量默认初始化赋值<ul>
+<li>int: 0, string: null 参考<a href="/java/base/局部变量与成员变量/">局部变量与成员变量</a></li>
 </ul>
+</li>
+<li>给成员变量显示初始化赋值</li>
+<li>给成员变量构造方法初始化赋值</li>
+<li>将对象的地址，赋值给栈内存中的引用</li>
+</ol>
+<blockquote>
+<p><b>构造代码块：</b>在类中，方法外，用大括号括起来的一段代码，在构造方法执行之前执行。</p>
+</blockquote>
+<h2 id="代码验证"><a href="#代码验证" class="headerlink" title="代码验证"></a>代码验证</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">"Test static"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(<span class="string">"Test 构造代码块"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Test</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 只定义，不会加载类</span></span><br><span class="line">        Dog dog;</span><br><span class="line">        System.out.println(<span class="string">"------创建对象，new 之前-----"</span>);</span><br><span class="line">        dog = <span class="keyword">new</span> Dog(<span class="string">"噜啦啦"</span>, <span class="number">8</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"-----dog1-----"</span>);</span><br><span class="line">        Dog dog1 = <span class="keyword">new</span> Dog();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">"Animal static"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Animal</span> <span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Animal 无参构造方法"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(<span class="string">"Dog 构造代码块：name = "</span> + name + <span class="string">"---- age = "</span> + age);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">"Dog 静态代码块"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Dog</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Dog 无参构造方法：name = "</span> + name + <span class="string">"---- age = "</span> + age);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Dog</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Dog 有参构造方法：name = "</span> + name + <span class="string">"---- age = "</span> + age);</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Test <span class="keyword">static</span></span><br><span class="line">------创建对象，<span class="keyword">new</span> 之前-----</span><br><span class="line">Animal <span class="keyword">static</span></span><br><span class="line">Dog 静态代码块</span><br><span class="line">Animal 无参构造方法</span><br><span class="line">Dog 构造代码块：name = <span class="keyword">null</span>---- age = <span class="number">0</span></span><br><span class="line">Dog 有参构造方法：name = 噜啦啦---- age = <span class="number">8</span></span><br><span class="line">-----dog1-----</span><br><span class="line">Animal 无参构造方法</span><br><span class="line">Dog 构造代码块：name = <span class="keyword">null</span>---- age = <span class="number">0</span></span><br><span class="line">Dog 无参构造方法：name = <span class="keyword">null</span>---- age = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h2><ol>
+<li>main方法是程序的入口，所以先加载 Test 类，加载Test中的静态代码块，输出 Test static。<ul>
+<li>因为没有new Test对象，所以不会执行构造方法，自然也不会执行构造代码块00</li>
+</ul>
+</li>
+<li>进入main方法，Dog dog只是定义了一个dog，并没有申请空间。不会加载类。</li>
+<li><code>dog = new Dog(&quot;噜啦啦&quot;, 8);</code>会先加载 Dog 类，但是Dog继承了 Animal，会先去加载父类，然后加载Dog类，执行Dog类的有参构造方法之前，先执行父类的构造方法，然后是Dog类的构造代码块，Dog类的有参构造方法。</li>
+<li><code>Dog dog1 = new Dog();</code>, 因为Animal和Dog类已经加载过了，所以当new另一个对象的时候，直接执行构造方法。先执行父类(Animal)的构造方法，再执行子类(Dog)的构造代码块，最后是Dog类的构造方法。</li>
+</ol>
+<blockquote>
+<p>构造代码块绑定构造方法，每执行一次类的构造方法，就会在构造方法前执行一次构造代码块。</p>
+</blockquote>
 
       
 
@@ -229,7 +256,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          http://sick-cat.github.io/base/
+          http://sick-cat.github.io/java/base/类加载过程/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -279,7 +306,33 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/base//" class="article-tag-list-link color5">base</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -329,7 +382,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/base/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/java/base/类加载过程/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -341,6 +394,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/java/base/array/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数组在内存中的加载过程</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -362,7 +425,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目录"><span class="toc-number">1.</span> <span class="toc-text">目录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一阶段"><span class="toc-number">1.1.</span> <span class="toc-text">第一阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、基础语法"><span class="toc-number">1.1.1.</span> <span class="toc-text">1、基础语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、面向对象"><span class="toc-number">1.1.2.</span> <span class="toc-text">2、面向对象</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建类加载过程"><span class="toc-number">1.</span> <span class="toc-text">创建类加载过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码验证"><span class="toc-number">2.</span> <span class="toc-text">代码验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#输出结果"><span class="toc-number">3.</span> <span class="toc-text">输出结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结果分析"><span class="toc-number">4.</span> <span class="toc-text">结果分析</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -387,7 +450,7 @@
 <script src="https://jjeejj.github.io/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Wed Jul 10 2019 09:44:04 GMT+0000",
+  id: "Thu Jul 18 2019 23:09:44 GMT+0000",
   owner: 'sick-cat',
   repo: 'sick-cat.github.io',
   oauth: {
@@ -455,7 +518,7 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
@@ -525,11 +588,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">剑指offer</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color3">剑指offer</a>
               </li>
             
             <div class="clearfix"></div>
