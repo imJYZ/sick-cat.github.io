@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>xpath和beautifulsoup | SickCat的博客</title>
+  <title>list和tuple转换 | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="xpath 和 beautifulsoup 的使用">
-<meta name="keywords" content="爬虫,xpath,beautifulsoup,python">
+  <meta name="description" content="list 相当于数组    tuple 相当于一个只读数组">
+<meta name="keywords" content="python,list,tuple,list和tuple转换">
 <meta property="og:type" content="article">
-<meta property="og:title" content="xpath和beautifulsoup">
-<meta property="og:url" content="http://sick-cat.github.io/python/xpath&beautifulsoup/index.html">
+<meta property="og:title" content="list和tuple转换">
+<meta property="og:url" content="http://sick-cat.github.io/python/list-tuple/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="xpath 和 beautifulsoup 的使用">
+<meta property="og:description" content="list 相当于数组    tuple 相当于一个只读数组">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-23T07:37:56.981Z">
+<meta property="og:updated_time" content="2019-07-23T10:47:00.253Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xpath和beautifulsoup">
-<meta name="twitter:description" content="xpath 和 beautifulsoup 的使用">
+<meta name="twitter:title" content="list和tuple转换">
+<meta name="twitter:description" content="list 相当于数组    tuple 相当于一个只读数组">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -38,7 +38,7 @@
   
 
   
-    <meta name="keywords" content="爬虫,xpath,beautifulsoup,python,java开发,安全,爬虫,程序员,码农,sickcat">
+    <meta name="keywords" content="python,list,tuple,list和tuple转换,java开发,安全,爬虫,程序员,码农,sickcat">
   
 </head>
 </html>
@@ -176,14 +176,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-xpath和beautifulsoup" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-list和tuple转换" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      xpath和beautifulsoup
+      list和tuple转换
     </h1>
   
 
@@ -195,8 +195,8 @@
                 </span>
 
 
-<a href="/python/xpath&beautifulsoup/" class="archive-article-date">
-  	<time datetime="2019-07-10T00:43:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
+<a href="/python/list-tuple/" class="archive-article-date">
+  	<time datetime="2019-07-11T01:10:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
 </a>
         
       </header>
@@ -204,13 +204,25 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>xpath 和 beautifulsoup 的使用</p>
-</blockquote>
+        <font color="#FFA500"> 
+list 相当于数组   
+tuple 相当于一个只读数组
+</font>
 <a id="more"></a>
-<h3 id="xpath"><a href="#xpath" class="headerlink" title="xpath"></a>xpath</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from lxml import etree</span><br><span class="line"></span><br><span class="line">#1、转换格式</span><br><span class="line">x_data = etree.HTML(data)</span><br><span class="line">#2、解析数据</span><br><span class="line">#xpath 返回值为列表</span><br><span class="line">url_list = x_data.xpath(&apos;//div[@class=&quot;XXXX&quot;]/a/@href&apos;)</span><br></pre></td></tr></table></figure>
 
-<h3 id="beautifulsoup"><a href="#beautifulsoup" class="headerlink" title="beautifulsoup"></a>beautifulsoup</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">from bs4 import BeautifulSoup</span><br><span class="line"></span><br><span class="line">html_doc = &quot;&quot;&quot;</span><br><span class="line">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&apos;s story&lt;/title&gt;&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&apos;s story&lt;/b&gt;&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span><br><span class="line">&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span><br><span class="line">&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span><br><span class="line">&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span><br><span class="line">and they lived at the bottom of a well.&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">#进行类型转换</span><br><span class="line">soup = BeautifulSoup(html_doc,features=&quot;lxml&quot;)</span><br><span class="line">#print(soup)</span><br><span class="line"></span><br><span class="line">result = soup.title</span><br><span class="line">result = soup.title.string</span><br><span class="line">result = soup.title.name</span><br><span class="line"></span><br><span class="line">result = soup.p</span><br><span class="line">#获取p标签的class属性，返回值为list， 通过.p只能访问到第一个p标签</span><br><span class="line">result = soup.p[&apos;class&apos;]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#find  返回符合条件的 第一个标签</span><br><span class="line">result = soup.find(name=&apos;p&apos;)</span><br><span class="line">result = soup.find(attrs=&#123;&quot;class&quot;:&quot;sister&quot;&#125;)</span><br><span class="line">result = soup.find(</span><br><span class="line">    name=&apos;a&apos;,</span><br><span class="line">    attrs=&#123;&quot;class&quot;:&quot;sister&quot;&#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">#find_all  返回所有符合条件的标签 返回值为list</span><br><span class="line">result = soup.find_all(name=&apos;a&apos;)</span><br><span class="line">result = soup.find_all(attrs=&#123;&quot;class&quot;:&quot;sister&quot;&#125;,limit=1)</span><br><span class="line"></span><br><span class="line">#select_one  css选择器 返回符合条件的第一个标签</span><br><span class="line">result = soup.select_one(&apos;.sister&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#select  css选择器  返回值为list</span><br><span class="line">result = soup.select(&apos;.sister&apos;) #类选择</span><br><span class="line">result = soup.select(&apos;#link1&apos;)  #id选择</span><br><span class="line">result = soup.select(&apos;.title,title&apos;)    #组合选择</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#标签包裹内容</span><br><span class="line">result = soup.select(&apos;b&apos;)[0].get_text()</span><br><span class="line"></span><br><span class="line">#标签的属性</span><br><span class="line">result = soup.select(&apos;a&apos;)[0].get(&apos;href&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(type(result))</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>强制类型转换：<ul>
+<li>list—-&gt;tuple    tuple(list_content)</li>
+<li>tuple—&gt;list     list(tuple_content)</li>
+</ul>
+</li>
+</ul>
+<h4 id="具体看代码"><a href="#具体看代码" class="headerlink" title="具体看代码"></a>具体看代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#要进行赋值，不然原变量内容和类型不变</span><br><span class="line">s = &apos;adkshfkjahkjadhjf&apos;</span><br><span class="line">print(list(s))</span><br><span class="line">print(tuple(s))</span><br><span class="line">#未进行赋值操作，s内容和类型不变</span><br><span class="line">print(s)</span><br><span class="line">print(type(s))</span><br><span class="line"></span><br><span class="line">print(&quot;\n----list-----&quot;)</span><br><span class="line">s = list(s)</span><br><span class="line">print(type(s))</span><br><span class="line">print(s)</span><br><span class="line"></span><br><span class="line">print(&quot;\n----tuple-----&quot;)</span><br><span class="line">s = tuple(s)</span><br><span class="line">print(type(s))</span><br><span class="line">print(s)</span><br></pre></td></tr></table></figure>
+
+<h4 id="输出结果："><a href="#输出结果：" class="headerlink" title="输出结果："></a>输出结果：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[&apos;a&apos;, &apos;d&apos;, &apos;k&apos;, &apos;s&apos;, &apos;h&apos;, &apos;f&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;h&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;d&apos;, &apos;h&apos;, &apos;j&apos;, &apos;f&apos;]</span><br><span class="line">(&apos;a&apos;, &apos;d&apos;, &apos;k&apos;, &apos;s&apos;, &apos;h&apos;, &apos;f&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;h&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;d&apos;, &apos;h&apos;, &apos;j&apos;, &apos;f&apos;)</span><br><span class="line">adkshfkjahkjadhjf</span><br><span class="line">&lt;class &apos;str&apos;&gt;</span><br><span class="line"></span><br><span class="line">----list-----</span><br><span class="line">&lt;class &apos;list&apos;&gt;</span><br><span class="line">[&apos;a&apos;, &apos;d&apos;, &apos;k&apos;, &apos;s&apos;, &apos;h&apos;, &apos;f&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;h&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;d&apos;, &apos;h&apos;, &apos;j&apos;, &apos;f&apos;]</span><br><span class="line"></span><br><span class="line">----tuple-----</span><br><span class="line">&lt;class &apos;tuple&apos;&gt;</span><br><span class="line">(&apos;a&apos;, &apos;d&apos;, &apos;k&apos;, &apos;s&apos;, &apos;h&apos;, &apos;f&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;h&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;d&apos;, &apos;h&apos;, &apos;j&apos;, &apos;f&apos;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p><font color="#FFA500">用list或tuble进行强转时，只有返回值，并不会在原数据上进行操作</font></p>
+
       
 
       <!-- 版权开始 -->
@@ -223,7 +235,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          http://sick-cat.github.io/python/xpath&amp;beautifulsoup/
+          http://sick-cat.github.io/python/list-tuple/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -345,7 +357,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/python/xpath&beautifulsoup/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/python/list-tuple/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -359,18 +371,18 @@
   
 <nav id="article-nav">
   
-    <a href="/java/base/JavaIntroduce/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/c/freeFunction/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          java介绍
+          free函数
         
       </div>
     </a>
   
   
-    <a href="/acm/matrixFind/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">二维数组查找</div>
+    <a href="/python/findall/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">findall</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -397,7 +409,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#xpath"><span class="toc-number">1.</span> <span class="toc-text">xpath</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#beautifulsoup"><span class="toc-number">2.</span> <span class="toc-text">beautifulsoup</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#具体看代码"><span class="toc-number">1.</span> <span class="toc-text">具体看代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输出结果："><span class="toc-number">2.</span> <span class="toc-text">输出结果：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结"><span class="toc-number">3.</span> <span class="toc-text">总结</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -422,7 +434,7 @@
 <script src="https://jjeejj.github.io/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Wed Jul 10 2019 00:43:30 GMT+0000",
+  id: "Thu Jul 11 2019 01:10:36 GMT+0000",
   owner: 'sick-cat',
   repo: 'sick-cat.github.io',
   oauth: {
