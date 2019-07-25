@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://sick-cat.github.io/acm/mirrorOfBinaryTree/</loc>
+    <lastmod>2019-07-25</lastmod>
+  </url>  <url>
+    <loc>http://sick-cat.github.io/acm/theNumberOf1/</loc>
+    <lastmod>2019-07-25</lastmod>
+  </url>  <url>
     <loc>http://sick-cat.github.io/java/base/ClassloadingProcess/</loc>
     <lastmod>2019-07-24</lastmod>
   </url>  <url>
