@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>二进制中1的个数 | SickCat的博客</title>
+  <title>List | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目来源：牛客网–二进制中1的个数 题目描述 输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。">
-<meta name="keywords" content="剑指offer,牛客,二进制中1的个数">
+  <meta name="description" content="继承结构 Collection (interface) List (interface) ArrayList (class) LinkedList (class) Vector (class)">
+<meta name="keywords" content="集合,Collection,ArrayList,LinkedList,Vector">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二进制中1的个数">
-<meta property="og:url" content="http://sick-cat.github.io/acm/theNumberOf1/index.html">
+<meta property="og:title" content="List">
+<meta property="og:url" content="http://sick-cat.github.io/java/base/List/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="题目来源：牛客网–二进制中1的个数 题目描述 输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。">
+<meta property="og:description" content="继承结构 Collection (interface) List (interface) ArrayList (class) LinkedList (class) Vector (class)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-25T15:20:45.768Z">
+<meta property="og:updated_time" content="2019-07-26T15:50:49.836Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二进制中1的个数">
-<meta name="twitter:description" content="题目来源：牛客网–二进制中1的个数 题目描述 输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。">
+<meta name="twitter:title" content="List">
+<meta name="twitter:description" content="继承结构 Collection (interface) List (interface) ArrayList (class) LinkedList (class) Vector (class)">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -38,7 +38,7 @@
   
 
   
-    <meta name="keywords" content="剑指offer,牛客,二进制中1的个数,java开发,安全,爬虫,程序员,码农,sickcat">
+    <meta name="keywords" content="集合,Collection,ArrayList,LinkedList,Vector,java开发,安全,爬虫,程序员,码农,sickcat">
   
 </head>
 </html>
@@ -176,14 +176,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-二进制中1的个数" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-java-第一阶段：javaEE基础-05集合-List" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      二进制中1的个数
+      List
     </h1>
   
 
@@ -195,8 +195,8 @@
                 </span>
 
 
-<a href="/acm/theNumberOf1/" class="archive-article-date">
-  	<time datetime="2019-07-25T23:18:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
+<a href="/java/base/List/" class="archive-article-date">
+  	<time datetime="2019-07-26T21:58:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-26</time>
 </a>
         
       </header>
@@ -204,23 +204,63 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>题目来源：</strong><a href="https://www.nowcoder.com/questionTerminal/8ee967e43c2c4ec193b040ea7fbb10b8" target="_blank" rel="noopener">牛客网–二进制中1的个数</a></p>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。</p>
-</blockquote>
+        <h2 id="继承结构"><a href="#继承结构" class="headerlink" title="继承结构"></a>继承结构</h2><ul>
+<li>Collection (interface)<ul>
+<li>List (interface)<ul>
+<li>ArrayList (class)</li>
+<li>LinkedList (class)</li>
+<li>Vector (class)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <a id="more"></a>
 
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<p>使用java中内置的函数比较简单，会自动转换为二进制并返回一个字符串，之后只需要遍历字符串中 1 的个数就好了，或者把字符串中的0替换为空字符，对字符串求长。</p>
-</blockquote>
-<h2 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">numberOfOne</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">		Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> n = in.nextInt();</span><br><span class="line">		<span class="comment">// 转换为二进制，返回值为字符串</span></span><br><span class="line">		String str = Integer.toBinaryString(n);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 把 0 替换成空值，求长度，得到 1 的个数</span></span><br><span class="line">		<span class="comment">// System.out.println(str.replaceAll("0", "").length());</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 遍历字符串，统计 1 的个数</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; str.length(); i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (str.charAt(i) == <span class="string">'1'</span>) &#123;</span><br><span class="line">				count++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(count);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <blockquote>
-<p>调用api属于耍赖？好吧，补上两种不耍赖的<br>这两种解法题目评论下边都有，翻了一下觉得挺好。</p>
+<p><strong>List (interface) 有顺序、可以重复、允许多个null元素</strong></p>
 </blockquote>
-<h3 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (n !=<span class="number">0</span>) &#123;</span><br><span class="line">		count++;</span><br><span class="line">		<span class="comment">// 每次与运算都会把 n 最右边的 1 与掉，这样有多少 1 就循环多少次</span></span><br><span class="line">		<span class="comment">// 1001 &amp; 1000 值为 1000，最右边的 1 掉了</span></span><br><span class="line">		n = n &amp; (n-<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h2><table>
+<thead>
+<tr>
+<th align="center">类</th>
+<th align="center">使用</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ArrayList</td>
+<td align="center">线程不安全<br>适合单线程访问时使用</td>
+<td>动态对象数组实现，默认构造方法创建了一个空数组；<br>第一次添加元素，容量扩充为10，之后1.5倍扩充，增量为int类型向下取整；<br>查找速度快，增删速度慢</td>
+</tr>
+<tr>
+<td align="center">LinkedList</td>
+<td align="center">线程不安全<br>适合单线程访问时使用</td>
+<td>采用双向链表实现，插入，删除操作，性能高，但是查找速度慢</td>
+</tr>
+<tr>
+<td align="center">Vector<br>较少使用</td>
+<td align="center">线程安全<br>适合在多线程访问时使用</td>
+<td>动态对象数组实现，默认构造方法创建了一个大小为10的对象数组；<br>扩充算法：当增量为0时，扩充为原来的2倍；当增量大于0时，扩充为 原来数组大小+增量；<br>不适合进行删除和插入操作；单线程使用时效率较低</td>
+</tr>
+</tbody></table>
+<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><blockquote>
+<p>ArrayList使用动态对象数组实现，每次进行增加或删除操作，都会使操作元素后边的元素位置发生变化（向后或向前移位），所以增删元素相对较慢<br>但是因为有索引（数组下标）的存在，所以查找的速度较快，可以使用索引精确的对数据直接操作</p>
+</blockquote>
+<blockquote>
+<p>LinkedList使用双向链表实现，对于增删操作可以直接改变节点指向，不需要移动元素，所以增删元素较快<br>但是在查找元素时，需要对链表进行遍历，这样查找效率就不如ArrayList速度快</p>
+</blockquote>
+<h2 id="ArrayList迭代异常"><a href="#ArrayList迭代异常" class="headerlink" title="ArrayList迭代异常"></a>ArrayList迭代异常</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 这里使用 ArrayList 举例，LinkedList结果相同</span></span><br><span class="line">	List list = <span class="keyword">new</span> ArrayList();</span><br><span class="line">	list.add(<span class="number">1</span>);</span><br><span class="line">	list.add(<span class="number">2</span>);</span><br><span class="line">	list.add(<span class="number">3</span>);</span><br><span class="line">	list.add(<span class="number">4</span>);</span><br><span class="line">	<span class="comment">// Iterator 迭代器实现迭代，迭代中对集合进行操作会报ConcurrentModificationException</span></span><br><span class="line"><span class="comment">//		Iterator iterator = list.iterator();</span></span><br><span class="line"><span class="comment">//		while (iterator.hasNext()) &#123;</span></span><br><span class="line"><span class="comment">//			Object object = iterator.next();</span></span><br><span class="line"><span class="comment">//			System.out.println(object);</span></span><br><span class="line"><span class="comment">//			if (object.equals(3)) &#123;</span></span><br><span class="line"><span class="comment">//				list.add(10);</span></span><br><span class="line"><span class="comment">//			&#125;</span></span><br><span class="line"><span class="comment">//		&#125;</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">// foreach 实现迭代，迭代中对集合进行操作会报ConcurrentModificationException</span></span><br><span class="line"><span class="comment">//		for (Object object : list) &#123;</span></span><br><span class="line"><span class="comment">//			System.out.println(object);</span></span><br><span class="line"><span class="comment">//			if (object.equals(3)) &#123;</span></span><br><span class="line"><span class="comment">//				list.add(10);</span></span><br><span class="line"><span class="comment">//			&#125;</span></span><br><span class="line"><span class="comment">//		&#125;</span></span><br><span class="line"><span class="comment">//		System.out.println(list);</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">// for i 实现迭代</span></span><br><span class="line">	System.out.println(<span class="string">"for i 实现迭代"</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; list.size(); i++) &#123;</span><br><span class="line">		Object obj = list.get(i);</span><br><span class="line">		System.out.print(obj + <span class="string">"  "</span>);</span><br><span class="line">		<span class="keyword">if</span> (obj.equals(<span class="number">3</span>)) &#123;</span><br><span class="line">			list.add(<span class="number">10</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(<span class="string">"\n"</span> + list);</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// ListIterator 列表迭代器实现迭代</span></span><br><span class="line">	System.out.println(<span class="string">"ListIterator 列表迭代器实现迭代"</span>);</span><br><span class="line">	ListIterator lit = list.listIterator();</span><br><span class="line">	<span class="keyword">while</span>(lit.hasNext()) &#123;</span><br><span class="line">		Object value = lit.next();</span><br><span class="line">		System.out.print(value + <span class="string">"  "</span>);</span><br><span class="line">		<span class="keyword">if</span> (value.equals(<span class="number">1</span>)) &#123;</span><br><span class="line">			lit.add(<span class="string">"listitertor first add"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(<span class="string">"\n"</span> + list);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test2</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(n != <span class="number">0</span>) &#123;</span><br><span class="line">		count += n &amp; <span class="number">1</span>;</span><br><span class="line">		<span class="comment">// 无符号右移，这样就不用考虑负数自动补1了，有多少位循环多少次</span></span><br><span class="line">		<span class="comment">// 1001 &gt;&gt;&gt; 1 值为 100</span></span><br><span class="line">		n = n &gt;&gt;&gt; <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i 实现迭代</span><br><span class="line"><span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span>  <span class="number">4</span>  <span class="number">10</span>  </span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">10</span>]</span><br><span class="line">ListIterator 列表迭代器实现迭代</span><br><span class="line"><span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span>  <span class="number">4</span>  <span class="number">10</span>  </span><br><span class="line">[<span class="number">1</span>, listitertor first add, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">10</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="异常原因"><a href="#异常原因" class="headerlink" title="异常原因"></a>异常原因</h3><blockquote>
+<p>在使用迭代器Iterator和foreach对集合迭代过程中，对集合进行<strong>增加</strong>操作（只有增加操作会报错），会报ConcurrentModificationException并发修改异常<br>但是正常for i不会报错，迭代器Iterator报错可以理解，但是foreach为什么会报错呢？<br><strong>因为for-each循环隐式地创建了一个迭代器，但它没有向用户公开，因此我们无法修改集合中的项目</strong></p>
+</blockquote>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><blockquote>
+<p>使用List实现类提供的 ListIterator() 方法，ListIterator 是Iterator的子类，使用匿名内部类实现，其中有add方法，可以对集合进行增加操作。</p>
+</blockquote>
+
       
 
       <!-- 版权开始 -->
@@ -233,7 +273,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          http://sick-cat.github.io/acm/theNumberOf1/
+          http://sick-cat.github.io/java/base/List/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -288,7 +328,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
@@ -300,7 +340,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/acm//" class="article-tag-list-link color4">acm</a>
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/base//" class="article-tag-list-link color5">base</a>
         		</li>
       		
 		</ul>
@@ -355,7 +399,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/acm/theNumberOf1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/java/base/List/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -369,18 +413,9 @@
   
 <nav id="article-nav">
   
-    <a href="/acm/mirrorOfBinaryTree/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          二叉树的镜像
-        
-      </div>
-    </a>
   
-  
-    <a href="/acm/RectangleCover/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">矩形覆盖</div>
+    <a href="/acm/mirrorOfBinaryTree/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">二叉树的镜像</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -407,7 +442,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路"><span class="toc-number">2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java代码"><span class="toc-number">3.</span> <span class="toc-text">java代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一种"><span class="toc-number">3.1.</span> <span class="toc-text">第一种</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二种"><span class="toc-number">3.2.</span> <span class="toc-text">第二种</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#继承结构"><span class="toc-number">1.</span> <span class="toc-text">继承结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对比"><span class="toc-number">2.</span> <span class="toc-text">对比</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解析"><span class="toc-number">2.1.</span> <span class="toc-text">解析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ArrayList迭代异常"><span class="toc-number">3.</span> <span class="toc-text">ArrayList迭代异常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#输出"><span class="toc-number">4.</span> <span class="toc-text">输出</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#异常原因"><span class="toc-number">4.1.</span> <span class="toc-text">异常原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决方案"><span class="toc-number">4.2.</span> <span class="toc-text">解决方案</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -432,7 +467,7 @@
 <script src="https://jjeejj.github.io/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Thu Jul 25 2019 23:18:54 GMT+0000",
+  id: "Fri Jul 26 2019 21:58:39 GMT+0000",
   owner: 'sick-cat',
   repo: 'sick-cat.github.io',
   oauth: {
