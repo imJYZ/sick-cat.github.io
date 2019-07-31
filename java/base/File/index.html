@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>Scanner小问题 | SickCat的博客</title>
+  <title>File | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="问题 在连续两个输入并且第二个输入是 nextLine() 时，输入数据会产生错误。没有数据或者多了一个空格。">
-<meta name="keywords" content="Scanner,nextLine">
+  <meta name="description" content="File 类的方法API上写的很详细，这里说一下过滤器。    方法 返回值 说明    listFiles(FileFilter filter) File[] 返回抽象路径名数组，这些路径名表示此抽象路径名表示的目录中满足指定过滤器的文件和目录。   listFiles(FilenameFilter filter) File[] 返回抽象路径名数组，这些路径名表示此抽象路径名表示的目录中满足指定">
+<meta name="keywords" content="java File,File,遍历文件夹,删除文件夹下所有文件,java,file过滤器,listFiles()">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Scanner小问题">
-<meta property="og:url" content="http://sick-cat.github.io/java/base/nextLine/index.html">
+<meta property="og:title" content="File">
+<meta property="og:url" content="http://sick-cat.github.io/java/base/File/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="问题 在连续两个输入并且第二个输入是 nextLine() 时，输入数据会产生错误。没有数据或者多了一个空格。">
+<meta property="og:description" content="File 类的方法API上写的很详细，这里说一下过滤器。    方法 返回值 说明    listFiles(FileFilter filter) File[] 返回抽象路径名数组，这些路径名表示此抽象路径名表示的目录中满足指定过滤器的文件和目录。   listFiles(FilenameFilter filter) File[] 返回抽象路径名数组，这些路径名表示此抽象路径名表示的目录中满足指定">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-24T15:01:55.953Z">
+<meta property="og:updated_time" content="2019-07-31T15:55:09.728Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Scanner小问题">
-<meta name="twitter:description" content="问题 在连续两个输入并且第二个输入是 nextLine() 时，输入数据会产生错误。没有数据或者多了一个空格。">
+<meta name="twitter:title" content="File">
+<meta name="twitter:description" content="File 类的方法API上写的很详细，这里说一下过滤器。    方法 返回值 说明    listFiles(FileFilter filter) File[] 返回抽象路径名数组，这些路径名表示此抽象路径名表示的目录中满足指定过滤器的文件和目录。   listFiles(FilenameFilter filter) File[] 返回抽象路径名数组，这些路径名表示此抽象路径名表示的目录中满足指定">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -38,7 +38,7 @@
   
 
   
-    <meta name="keywords" content="Scanner,nextLine,java开发,安全,爬虫,程序员,码农,sickcat">
+    <meta name="keywords" content="java File,File,遍历文件夹,删除文件夹下所有文件,java,file过滤器,listFiles(),java开发,安全,爬虫,程序员,码农,sickcat">
   
 </head>
 </html>
@@ -176,14 +176,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-java-第一阶段：javaEE基础-Scanner小问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-File" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Scanner小问题
+      File
     </h1>
   
 
@@ -195,8 +195,8 @@
                 </span>
 
 
-<a href="/java/base/nextLine/" class="archive-article-date">
-  	<time datetime="2019-07-24T22:58:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-24</time>
+<a href="/java/base/File/" class="archive-article-date">
+  	<time datetime="2019-07-31T23:34:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-31</time>
 </a>
         
       </header>
@@ -204,32 +204,32 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><blockquote>
-<p>在连续两个输入并且第二个输入是 nextLine() 时，输入数据会产生错误。没有数据或者多了一个空格。</p>
-</blockquote>
+        <p><strong>File 类的方法API上写的很详细，这里说一下过滤器。</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th align="center">返回值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>listFiles(FileFilter filter)</td>
+<td align="center">File[]</td>
+<td>返回抽象路径名数组，这些路径名表示此抽象路径名表示的目录中满足指定过滤器的文件和目录。</td>
+</tr>
+<tr>
+<td>listFiles(FilenameFilter filter)</td>
+<td align="center">File[]</td>
+<td>返回抽象路径名数组，这些路径名表示此抽象路径名表示的目录中满足指定过滤器的文件和目录。</td>
+</tr>
+</tbody></table>
 <a id="more"></a>
 
-<h2 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> a = in.nextInt();</span><br><span class="line">		String str1 = in.nextLine();</span><br><span class="line">		String str2 = in.nextLine();</span><br><span class="line"></span><br><span class="line">		System.out.println(a);</span><br><span class="line">		System.out.println(str1);</span><br><span class="line">		System.out.println(str2);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="输入一"><a href="#输入一" class="headerlink" title="输入一"></a>输入一</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">80</span> str1 str1</span><br><span class="line">str2</span><br></pre></td></tr></table></figure>
-
-<h3 id="输出一"><a href="#输出一" class="headerlink" title="输出一"></a>输出一</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">80</span></span><br><span class="line"> str1 str1</span><br><span class="line">str2</span><br></pre></td></tr></table></figure>
-
 <blockquote>
-<p>发现输出第一个str前边有空格，即在输入80之后，第一个nextLine() 接收了之后的空格，直到遇到换行符结束。</p>
+<p>二者作用一样，只不过实现的接口略有不同。<br>写了个小东西，遍历或删除目录下的所有文件和文件夹<br>这里我使用了listFiles(FileFilter filter)方法，通过匿名内部类实现的 FileFilter 接口</p>
 </blockquote>
-<h3 id="输入二"><a href="#输入二" class="headerlink" title="输入二"></a>输入二</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">80</span></span><br><span class="line">only str2</span><br></pre></td></tr></table></figure>
-
-<h3 id="输出二"><a href="#输出二" class="headerlink" title="输出二"></a>输出二</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">80</span></span><br><span class="line"></span><br><span class="line">only str2</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>输入80后，直接换行，这时str1接收了这个换行，并且遇到换行结束，所以str1中只有一个换行符，再次输入会是 str2 的内容</p>
-</blockquote>
-<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p><strong>next()、nextInt()……接收输入以空格为分隔，不能接收换行符<br>只有nextLine() 可以接收换行符，并且以换行符为分隔</strong></p>
-<blockquote>
-<p>输入时使用两个连续的 nextLine() ，第一个nextLine() 用于接收换行或者其他的无效输入，第二个nextLine() 接收有效输入</p>
-</blockquote>
-
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileFilter;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 遍历文件夹中的所有文件，包括子文件夹下的文件</span></span><br><span class="line"><span class="comment"> * 遍历之后，逐级删除</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> jiayanzhao</span></span><br><span class="line"><span class="comment"> * 2019年7月31日</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">fileTraversalAndDeletion</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		File file = <span class="keyword">new</span> File(<span class="string">"F:/test"</span>);</span><br><span class="line">		<span class="comment">// 如果文件不存在</span></span><br><span class="line">		<span class="keyword">if</span> (!file.exists()) &#123;</span><br><span class="line">			System.out.println(<span class="string">"File does not exist"</span>);</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 遍历目录中的文件并打印</span></span><br><span class="line">		ArrayList&lt;File&gt; files = traversalFile(file);</span><br><span class="line">		<span class="keyword">for</span> (File temFile : files) &#123;</span><br><span class="line">			System.out.println(temFile);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 删除文件夹，及文件夹下的所有内容</span></span><br><span class="line"><span class="comment">//		deletionFile(file);</span></span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 遍历文件夹下所有文件和文件夹</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> file</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">static</span> ArrayList&lt;File&gt; <span class="title">traversalAll</span><span class="params">(File file)</span> </span>&#123;</span><br><span class="line">		ArrayList&lt;File&gt; files = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">		<span class="comment">// 数组形式保存当前目录下的文件和文件夹</span></span><br><span class="line">        <span class="comment">// 匿名内部类实现 FileFilter 接口</span></span><br><span class="line">		File[] tempFiles = file.listFiles(<span class="keyword">new</span> FileFilter() &#123;</span><br><span class="line">			<span class="meta">@Override</span></span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">accept</span><span class="params">(File pathname)</span> </span>&#123;</span><br><span class="line">				<span class="comment">// 如果是文件夹，就递归遍历 子文件夹。</span></span><br><span class="line">				<span class="keyword">if</span> (pathname.isDirectory()) &#123;</span><br><span class="line">					<span class="comment">// 把子文件夹中的文件添加到 大集合 中</span></span><br><span class="line">					files.addAll(traversalAll(pathname));</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line">		<span class="comment">// 数组转为集合</span></span><br><span class="line">		List&lt;File&gt; tempFilesList = Arrays.asList(tempFiles);</span><br><span class="line">		<span class="comment">// 把每个文件夹下的 文件和文件夹 保存到大集合中</span></span><br><span class="line">		files.addAll(tempFilesList);</span><br><span class="line">		<span class="keyword">return</span> files;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 删除文件夹和子文件夹下所有文件</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> file</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">deletionFile</span><span class="params">(File file)</span> </span>&#123;</span><br><span class="line">		ArrayList&lt;File&gt; files = traversalAll(file);</span><br><span class="line">		<span class="comment">// 先遍历删除 文件 和 子文件夹</span></span><br><span class="line">		<span class="keyword">for</span> (File deleteFile : files) &#123;</span><br><span class="line">			System.out.println(deleteFile + <span class="string">"---"</span> + deleteFile.delete());</span><br><span class="line">		&#125;</span><br><span class="line">	</span><br><span class="line">		<span class="comment">// 再最后删除file文件夹</span></span><br><span class="line">		System.out.println(file + <span class="string">"---"</span> + file.delete());</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 遍历当前目录以及子目录下所有文件</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> file</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">static</span> ArrayList&lt;File&gt; <span class="title">traversalFile</span><span class="params">(File file)</span></span>&#123;</span><br><span class="line">		ArrayList&lt;File&gt; tempFiles = traversalAll(file);</span><br><span class="line">		ArrayList&lt;File&gt; files = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">		<span class="comment">// 把大集合中的所有 文件 逐个添加到files中</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; tempFiles.size(); i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (tempFiles.get(i).isFile()) &#123;</span><br><span class="line">				files.add(tempFiles.get(i));</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> files;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       <!-- 版权开始 -->
@@ -242,7 +242,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          http://sick-cat.github.io/java/base/nextLine/
+          http://sick-cat.github.io/java/base/File/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -368,7 +368,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/java/base/nextLine/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/java/base/File/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -382,18 +382,9 @@
   
 <nav id="article-nav">
   
-    <a href="/acm/RectangleCover/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          矩形覆盖
-        
-      </div>
-    </a>
   
-  
-    <a href="/java/base/print(obj)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">print打印对象</div>
+    <a href="/java/base/Exception/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">异常</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -420,7 +411,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题"><span class="toc-number">1.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试代码"><span class="toc-number">2.</span> <span class="toc-text">测试代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#输入一"><span class="toc-number">2.1.</span> <span class="toc-text">输入一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输出一"><span class="toc-number">2.2.</span> <span class="toc-text">输出一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输入二"><span class="toc-number">2.3.</span> <span class="toc-text">输入二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输出二"><span class="toc-number">2.4.</span> <span class="toc-text">输出二</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决办法"><span class="toc-number">3.</span> <span class="toc-text">解决办法</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -445,7 +436,7 @@
 <script src="https://jjeejj.github.io/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Wed Jul 24 2019 22:58:28 GMT+0000",
+  id: "Wed Jul 31 2019 23:34:05 GMT+0000",
   owner: 'sick-cat',
   repo: 'sick-cat.github.io',
   oauth: {

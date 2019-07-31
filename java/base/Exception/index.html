@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>Scanner小问题 | SickCat的博客</title>
+  <title>异常 | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="问题 在连续两个输入并且第二个输入是 nextLine() 时，输入数据会产生错误。没有数据或者多了一个空格。">
-<meta name="keywords" content="Scanner,nextLine">
+  <meta name="description" content="继承体系 Throwable 错误和异常的根类    Error：是严重的问题，不应该试图去捕获    Exception：应该试图去捕获    RuntimeException 运行时异常">
+<meta name="keywords" content="java异常,java,异常,Exception">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Scanner小问题">
-<meta property="og:url" content="http://sick-cat.github.io/java/base/nextLine/index.html">
+<meta property="og:title" content="异常">
+<meta property="og:url" content="http://sick-cat.github.io/java/base/Exception/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="问题 在连续两个输入并且第二个输入是 nextLine() 时，输入数据会产生错误。没有数据或者多了一个空格。">
+<meta property="og:description" content="继承体系 Throwable 错误和异常的根类    Error：是严重的问题，不应该试图去捕获    Exception：应该试图去捕获    RuntimeException 运行时异常">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-24T15:01:55.953Z">
+<meta property="og:updated_time" content="2019-07-31T15:30:54.523Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Scanner小问题">
-<meta name="twitter:description" content="问题 在连续两个输入并且第二个输入是 nextLine() 时，输入数据会产生错误。没有数据或者多了一个空格。">
+<meta name="twitter:title" content="异常">
+<meta name="twitter:description" content="继承体系 Throwable 错误和异常的根类    Error：是严重的问题，不应该试图去捕获    Exception：应该试图去捕获    RuntimeException 运行时异常">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -38,7 +38,7 @@
   
 
   
-    <meta name="keywords" content="Scanner,nextLine,java开发,安全,爬虫,程序员,码农,sickcat">
+    <meta name="keywords" content="java异常,java,异常,Exception,java开发,安全,爬虫,程序员,码农,sickcat">
   
 </head>
 </html>
@@ -176,14 +176,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-java-第一阶段：javaEE基础-Scanner小问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-java-第一阶段：javaEE基础-异常" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Scanner小问题
+      异常
     </h1>
   
 
@@ -195,8 +195,8 @@
                 </span>
 
 
-<a href="/java/base/nextLine/" class="archive-article-date">
-  	<time datetime="2019-07-24T22:58:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-24</time>
+<a href="/java/base/Exception/" class="archive-article-date">
+  	<time datetime="2019-07-31T23:27:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-31</time>
 </a>
         
       </header>
@@ -204,31 +204,67 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><blockquote>
-<p>在连续两个输入并且第二个输入是 nextLine() 时，输入数据会产生错误。没有数据或者多了一个空格。</p>
-</blockquote>
+        <h2 id="继承体系"><a href="#继承体系" class="headerlink" title="继承体系"></a>继承体系</h2><ul>
+<li>Throwable 错误和异常的根类   <ul>
+<li>Error：是严重的问题，不应该试图去捕获   </li>
+<li>Exception：应该试图去捕获   <ul>
+<li>RuntimeException 运行时异常  </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <a id="more"></a>
 
-<h2 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> a = in.nextInt();</span><br><span class="line">		String str1 = in.nextLine();</span><br><span class="line">		String str2 = in.nextLine();</span><br><span class="line"></span><br><span class="line">		System.out.println(a);</span><br><span class="line">		System.out.println(str1);</span><br><span class="line">		System.out.println(str2);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="输入一"><a href="#输入一" class="headerlink" title="输入一"></a>输入一</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">80</span> str1 str1</span><br><span class="line">str2</span><br></pre></td></tr></table></figure>
-
-<h3 id="输出一"><a href="#输出一" class="headerlink" title="输出一"></a>输出一</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">80</span></span><br><span class="line"> str1 str1</span><br><span class="line">str2</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>发现输出第一个str前边有空格，即在输入80之后，第一个nextLine() 接收了之后的空格，直到遇到换行符结束。</p>
+<p>Exception分为两类:<br>一类称为编译时异常(受检异常)Exception中除了RuntimeException以外的异常；<br>另一类称为运行时异常(非受检异常)RuntimeException及其子类。</p>
 </blockquote>
-<h3 id="输入二"><a href="#输入二" class="headerlink" title="输入二"></a>输入二</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">80</span></span><br><span class="line">only str2</span><br></pre></td></tr></table></figure>
-
-<h3 id="输出二"><a href="#输出二" class="headerlink" title="输出二"></a>输出二</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">80</span></span><br><span class="line"></span><br><span class="line">only str2</span><br></pre></td></tr></table></figure>
+<h2 id="异常执行过程"><a href="#异常执行过程" class="headerlink" title="异常执行过程"></a>异常执行过程</h2><blockquote>
+<p>当程序执行到某一行时，产生错误，首先尝试内部解决，如果内部能解决就解决，不能解决就向上找调用者， 调用者也是先尝试自己解决不能解决继续向上找，以此类推直至找到jvm，jvm将异常名、异常信息、异常出现位置这些信息返回到控制台。</p>
+</blockquote>
+<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><h3 id="捕获异常"><a href="#捕获异常" class="headerlink" title="捕获异常"></a>捕获异常</h3><blockquote>
+<p>真正的通过代码等方式处理问题</p>
+</blockquote>
+<h4 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">	可能会出现异常的代码</span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类型 异常对象名称)&#123;</span><br><span class="line">	处理异常的代码</span><br><span class="line"><span class="comment">// 如果没有需求，finally 可以不写</span></span><br><span class="line">&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">	一定会执行的语句</span><br><span class="line">	释放资源操作的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>输入80后，直接换行，这时str1接收了这个换行，并且遇到换行结束，所以str1中只有一个换行符，再次输入会是 str2 的内容</p>
+<p>try可以和多个catch进行组合，catch小括号中的异常名，从上向下看类型逐渐增大，如果是平级的谁在上谁在下无所谓。<br> 无论有无异常，finally都会执行，即使遇到return语句也会执行；只有遇到System.exit(0);时不会执行。</p>
 </blockquote>
-<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p><strong>next()、nextInt()……接收输入以空格为分隔，不能接收换行符<br>只有nextLine() 可以接收换行符，并且以换行符为分隔</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">	可能会出现异常的代码</span><br><span class="line"><span class="comment">// 也可以这样写，但是不建议，尽量把每个异常单独抛出</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类型<span class="number">1</span> | 异常类型<span class="number">2</span> 异常对象名称)&#123;</span><br><span class="line">	处理异常的代码</span><br><span class="line">	<span class="comment">// 即使执行return，finally 也会执行</span></span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;<span class="keyword">catch</span>(异常声明)&#123;</span><br><span class="line">    处理异常的代码</span><br><span class="line">    <span class="comment">// 只有这种情况才不会执行 finally</span></span><br><span class="line">    System.exit(<span class="number">0</span>);</span><br><span class="line">&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">	一定会执行的语句</span><br><span class="line">	释放资源操作的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>try和finally组合</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    可能发生异常的代码   </span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">    一定要执行的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <blockquote>
-<p>输入时使用两个连续的 nextLine() ，第一个nextLine() 用于接收换行或者其他的无效输入，第二个nextLine() 接收有效输入</p>
+<p>这种结构并不能捕获异常。目的就是想要finally中的代码执行，由于finally不能单独使用，因此需和try组合使用</p>
 </blockquote>
+<h3 id="声明异常"><a href="#声明异常" class="headerlink" title="声明异常"></a>声明异常</h3><blockquote>
+<p>并不是真正的处理，是交给他人处理</p>
+</blockquote>
+<h4 id="throws"><a href="#throws" class="headerlink" title="throws"></a>throws</h4><blockquote>
+<p>用在方法上，告知方法的调用者，该方法可能有问题，使用时需要处理。</p>
+</blockquote>
+<h5 id="格式："><a href="#格式：" class="headerlink" title="格式："></a>格式：</h5><p> <code>方法名  throws  异常名1,异常名2，异常名3,……</code>   </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">示例：</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> <span class="keyword">throws</span> NullPointerException,IndexOutOfBoundsException</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果声明的运行时异常，则调用时可以处理也可以不处理<br>如果声明的是非运行时异常，则调用时必须处理，<br>处理方式两种：<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 1.捕获<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  2.继续向上声明throws</p>
+</blockquote>
+<h4 id="throw"><a href="#throw" class="headerlink" title="throw"></a>throw</h4><blockquote>
+<p>用在方法内，主动抛出一个异常对象<br>如果抛出的是运行时异常，处理或者不处理都可以<br>如果抛出的是编译时异常，则必须处理，捕获或者是throws都可以，但是一般都选择使用throws，调用该方法时必须做出处理。</p>
+</blockquote>
+<h5 id="格式-1"><a href="#格式-1" class="headerlink" title="格式"></a>格式</h5><p><code>throw new NullPointerException();</code></p>
+<h2 id="自定义异常类"><a href="#自定义异常类" class="headerlink" title="自定义异常类"></a>自定义异常类</h2><blockquote>
+<p>定义类继承Exception或者继承RuntimeException<br>调用父类的构造方法(可选)</p>
+</blockquote>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">exceptionDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">double</span> r = in.nextDouble();</span><br><span class="line">		<span class="comment">// 处理 getArea 可能存在的异常</span></span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			getArea(r);</span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			System.out.println(e);</span><br><span class="line">		&#125;</span><br><span class="line">		in.close();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 定义方法，求的圆面积</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getArea</span><span class="params">(<span class="keyword">double</span> r)</span> <span class="keyword">throws</span> RadiusLessThanZeroException </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (r &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="comment">// 抛出运行时异常，不处理，选择上抛，在方法后添加throws</span></span><br><span class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> RadiusLessThanZeroException(<span class="string">"半径必须大于零"</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			System.out.println(Math.PI * Math.pow(r, <span class="number">2</span>));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义异常类 半径小于等于0异常</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RadiusLessThanZeroException</span> <span class="keyword">extends</span> <span class="title">Exception</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">RadiusLessThanZeroException</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">RadiusLessThanZeroException</span><span class="params">(String msg)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">super</span>(msg);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="异常在继承中的问题"><a href="#异常在继承中的问题" class="headerlink" title="异常在继承中的问题"></a>异常在继承中的问题</h2><p><strong>重写方法时</strong>  </p>
+<ol>
+<li>父类方法没有throws子类重写时可以加也可以不加，如果加throws，throws后边只能跟运行时异常   </li>
+<li>父类方法有throws，并且是Exception,那么子类重写时，可以加throws，也可以不加throws，如果加throws，throws后声明的异常与父类相同或者是父类异常的子集都可以</li>
+</ol>
 
       
 
@@ -242,7 +278,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          http://sick-cat.github.io/java/base/nextLine/
+          http://sick-cat.github.io/java/base/Exception/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -368,7 +404,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/java/base/nextLine/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/java/base/Exception/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -382,18 +418,18 @@
   
 <nav id="article-nav">
   
-    <a href="/acm/RectangleCover/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/java/base/File/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          矩形覆盖
+          File
         
       </div>
     </a>
   
   
-    <a href="/java/base/print(obj)/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">print打印对象</div>
+    <a href="/java/base/Set/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Set</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -420,7 +456,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题"><span class="toc-number">1.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试代码"><span class="toc-number">2.</span> <span class="toc-text">测试代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#输入一"><span class="toc-number">2.1.</span> <span class="toc-text">输入一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输出一"><span class="toc-number">2.2.</span> <span class="toc-text">输出一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输入二"><span class="toc-number">2.3.</span> <span class="toc-text">输入二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输出二"><span class="toc-number">2.4.</span> <span class="toc-text">输出二</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决办法"><span class="toc-number">3.</span> <span class="toc-text">解决办法</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#继承体系"><span class="toc-number">1.</span> <span class="toc-text">继承体系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常执行过程"><span class="toc-number">2.</span> <span class="toc-text">异常执行过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常处理"><span class="toc-number">3.</span> <span class="toc-text">异常处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#捕获异常"><span class="toc-number">3.1.</span> <span class="toc-text">捕获异常</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#格式"><span class="toc-number">3.1.1.</span> <span class="toc-text">格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#声明异常"><span class="toc-number">3.2.</span> <span class="toc-text">声明异常</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#throws"><span class="toc-number">3.2.1.</span> <span class="toc-text">throws</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#格式："><span class="toc-number">3.2.1.1.</span> <span class="toc-text">格式：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#throw"><span class="toc-number">3.2.2.</span> <span class="toc-text">throw</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#格式-1"><span class="toc-number">3.2.2.1.</span> <span class="toc-text">格式</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义异常类"><span class="toc-number">4.</span> <span class="toc-text">自定义异常类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#示例"><span class="toc-number">4.1.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常在继承中的问题"><span class="toc-number">5.</span> <span class="toc-text">异常在继承中的问题</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -445,7 +481,7 @@
 <script src="https://jjeejj.github.io/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Wed Jul 24 2019 22:58:28 GMT+0000",
+  id: "Wed Jul 31 2019 23:27:23 GMT+0000",
   owner: 'sick-cat',
   repo: 'sick-cat.github.io',
   oauth: {

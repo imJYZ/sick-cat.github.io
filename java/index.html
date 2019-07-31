@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
   <title>java成长路线 | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="目录第一阶段 1、基础语法 java介绍   数据类型和Max+1   标识符与运算符   数组在内存中的加载过程    2、面向对象 局部变量与成员变量 类加载过程 print打印对象   3、核心类库 Scanner小问题   4、集合 List">
+  <meta name="description" content="目录第一阶段 1、基础语法 java介绍   数据类型和Max+1   标识符与运算符   数组在内存中的加载过程    2、面向对象 局部变量与成员变量 类加载过程 print打印对象   3、核心类库 Scanner小问题   4、集合 List Set   5、异常 异常   6、IO File">
 <meta name="keywords" content="java开发,安全,爬虫,程序员,码农,sickcat">
 <meta property="og:type" content="website">
 <meta property="og:title" content="java成长路线">
 <meta property="og:url" content="http://sick-cat.github.io/java/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="目录第一阶段 1、基础语法 java介绍   数据类型和Max+1   标识符与运算符   数组在内存中的加载过程    2、面向对象 局部变量与成员变量 类加载过程 print打印对象   3、核心类库 Scanner小问题   4、集合 List">
+<meta property="og:description" content="目录第一阶段 1、基础语法 java介绍   数据类型和Max+1   标识符与运算符   数组在内存中的加载过程    2、面向对象 局部变量与成员变量 类加载过程 print打印对象   3、核心类库 Scanner小问题   4、集合 List Set   5、异常 异常   6、IO File">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-26T16:09:04.616Z">
+<meta property="og:updated_time" content="2019-07-31T15:54:58.402Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java成长路线">
-<meta name="twitter:description" content="目录第一阶段 1、基础语法 java介绍   数据类型和Max+1   标识符与运算符   数组在内存中的加载过程    2、面向对象 局部变量与成员变量 类加载过程 print打印对象   3、核心类库 Scanner小问题   4、集合 List">
+<meta name="twitter:description" content="目录第一阶段 1、基础语法 java介绍   数据类型和Max+1   标识符与运算符   数组在内存中的加载过程    2、面向对象 局部变量与成员变量 类加载过程 print打印对象   3、核心类库 Scanner小问题   4、集合 List Set   5、异常 异常   6、IO File">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -224,6 +224,15 @@
 </li>
 <li><h4 id="4、集合"><a href="#4、集合" class="headerlink" title="4、集合"></a>4、集合</h4><ul>
 <li><a href="\java\base\List">List</a></li>
+<li><a href="\java\base\Set">Set</a></li>
+</ul>
+</li>
+<li><h4 id="5、异常"><a href="#5、异常" class="headerlink" title="5、异常"></a>5、异常</h4><ul>
+<li><a href="\java\base\Exception">异常</a></li>
+</ul>
+</li>
+<li><h4 id="6、IO"><a href="#6、IO" class="headerlink" title="6、IO"></a>6、IO</h4><ul>
+<li><a href="\java\base\File">File</a></li>
 </ul>
 </li>
 </ul>
@@ -373,7 +382,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目录"><span class="toc-number">1.</span> <span class="toc-text">目录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一阶段"><span class="toc-number">1.1.</span> <span class="toc-text">第一阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、基础语法"><span class="toc-number">1.1.1.</span> <span class="toc-text">1、基础语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、面向对象"><span class="toc-number">1.1.2.</span> <span class="toc-text">2、面向对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、核心类库"><span class="toc-number">1.1.3.</span> <span class="toc-text">3、核心类库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、集合"><span class="toc-number">1.1.4.</span> <span class="toc-text">4、集合</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目录"><span class="toc-number">1.</span> <span class="toc-text">目录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一阶段"><span class="toc-number">1.1.</span> <span class="toc-text">第一阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、基础语法"><span class="toc-number">1.1.1.</span> <span class="toc-text">1、基础语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、面向对象"><span class="toc-number">1.1.2.</span> <span class="toc-text">2、面向对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、核心类库"><span class="toc-number">1.1.3.</span> <span class="toc-text">3、核心类库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、集合"><span class="toc-number">1.1.4.</span> <span class="toc-text">4、集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5、异常"><span class="toc-number">1.1.5.</span> <span class="toc-text">5、异常</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6、IO"><span class="toc-number">1.1.6.</span> <span class="toc-text">6、IO</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -528,11 +537,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">essays</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color2">essays</a>
               </li>
              
               <li class="article-tag-list-item">
