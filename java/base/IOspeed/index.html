@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>java成长路线 | SickCat的博客</title>
+  <title>java输入输出速度对比 | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="目录第一阶段 1、基础语法 java介绍   数据类型和Max+1   标识符与运算符   数组在内存中的加载过程    2、面向对象 局部变量与成员变量 类加载过程 print打印对象   3、核心类库 Scanner小问题   4、集合 List Set   5、异常 异常   6、IO File">
-<meta name="keywords" content="java开发,安全,爬虫,程序员,码农,sickcat">
-<meta property="og:type" content="website">
-<meta property="og:title" content="java成长路线">
-<meta property="og:url" content="http://sick-cat.github.io/java/index.html">
+  <meta name="description" content="说明 在使用方法前就定义了数组，再把数组传入方法内，其实这里就使用了缓存的思想本篇文章讨论自定义数组大小，对不同IO读写方法速度的影响读写速度受计算机软硬件环境影响，测试结果为多次测试数据，去除最大值和最小值，求平均值得出。">
+<meta name="keywords" content="javaio,FilterOutputStream,BufferedOutputStream,FilterInputStream,BufferedInputStream,InputStreamReader,FileReader,OutputStreamWriter,FileWriter">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java输入输出速度对比">
+<meta property="og:url" content="http://sick-cat.github.io/java/base/IOspeed/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="目录第一阶段 1、基础语法 java介绍   数据类型和Max+1   标识符与运算符   数组在内存中的加载过程    2、面向对象 局部变量与成员变量 类加载过程 print打印对象   3、核心类库 Scanner小问题   4、集合 List Set   5、异常 异常   6、IO File">
+<meta property="og:description" content="说明 在使用方法前就定义了数组，再把数组传入方法内，其实这里就使用了缓存的思想本篇文章讨论自定义数组大小，对不同IO读写方法速度的影响读写速度受计算机软硬件环境影响，测试结果为多次测试数据，去除最大值和最小值，求平均值得出。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-31T15:54:58.402Z">
+<meta property="og:updated_time" content="2019-08-02T15:13:04.118Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java成长路线">
-<meta name="twitter:description" content="目录第一阶段 1、基础语法 java介绍   数据类型和Max+1   标识符与运算符   数组在内存中的加载过程    2、面向对象 局部变量与成员变量 类加载过程 print打印对象   3、核心类库 Scanner小问题   4、集合 List Set   5、异常 异常   6、IO File">
+<meta name="twitter:title" content="java输入输出速度对比">
+<meta name="twitter:description" content="说明 在使用方法前就定义了数组，再把数组传入方法内，其实这里就使用了缓存的思想本篇文章讨论自定义数组大小，对不同IO读写方法速度的影响读写速度受计算机软硬件环境影响，测试结果为多次测试数据，去除最大值和最小值，求平均值得出。">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -38,7 +38,7 @@
   
 
   
-    <meta name="keywords" content="java开发,安全,爬虫,程序员,码农,sickcat">
+    <meta name="keywords" content="javaio,FilterOutputStream,BufferedOutputStream,FilterInputStream,BufferedInputStream,InputStreamReader,FileReader,OutputStreamWriter,FileWriter,java开发,安全,爬虫,程序员,码农,sickcat">
   
 </head>
 </html>
@@ -176,14 +176,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-java输入输出速度对比" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      java成长路线
+      java输入输出速度对比
     </h1>
   
 
@@ -195,8 +195,8 @@
                 </span>
 
 
-<a href="/java/index.html" class="archive-article-date">
-  	<time datetime="2019-07-10T09:44:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
+<a href="/java/base/IOspeed/" class="archive-article-date">
+  	<time datetime="2019-08-02T23:10:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
 </a>
         
       </header>
@@ -204,38 +204,126 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><h3 id="第一阶段"><a href="#第一阶段" class="headerlink" title="第一阶段"></a>第一阶段</h3><ul>
-<li><h4 id="1、基础语法"><a href="#1、基础语法" class="headerlink" title="1、基础语法"></a>1、基础语法</h4><ul>
-<li><a href="\java\base\JavaIntroduce">java介绍</a>  </li>
-<li><a href="\java\base\DataTypeAndMAX+1">数据类型和Max+1</a>  </li>
-<li><a href="\java\base\IdentifiersAndOperators">标识符与运算符</a>  </li>
-<li><a href="\java\base\array">数组在内存中的加载过程</a> </li>
-</ul>
-</li>
-<li><h4 id="2、面向对象"><a href="#2、面向对象" class="headerlink" title="2、面向对象"></a>2、面向对象</h4><ul>
-<li><a href="\java\base\LocalAndMemberVariables">局部变量与成员变量</a></li>
-<li><a href="\java\base\ClassloadingProcess">类加载过程</a></li>
-<li><a href="\java\base\print(obj)">print打印对象</a></li>
-</ul>
-</li>
-<li><h4 id="3、核心类库"><a href="#3、核心类库" class="headerlink" title="3、核心类库"></a>3、核心类库</h4><ul>
-<li><a href="\java\base\Scanner小问题">Scanner小问题</a></li>
-</ul>
-</li>
-<li><h4 id="4、集合"><a href="#4、集合" class="headerlink" title="4、集合"></a>4、集合</h4><ul>
-<li><a href="\java\base\List">List</a></li>
-<li><a href="\java\base\Set">Set</a></li>
-</ul>
-</li>
-<li><h4 id="5、异常"><a href="#5、异常" class="headerlink" title="5、异常"></a>5、异常</h4><ul>
-<li><a href="\java\base\Exception">异常</a></li>
-</ul>
-</li>
-<li><h4 id="6、IO"><a href="#6、IO" class="headerlink" title="6、IO"></a>6、IO</h4><ul>
-<li><a href="\java\base\File">File</a></li>
+        <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><blockquote>
+<p>在使用方法前就定义了数组，再把数组传入方法内，其实这里就使用了缓存的思想<br>本篇文章讨论自定义数组大小，对不同IO读写方法速度的影响<br>读写速度受计算机软硬件环境影响，测试结果为多次测试数据，去除最大值和最小值，求平均值得出。</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="继承关系"><a href="#继承关系" class="headerlink" title="继承关系"></a>继承关系</h2><ul>
+<li>java.lang.Object <ul>
+<li>java.io.OutputStream<ul>
+<li>java.io.FilterOutputStream <ul>
+<li>java.io.BufferedOutputStream</li>
 </ul>
 </li>
 </ul>
+</li>
+<li>java.io.InputStream <ul>
+<li>java.io.FilterInputStream <ul>
+<li>java.io.BufferedInputStream </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>java.io.Reader <ul>
+<li>java.io.BufferedReader</li>
+<li>java.io.InputStreamReader <ul>
+<li>java.io.FileReader </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>java.io.Writer <ul>
+<li>java.io.BufferedWriter </li>
+<li>java.io.OutputStreamWriter <ul>
+<li>java.io.FileWriter </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="生成测试文件"><a href="#生成测试文件" class="headerlink" title="生成测试文件"></a>生成测试文件</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">BufferedWriter bw = <span class="keyword">new</span> BufferedWriter(fw);</span><br><span class="line">String str = <span class="string">"从前有座，山上有座庙，庙里有个老和尚，在和小和尚讲故事，讲的故事是："</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000000</span>; i++) &#123;</span><br><span class="line">	fw.write(str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>测试文本大小：972MB</p>
+</blockquote>
+<h2 id="字节流"><a href="#字节流" class="headerlink" title="字节流"></a>字节流</h2><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	File file = <span class="keyword">new</span> File(<span class="string">"src/io/a.txt"</span>);</span><br><span class="line">	File file1 = <span class="keyword">new</span> File(<span class="string">"src/io/test.txt"</span>);</span><br><span class="line">	<span class="keyword">if</span> (!file.exists()) &#123;</span><br><span class="line">		System.out.println(<span class="string">"file is not found"</span>);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">long</span> start = System.currentTimeMillis();</span><br><span class="line">	<span class="keyword">try</span> &#123;</span><br><span class="line">		InputStream bis = <span class="keyword">new</span> FileInputStream(file);</span><br><span class="line">		OutputStream bos = <span class="keyword">new</span> FileOutputStream(file1);</span><br><span class="line">		</span><br><span class="line"><span class="comment">//			InputStream ins = new FileInputStream(file);</span></span><br><span class="line"><span class="comment">//			BufferedInputStream bis = new BufferedInputStream(ins);</span></span><br><span class="line"><span class="comment">//			OutputStream fos = new FileOutputStream(file1);</span></span><br><span class="line"><span class="comment">//			BufferedOutputStream bos = new BufferedOutputStream(fos);</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">byte</span>[] bytes = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</span><br><span class="line">		<span class="keyword">int</span> len = -<span class="number">1</span> ;</span><br><span class="line">		<span class="keyword">while</span> ((len = bis.read(bytes)) != -<span class="number">1</span>) &#123;</span><br><span class="line">			bos.write(bytes, <span class="number">0</span>, len);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// (BufferedOutputStream)关闭此输入流并释放与流 相关联的 任何 系统资源。 </span></span><br><span class="line">		bis.close();</span><br><span class="line">		bos.close();</span><br><span class="line">	<span class="comment">// 上边已经能关闭了流，下面这句会抛出IOException: Stream Closed</span></span><br><span class="line">    <span class="comment">//	System.out.println(ins.read());</span></span><br><span class="line">	&#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">long</span> end = System.currentTimeMillis();</span><br><span class="line">	System.out.println(end -  start);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><table>
+<thead>
+<tr>
+<th align="center">byte[]长度</th>
+<th align="center">FileInputStream<br>FileOutputStream</th>
+<th align="center">BufferedInputStream<br>BufferedOutputStream</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1024</td>
+<td align="center">7953 ms</td>
+<td align="center">5840 ms</td>
+</tr>
+<tr>
+<td align="center">8192</td>
+<td align="center">5193 ms</td>
+<td align="center">5458 ms</td>
+</tr>
+<tr>
+<td align="center">102400</td>
+<td align="center">4820 ms</td>
+<td align="center">4904 ms</td>
+</tr>
+</tbody></table>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><blockquote>
+<p>BufferedOutputStream默认缓冲区是一个 byte[8192] 的数组。  </p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// BufferedOutputStream.class</span></span><br><span class="line"><span class="comment">// 存储数据的内部缓冲区</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">byte</span> buf[];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个新的缓冲输出流来将数据写入指定底层输出流</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">BufferedOutputStream</span><span class="params">(OutputStream out)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>(out, <span class="number">8192</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个新的缓冲输出流,来将数据写入,使用指定的缓冲区,指定底层输出流大小。</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">BufferedOutputStream</span><span class="params">(OutputStream out, <span class="keyword">int</span> size)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">super</span>(out);</span><br><span class="line">    <span class="keyword">if</span> (size &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"Buffer size &lt;= 0"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    buf = <span class="keyword">new</span> <span class="keyword">byte</span>[size];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>每次写入数据，如果是小数据的话（小于8k），则只是复制到缓冲buf，不进行磁盘io，一直到缓冲buf满了之后，才进行一次磁盘IO，把缓冲buf的字节全部写入磁盘。<br>如果是大数据（大于8K），则先把刷新缓冲区，把缓冲区内容写入到磁盘，然后把传入的大数据写入到磁盘。<br><strong>如果每次传入数据大于等于8k，则使用BufferedOutputStream的效率反而会慢，因为每次写入数据都多了一步————刷新缓存区</strong></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// BufferedOutputStream.class</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(<span class="keyword">byte</span> b[], <span class="keyword">int</span> off, <span class="keyword">int</span> len)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 如果请求长度超过输出缓冲区的大小</span></span><br><span class="line">        <span class="keyword">if</span> (len &gt;= buf.length) &#123;</span><br><span class="line">            <span class="comment">// 刷新输出缓冲区，然后直接写入数据。</span></span><br><span class="line">            flushBuffer();</span><br><span class="line">            out.write(b, off, len);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (len &gt; buf.length - count) &#123;</span><br><span class="line">            flushBuffer();</span><br><span class="line">        &#125;</span><br><span class="line">        System.arraycopy(b, off, buf, count, len);</span><br><span class="line">        count += len;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="字符流"><a href="#字符流" class="headerlink" title="字符流"></a>字符流</h2><h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	File file = <span class="keyword">new</span> File(<span class="string">"src/io/a.txt"</span>);</span><br><span class="line">	File file1 = <span class="keyword">new</span> File(<span class="string">"src/io/test.txt"</span>);</span><br><span class="line">	<span class="keyword">if</span> (!file.exists()) &#123;</span><br><span class="line">		System.out.println(<span class="string">"file is not found"</span>);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">long</span> start = System.currentTimeMillis();</span><br><span class="line">	<span class="keyword">try</span> &#123;</span><br><span class="line">		Reader br = <span class="keyword">new</span> FileReader(file);</span><br><span class="line">		Writer bw = <span class="keyword">new</span> FileWriter(file1);</span><br><span class="line"><span class="comment">//		BufferedReader br = new BufferedReader(fr);</span></span><br><span class="line"><span class="comment">//		BufferedWriter bw = new BufferedWriter(fw);</span></span><br><span class="line">		</span><br><span class="line">		<span class="keyword">char</span>[] ch = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">1024</span>];</span><br><span class="line">		<span class="keyword">int</span> len = -<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span> ((len = br.read(ch)) != -<span class="number">1</span>) &#123;</span><br><span class="line">			bw.write(ch, <span class="number">0</span>, len);</span><br><span class="line">		&#125;</span><br><span class="line">		bw.close();</span><br><span class="line">		br.close();</span><br><span class="line">		<span class="keyword">long</span> end = System.currentTimeMillis();</span><br><span class="line">		System.out.println(<span class="string">"time："</span> + (end - start));</span><br><span class="line">		</span><br><span class="line">	&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果-1"><a href="#结果-1" class="headerlink" title="结果"></a>结果</h3><table>
+<thead>
+<tr>
+<th align="center">char[]长度</th>
+<th align="center">FileReader<br>FileWriter</th>
+<th align="center">BufferedReader<br>BufferedWriter</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1024</td>
+<td align="center">7153 ms</td>
+<td align="center">7056 ms</td>
+</tr>
+<tr>
+<td align="center">8192</td>
+<td align="center">7067 ms</td>
+<td align="center">7254 ms</td>
+</tr>
+<tr>
+<td align="center">102400</td>
+<td align="center">6826 ms</td>
+<td align="center">6979 ms</td>
+</tr>
+</tbody></table>
+<h3 id="结论-1"><a href="#结论-1" class="headerlink" title="结论"></a>结论</h3><blockquote>
+<p>FileWriter是有默认缓冲区的，是一个 char[1024] 数组； 每次写入数据，如果是小数据的话（小于等于1024字符（GBK字符，两字节）），<br>则开辟一个 char[1024] 数组，每次写入数据都先存到数组里，直到缓冲buf满了之后，才进行一次磁盘io，把cbuf的字符全部写入磁盘。<br>如果写入数据，大于1024字符，则开辟一个和写入数据大小相同的数组，然后直接进行一次io，把cbuf写入磁盘。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Writer.class</span></span><br><span class="line"><span class="comment">// 用于保存字符串和单个字符写入的临时缓冲区</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">char</span>[] writeBuffer;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> WRITE_BUFFER_SIZE = <span class="number">1024</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(String str, <span class="keyword">int</span> off, <span class="keyword">int</span> len)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="keyword">synchronized</span> (lock) &#123;</span><br><span class="line">        <span class="keyword">char</span> cbuf[];</span><br><span class="line">        <span class="keyword">if</span> (len &lt;= WRITE_BUFFER_SIZE) &#123;</span><br><span class="line">            <span class="keyword">if</span> (writeBuffer == <span class="keyword">null</span>) &#123;</span><br><span class="line">                writeBuffer = <span class="keyword">new</span> <span class="keyword">char</span>[WRITE_BUFFER_SIZE];</span><br><span class="line">            &#125;</span><br><span class="line">            cbuf = writeBuffer;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;    <span class="comment">// 不要永久地分配非常大的缓冲区</span></span><br><span class="line">            cbuf = <span class="keyword">new</span> <span class="keyword">char</span>[len];</span><br><span class="line">        &#125;</span><br><span class="line">        str.getChars(off, (off + len), cbuf, <span class="number">0</span>);</span><br><span class="line">        write(cbuf, <span class="number">0</span>, len);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>BufferedReader缓冲区是一个 char[8192] 数组   存储数据流程参照FileWriter和源码，这里不再赘述。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// BufferedWriter.class</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">char</span> cb[];</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> defaultCharBufferSize = <span class="number">8192</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(<span class="keyword">char</span> cbuf[], <span class="keyword">int</span> off, <span class="keyword">int</span> len)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="keyword">synchronized</span> (lock) &#123;</span><br><span class="line">        ensureOpen();</span><br><span class="line">        <span class="keyword">if</span> ((off &lt; <span class="number">0</span>) || (off &gt; cbuf.length) || (len &lt; <span class="number">0</span>) ||</span><br><span class="line">            ((off + len) &gt; cbuf.length) || ((off + len) &lt; <span class="number">0</span>)) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IndexOutOfBoundsException();</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (len == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (len &gt;= nChars) &#123;</span><br><span class="line">            <span class="comment">// 如果请求长度超过输出缓冲区的大小，刷新缓冲区，然后直接写入数据</span></span><br><span class="line">            flushBuffer();</span><br><span class="line">            out.write(cbuf, off, len);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> b = off, t = off + len;</span><br><span class="line">        <span class="keyword">while</span> (b &lt; t) &#123;</span><br><span class="line">            <span class="keyword">int</span> d = min(nChars - nextChar, t - b);</span><br><span class="line">            System.arraycopy(cbuf, b, cb, nextChar, d);</span><br><span class="line">            b += d;</span><br><span class="line">            nextChar += d;</span><br><span class="line">            <span class="keyword">if</span> (nextChar &gt;= nChars)</span><br><span class="line">                flushBuffer();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="结论-2"><a href="#结论-2" class="headerlink" title="结论"></a>结论</h2><blockquote>
+<p>如果自定义缓存大小（char[] / byte[]），大于 BufferedXxxx() 方法默认缓存大小(8192)，使用 BufferedXxxx() 方法，速度反而会慢，因为多了一步刷新缓存的步骤。<br>FileWriter例外，因为他会根据传入内容的大小，调节方法内缓存数组的大小。</p>
+</blockquote>
 
       
 
@@ -249,7 +337,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          http://sick-cat.github.io/java/
+          http://sick-cat.github.io/java/base/IOspeed/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -299,7 +387,33 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/base//" class="article-tag-list-link color5">base</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -349,7 +463,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/java/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/java/base/IOspeed/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -361,6 +475,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/java/base/File/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">File</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -382,7 +506,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目录"><span class="toc-number">1.</span> <span class="toc-text">目录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一阶段"><span class="toc-number">1.1.</span> <span class="toc-text">第一阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、基础语法"><span class="toc-number">1.1.1.</span> <span class="toc-text">1、基础语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、面向对象"><span class="toc-number">1.1.2.</span> <span class="toc-text">2、面向对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、核心类库"><span class="toc-number">1.1.3.</span> <span class="toc-text">3、核心类库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、集合"><span class="toc-number">1.1.4.</span> <span class="toc-text">4、集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5、异常"><span class="toc-number">1.1.5.</span> <span class="toc-text">5、异常</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6、IO"><span class="toc-number">1.1.6.</span> <span class="toc-text">6、IO</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#说明"><span class="toc-number">1.</span> <span class="toc-text">说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#继承关系"><span class="toc-number">2.</span> <span class="toc-text">继承关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成测试文件"><span class="toc-number">3.</span> <span class="toc-text">生成测试文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字节流"><span class="toc-number">4.</span> <span class="toc-text">字节流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-number">4.1.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结果"><span class="toc-number">4.2.</span> <span class="toc-text">结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结论"><span class="toc-number">4.3.</span> <span class="toc-text">结论</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符流"><span class="toc-number">5.</span> <span class="toc-text">字符流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码-1"><span class="toc-number">5.1.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结果-1"><span class="toc-number">5.2.</span> <span class="toc-text">结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结论-1"><span class="toc-number">5.3.</span> <span class="toc-text">结论</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结论-2"><span class="toc-number">6.</span> <span class="toc-text">结论</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -407,7 +531,7 @@
 <script src="https://jjeejj.github.io/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Wed Jul 10 2019 09:44:04 GMT+0000",
+  id: "Fri Aug 02 2019 23:10:27 GMT+0000",
   owner: 'sick-cat',
   repo: 'sick-cat.github.io',
   oauth: {
@@ -475,7 +599,7 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
