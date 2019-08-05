@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>矩形覆盖 | SickCat的博客</title>
+  <title>Scanner小问题 | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目来源：牛客网–矩形覆盖 题目描述 我们可以用21的小矩形横着或者竖着去覆盖更大的矩形。请问用n个21的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？">
-<meta name="keywords" content="矩形覆盖,牛客,剑指offer,算法">
+  <meta name="description" content="nextLine()问题 在连续两个输入并且第二个输入是 nextLine() 时，输入数据会产生错误。没有数据或者多了一个空格。">
+<meta name="keywords" content="Scanner,nextLine,close">
 <meta property="og:type" content="article">
-<meta property="og:title" content="矩形覆盖">
-<meta property="og:url" content="http://sick-cat.github.io/acm/RectangleCover/index.html">
+<meta property="og:title" content="Scanner小问题">
+<meta property="og:url" content="http://sick-cat.github.io/java/base/ScannerProblem/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="题目来源：牛客网–矩形覆盖 题目描述 我们可以用21的小矩形横着或者竖着去覆盖更大的矩形。请问用n个21的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？">
+<meta property="og:description" content="nextLine()问题 在连续两个输入并且第二个输入是 nextLine() 时，输入数据会产生错误。没有数据或者多了一个空格。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-24T15:07:28.887Z">
+<meta property="og:updated_time" content="2019-08-05T10:39:49.867Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="矩形覆盖">
-<meta name="twitter:description" content="题目来源：牛客网–矩形覆盖 题目描述 我们可以用21的小矩形横着或者竖着去覆盖更大的矩形。请问用n个21的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？">
+<meta name="twitter:title" content="Scanner小问题">
+<meta name="twitter:description" content="nextLine()问题 在连续两个输入并且第二个输入是 nextLine() 时，输入数据会产生错误。没有数据或者多了一个空格。">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -38,7 +38,7 @@
   
 
   
-    <meta name="keywords" content="矩形覆盖,牛客,剑指offer,算法,java开发,安全,爬虫,程序员,码农,sickcat">
+    <meta name="keywords" content="Scanner,nextLine,close,java开发,安全,爬虫,程序员,码农,sickcat">
   
 </head>
 </html>
@@ -176,14 +176,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-矩形覆盖" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-java-第一阶段：javaEE基础-Scanner小问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      矩形覆盖
+      Scanner小问题
     </h1>
   
 
@@ -195,8 +195,8 @@
                 </span>
 
 
-<a href="/acm/RectangleCover/" class="archive-article-date">
-  	<time datetime="2019-07-24T23:04:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-24</time>
+<a href="/java/base/ScannerProblem/" class="archive-article-date">
+  	<time datetime="2019-07-24T22:58:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-24</time>
 </a>
         
       </header>
@@ -204,16 +204,50 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>题目来源：</strong><a href="https://www.nowcoder.com/questionTerminal/72a5a919508a4251859fb2cfb987a0e6" target="_blank" rel="noopener">牛客网–矩形覆盖</a></p>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>我们可以用2<em>1的小矩形横着或者竖着去覆盖更大的矩形。请问用n个2</em>1的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？   </p>
+        <h2 id="nextLine-问题"><a href="#nextLine-问题" class="headerlink" title="nextLine()问题"></a>nextLine()问题</h2><blockquote>
+<p>在连续两个输入并且第二个输入是 nextLine() 时，输入数据会产生错误。没有数据或者多了一个空格。</p>
 </blockquote>
 <a id="more"></a>
 
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<p>这又是一个斐波那契数列的变种，可以画个图找一下规律，会发现是符合下面这个规律的<br>fn = f(n-1) + f(n-2)</p>
+<h3 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">	<span class="keyword">int</span> a = in.nextInt();</span><br><span class="line">	String str1 = in.nextLine();</span><br><span class="line">	String str2 = in.nextLine();</span><br><span class="line"></span><br><span class="line">	System.out.println(a);</span><br><span class="line">	System.out.println(str1);</span><br><span class="line">	System.out.println(str2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="输入一"><a href="#输入一" class="headerlink" title="输入一"></a>输入一</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">80</span> str1 str1</span><br><span class="line">str2</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出一"><a href="#输出一" class="headerlink" title="输出一"></a>输出一</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">80</span></span><br><span class="line"> str1 str1</span><br><span class="line">str2</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>发现输出第一个str前边有空格，即在输入80之后，第一个nextLine() 接收了之后的空格，直到遇到换行符结束。</p>
 </blockquote>
-<h2 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">RectCover</span><span class="params">(<span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] rectangle = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">40</span>];</span><br><span class="line">		rectangle[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">		rectangle[<span class="number">2</span>] = <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">3</span>; i &lt; <span class="number">40</span>; i++) &#123;</span><br><span class="line">			rectangle[i] = rectangle[i-<span class="number">1</span>] + rectangle[i-<span class="number">2</span>];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> rectangle[target];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="输入二"><a href="#输入二" class="headerlink" title="输入二"></a>输入二</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">80</span></span><br><span class="line">only str2</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出二"><a href="#输出二" class="headerlink" title="输出二"></a>输出二</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">80</span></span><br><span class="line"></span><br><span class="line">only str2</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输入80后，直接换行，这时str1接收了这个换行，并且遇到换行结束，所以str1中只有一个换行符，再次输入会是 str2 的内容</p>
+</blockquote>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p><strong>next()、nextInt()……接收输入以空格为分隔，不能接收换行符<br>只有nextLine() 可以接收换行符，并且以换行符为分隔</strong></p>
+<blockquote>
+<p>输入时使用两个连续的 nextLine() ，第一个nextLine() 用于接收换行或者其他的无效输入，第二个nextLine() 接收有效输入</p>
+</blockquote>
+<h2 id="close-问题"><a href="#close-问题" class="headerlink" title="close()问题"></a>close()问题</h2><blockquote>
+<p>在一个程序中，一个scanner对象 close() 之后，使用其他scanner对象输入时，会抛出 NoSuchElementException 异常。</p>
+</blockquote>
+<h3 id="代码一"><a href="#代码一" class="headerlink" title="代码一"></a>代码一</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo1</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> a = in.nextInt();</span><br><span class="line">		System.out.println(<span class="string">"a = "</span> + a);</span><br><span class="line">		</span><br><span class="line">		Demo2 d2 = <span class="keyword">new</span> Demo2();</span><br><span class="line">		d2.scannerTest();</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> c = in.nextInt();</span><br><span class="line">		System.out.println(<span class="string">"c = "</span> + c);</span><br><span class="line">		</span><br><span class="line">		in.close();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo2</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">scannerTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		Scanner in1 = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> b = in1.nextInt();</span><br><span class="line">		System.out.println(<span class="string">"b = "</span> + b);</span><br><span class="line">		in1.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line">a = <span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line">b = <span class="number">2</span></span><br><span class="line">Exception in thread <span class="string">"main"</span> java.util.NoSuchElementException</span><br><span class="line">	at java.util.Scanner.throwFor(Unknown Source)</span><br><span class="line">	at java.util.Scanner.next(Unknown Source)</span><br><span class="line">	at java.util.Scanner.nextInt(Unknown Source)</span><br><span class="line">	at java.util.Scanner.nextInt(Unknown Source)</span><br><span class="line">	at test.Demo1.main(Demo1.java:<span class="number">16</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="代码二"><a href="#代码二" class="headerlink" title="代码二"></a>代码二</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 代码一中片段</span></span><br><span class="line">Demo2 d2 = <span class="keyword">new</span> Demo2();</span><br><span class="line">d2.scannerTest();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在 d2 中关闭 in1 后，创建 in2 对象，试图重新打开 System.in 流</span></span><br><span class="line">Scanner in2 = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="comment">// 这一行还是会报错，证明 System.in 流一旦被关闭，就无法再次被打开</span></span><br><span class="line"><span class="keyword">int</span> c = in2.nextInt();</span><br><span class="line">System.out.println(<span class="string">"c = "</span> + c);</span><br><span class="line"></span><br><span class="line">in2.close();</span><br></pre></td></tr></table></figure>
+
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><blockquote>
+<p><strong>当 in1 调用 close() 后，System.in流将会关闭，而这种关闭将是永久性的，导致之后将不能接受任何数据，从而引发NoSuchElementException的错误，而代码二也证明 System.in 流一旦被关闭，就无法再次被打开</strong></p>
+</blockquote>
+<h3 id="解决办法-1"><a href="#解决办法-1" class="headerlink" title="解决办法"></a>解决办法</h3><blockquote>
+<ol>
+<li>把Scanner对象设为成员变量</li>
+<li>Scanner对象只能关闭一次，在程序不再有输入需求后关闭流。</li>
+</ol>
+</blockquote>
+
       
 
       <!-- 版权开始 -->
@@ -226,7 +260,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          http://sick-cat.github.io/acm/RectangleCover/
+          http://sick-cat.github.io/java/base/ScannerProblem/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -281,7 +315,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
@@ -293,7 +327,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/acm//" class="article-tag-list-link color4">acm</a>
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/base//" class="article-tag-list-link color5">base</a>
         		</li>
       		
 		</ul>
@@ -348,7 +386,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/acm/RectangleCover/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/java/base/ScannerProblem/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -362,18 +400,18 @@
   
 <nav id="article-nav">
   
-    <a href="/acm/theNumberOf1/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/acm/RectangleCover/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          二进制中1的个数
+          矩形覆盖
         
       </div>
     </a>
   
   
-    <a href="/java/base/ScannerProblem/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Scanner小问题</div>
+    <a href="/java/base/print(obj)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">print打印对象</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -400,7 +438,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路"><span class="toc-number">2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java代码"><span class="toc-number">3.</span> <span class="toc-text">java代码</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#nextLine-问题"><span class="toc-number">1.</span> <span class="toc-text">nextLine()问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#测试代码"><span class="toc-number">1.1.</span> <span class="toc-text">测试代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输入一"><span class="toc-number">1.2.</span> <span class="toc-text">输入一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输出一"><span class="toc-number">1.3.</span> <span class="toc-text">输出一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输入二"><span class="toc-number">1.4.</span> <span class="toc-text">输入二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输出二"><span class="toc-number">1.5.</span> <span class="toc-text">输出二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决办法"><span class="toc-number">1.6.</span> <span class="toc-text">解决办法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#close-问题"><span class="toc-number">2.</span> <span class="toc-text">close()问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码一"><span class="toc-number">2.1.</span> <span class="toc-text">代码一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输出"><span class="toc-number">2.2.</span> <span class="toc-text">输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码二"><span class="toc-number">2.3.</span> <span class="toc-text">代码二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结论"><span class="toc-number">2.4.</span> <span class="toc-text">结论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决办法-1"><span class="toc-number">2.5.</span> <span class="toc-text">解决办法</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -425,7 +463,7 @@
 <script src="https://jjeejj.github.io/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Wed Jul 24 2019 23:04:01 GMT+0000",
+  id: "Wed Jul 24 2019 22:58:28 GMT+0000",
   owner: 'sick-cat',
   repo: 'sick-cat.github.io',
   oauth: {

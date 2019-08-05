@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://sick-cat.github.io/java/base/nextLine/</loc>
+    <loc>http://sick-cat.github.io/java/base/ScannerProblem/</loc>
     
-    <lastmod>2019-08-05T10:21:03.756Z</lastmod>
+    <lastmod>2019-08-05T10:39:49.867Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://sick-cat.github.io/java/index.html</loc>
+    
+    <lastmod>2019-08-05T10:39:46.621Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>http://sick-cat.github.io/java/base/File/</loc>
     
     <lastmod>2019-07-31T16:08:05.991Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://sick-cat.github.io/java/index.html</loc>
-    
-    <lastmod>2019-07-31T15:54:58.402Z</lastmod>
     
   </url>
   
