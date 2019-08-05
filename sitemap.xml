@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sick-cat.github.io/java/base/nextLine/</loc>
+    
+    <lastmod>2019-08-05T10:21:03.756Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://sick-cat.github.io/java/base/IOspeed/</loc>
     
     <lastmod>2019-08-02T15:18:52.359Z</lastmod>
@@ -75,13 +82,6 @@
     <loc>http://sick-cat.github.io/acm/RectangleCover/</loc>
     
     <lastmod>2019-07-24T15:07:28.887Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://sick-cat.github.io/java/base/nextLine/</loc>
-    
-    <lastmod>2019-07-24T15:01:55.953Z</lastmod>
     
   </url>
   
