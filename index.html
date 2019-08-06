@@ -305,26 +305,18 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>File 类的方法API上写的很详细，这里说一下过滤器。</strong></p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th align="center">返回值</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>listFiles(FileFilter filter)</td>
-<td align="center">File[]</td>
-<td>返回抽象路径名数组，这些路径名表示此抽象路径名表示的目录中满足指定过滤器的文件和目录。</td>
-</tr>
-<tr>
-<td>listFiles(FilenameFilter filter)</td>
-<td align="center">File[]</td>
-<td>返回抽象路径名数组，这些路径名表示此抽象路径名表示的目录中满足指定过滤器的文件和目录。</td>
-</tr>
-</tbody></table>
+        <blockquote>
+<ol>
+<li>遍历指定目录下的所有文件</li>
+<li>删除指定文件夹   </li>
+</ol>
+<p>实现方式：<br>这里我使用了listFiles(FileFilter filter)方法，通过匿名内部类实现的 FileFilter 接口   </p>
+<ol>
+<li>遍历文件夹下所有文件和文件夹。  </li>
+<li>调用方法一，返回ArrayList，遍历集合，对文件（夹）进行删除操作。  </li>
+<li>调用方法一，返回ArrayList，对集合进行过滤。</li>
+</ol>
+</blockquote>
         
           <a class="article-more-a" href="/java/base/File/#more">more >></a>
         
@@ -1170,15 +1162,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">剑指offer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
             
             <div class="clearfix"></div>
