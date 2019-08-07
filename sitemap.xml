@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sick-cat.github.io/acm/refactoringBinaryTree/</loc>
+    
+    <lastmod>2019-08-07T13:46:27.952Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://sick-cat.github.io/java/base/IOspeed/</loc>
     
     <lastmod>2019-08-06T01:03:28.534Z</lastmod>
