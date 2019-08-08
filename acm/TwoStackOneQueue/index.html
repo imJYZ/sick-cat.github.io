@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>Set | SickCat的博客</title>
+  <title>两个栈实现队列 | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="继承结构 Collection (interface) Set (interface) HashSet (class) LinkedHashSet (class)   TreeSet (class)">
-<meta name="keywords" content="java,set,hashset,hashset null">
+  <meta name="description" content="题目来源：用两个栈实现队列 题目描述 用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。  解题思路  stack1 用于直接入队存储。 需要出队操作时，把stack1 中的内容逐个出栈，并入栈到stack2 中；这样stack2 (相对入队顺序)就是倒序的，stack1 也已经清空。 再次出队时，直接从stack2 中取，如果stack2 为空，重复 2 操作，">
+<meta name="keywords" content="剑指offer,牛客,两个栈实现队列">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Set">
-<meta property="og:url" content="http://sick-cat.github.io/java/base/Set/index.html">
+<meta property="og:title" content="两个栈实现队列">
+<meta property="og:url" content="http://sick-cat.github.io/acm/TwoStackOneQueue/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="继承结构 Collection (interface) Set (interface) HashSet (class) LinkedHashSet (class)   TreeSet (class)">
+<meta property="og:description" content="题目来源：用两个栈实现队列 题目描述 用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。  解题思路  stack1 用于直接入队存储。 需要出队操作时，把stack1 中的内容逐个出栈，并入栈到stack2 中；这样stack2 (相对入队顺序)就是倒序的，stack1 也已经清空。 再次出队时，直接从stack2 中取，如果stack2 为空，重复 2 操作，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://sick-cat.github.io/images/hashmapresize.jpg">
-<meta property="og:updated_time" content="2019-07-30T06:37:21.514Z">
+<meta property="og:updated_time" content="2019-08-08T13:41:30.103Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Set">
-<meta name="twitter:description" content="继承结构 Collection (interface) Set (interface) HashSet (class) LinkedHashSet (class)   TreeSet (class)">
-<meta name="twitter:image" content="http://sick-cat.github.io/images/hashmapresize.jpg">
+<meta name="twitter:title" content="两个栈实现队列">
+<meta name="twitter:description" content="题目来源：用两个栈实现队列 题目描述 用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。  解题思路  stack1 用于直接入队存储。 需要出队操作时，把stack1 中的内容逐个出栈，并入栈到stack2 中；这样stack2 (相对入队顺序)就是倒序的，stack1 也已经清空。 再次出队时，直接从stack2 中取，如果stack2 为空，重复 2 操作，">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -40,7 +38,7 @@
   
 
   
-    <meta name="keywords" content="java,set,hashset,hashset null,java开发,安全,爬虫,程序员,码农,sickcat">
+    <meta name="keywords" content="剑指offer,牛客,两个栈实现队列,java开发,安全,爬虫,程序员,码农,sickcat">
   
 </head>
 </html>
@@ -178,14 +176,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-java-第一阶段：javaEE基础-Set" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-两个栈实现队列" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Set
+      两个栈实现队列
     </h1>
   
 
@@ -197,8 +195,8 @@
                 </span>
 
 
-<a href="/java/base/Set/" class="archive-article-date">
-  	<time datetime="2019-07-30T00:17:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-30</time>
+<a href="/acm/TwoStackOneQueue/" class="archive-article-date">
+  	<time datetime="2019-08-08T21:39:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
 </a>
         
       </header>
@@ -206,75 +204,20 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="继承结构"><a href="#继承结构" class="headerlink" title="继承结构"></a>继承结构</h2><ul>
-<li>Collection (interface)<ul>
-<li>Set (interface)<ul>
-<li>HashSet (class)<ul>
-<li>LinkedHashSet (class)</li>
-</ul>
-</li>
-<li>TreeSet (class)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+        <p><strong>题目来源：<a href="https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6?tpId=13&tqId=11158&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking" target="_blank" rel="noopener">用两个栈实现队列</a></strong></p>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
+<p>用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。</p>
+</blockquote>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
+<ol>
+<li>stack1 用于直接入队存储。</li>
+<li>需要出队操作时，把stack1 中的内容逐个出栈，并入栈到stack2 中；这样stack2 (相对入队顺序)就是倒序的，stack1 也已经清空。</li>
+<li>再次出队时，直接从stack2 中取，如果stack2 为空，重复 2 操作，如果stack1 也为空，说明队列中已经没有数据，返回-1。</li>
+</ol>
+</blockquote>
 <a id="more"></a>
 
-<blockquote>
-<p><strong>Set (interface) 无序、不可以重复、最多一个null元素</strong><br>LinkedHashSet (class) 有序，最多一个null元素。<br>TreeSet (class) 无序，不能有null元素，符合二叉树特征。   </p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="center">类</th>
-<th align="center">使用</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">HashSet</td>
-<td align="center">非线程安全<br>较多使用</td>
-<td>基于哈希表（HashMap)实现；判断两个对象是否相同：先判断hashcode，如果hashcode不同直接存储，如果相同，再用equals判断；自定义对象，要重写对象所在类的hashcode和equals方法。<br>把对象存储到哈希表中：先计算对象的hashcode值，再对数组的长度进行&amp;运算，来决定对象要存储在数组中的位置</td>
-</tr>
-<tr>
-<td align="center">LinkedHashSet</td>
-<td align="center">非线程安全<br>较少使用<br>除非需要保证原来的顺序</td>
-<td>有序，哈希表和链接列表实现，维护着一个运行于所有条目的双重链表，此链表定义了迭代顺序；一般插入和删除效率较高，检索效率相对较低。</td>
-</tr>
-<tr>
-<td align="center">TreeSet</td>
-<td align="center">非线程安全</td>
-<td>基于TreeMap（二叉树数据结构），不能有null元素，对象需要比较大小，通过对象比较器实现；对象比较器还可以用来去除重复元素，如果自定义的数据类，必须实现比较器接口<code>class Person implements Comparable&lt;T&gt;{}</code></td>
-</tr>
-</tbody></table>
-<h2 id="HashSet-和-HashMap-的关系"><a href="#HashSet-和-HashMap-的关系" class="headerlink" title="HashSet 和 HashMap 的关系"></a>HashSet 和 HashMap 的关系</h2><blockquote>
-<p>HashSet 就是 HashMap 的 key 那一列<br>将 HashMap 中的 value 那一列隐藏掉，就变成了HashSet。</p>
-</blockquote>
-<h2 id="HashSet加载和扩充过程"><a href="#HashSet加载和扩充过程" class="headerlink" title="HashSet加载和扩充过程"></a>HashSet加载和扩充过程</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">setDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		HashSet&lt;Persons&gt; hset = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">		hset.add(<span class="keyword">new</span> Persons(<span class="string">"person1"</span>, <span class="number">10</span>));</span><br><span class="line">		hset.add(<span class="keyword">new</span> Persons(<span class="string">"person2"</span>, <span class="number">11</span>));</span><br><span class="line">		hset.add(<span class="keyword">new</span> Persons(<span class="string">"person3"</span>, <span class="number">12</span>));</span><br><span class="line">		hset.add(<span class="keyword">new</span> Persons(<span class="string">"person4"</span>, <span class="number">13</span>));</span><br><span class="line">		<span class="comment">// 如果不重写 equals() 下面这个对象也会出现在集合中</span></span><br><span class="line">		hset.add(<span class="keyword">new</span> Persons(<span class="string">"person1"</span>, <span class="number">10</span>));</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span> (Persons per : hset) &#123;</span><br><span class="line">			System.out.println(per);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Persons</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> String name;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Persons</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">super</span>();</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">		<span class="keyword">this</span>.age = age;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 因为Object类中的hashcode()会根据不同对象，生成不同的数字，这样就没有办法去重。</span></span><br><span class="line"><span class="comment">	 * 所以自定义类，要重写hashcode()方法，以便去重。</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">final</span> <span class="keyword">int</span> prime = <span class="number">31</span>;</span><br><span class="line">		<span class="keyword">int</span> result = <span class="number">1</span>;</span><br><span class="line">		result = prime * result + age;</span><br><span class="line">		result = prime * result + ((name == <span class="keyword">null</span>) ? <span class="number">0</span> : name.hashCode());</span><br><span class="line">		<span class="keyword">return</span> result;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * HashSet使用的equals()方法是对比对象的地址,不符合实际要求</span></span><br><span class="line"><span class="comment">	 * 更改为属性相同返回true；</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">this</span> == obj)</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		<span class="keyword">if</span> (obj == <span class="keyword">null</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		<span class="keyword">if</span> (getClass() != obj.getClass())</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		Persons other = (Persons) obj;</span><br><span class="line">		<span class="keyword">if</span> (age != other.age)</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		<span class="keyword">if</span> (name == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (other.name != <span class="keyword">null</span>)</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (!name.equals(other.name))</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">"Person [name="</span> + name + <span class="string">", age="</span> + age + <span class="string">"]"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>HashSet基于HashMap实现，很多特性都可以参考HashMap，如果集合中的元素是自定义对象，那么要重 写 hashcode() 和 equals() 方法。</strong></p>
-<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>新建一个HashSet会默认初始化一个大小为16的数组，初始值为null，负载因子为0.75，数组的每个元素都是一个链表。</p>
-<h3 id="向集合中添加对象"><a href="#向集合中添加对象" class="headerlink" title="向集合中添加对象"></a>向集合中添加对象</h3><ol>
-<li>计算对象的hash值，如果hash值不同（与集合中所有对象对比），直接存储。<br>&emsp; &nbsp;如果hash值相同，则进行equals()比较，不同就进行存储，相同则舍弃。</li>
-<li>用hash值对数组长度取余，求得数组下标index。</li>
-<li>如果此位置没有元素（没有冲突），则直接存储。</li>
-<li>如果有冲突，则以链表的形式存在当前存在元素后。</li>
-<li>如果冲突导致链表过长(大于等于TREEIFY_THRESHOLD，默认为8)，就把链表转换成红黑树，然后写入</li>
-<li>如果写入后，如果数组满了(大于 负载因子*数组当前大小)，进行resize扩容。</li>
-</ol>
-<h3 id="集合扩容（其实是HashMap）"><a href="#集合扩容（其实是HashMap）" class="headerlink" title="集合扩容（其实是HashMap）"></a>集合扩容（其实是HashMap）</h3><ol>
-<li>新建一个数组，长度为老数组长度的二倍，如果老数组大小如果已经达到最大(2^30)，修改阈值为int的最大值(2^31-1)，这样以后就不会扩容了</li>
-<li>重新计算每个元素在集合中的位置，把对象存储在新数组中，jdk1.8优化了计算hash值这一步，不再需要重复计算hash值，而且jdk1.8之后移动的链表不会倒置<ul>
-<li>原理：我们使用的是2次幂的扩展，所以，元素的位置要么是在原位置，要么是在原位置再移动2次幂的位置，计算<code>hashcode &amp; newCapacity</code>时，只需要看newCapacity相比oldCapacity新增的那一位是0还是1。是0的话索引没变，是1的话索引变成<code>原索引+oldCapcity</code><br><img src="/images/hashmapresize.jpg" alt="hashmapresize.jpg"></li>
-</ul>
-</li>
-</ol>
-<blockquote>
-<p>扩容是一个特别耗性能的操作，所以使用HashMap的时候，先估算map的大小，初始化的时候给一个大致的数值，避免map进行频繁的扩容。</p>
-</blockquote>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>1、<a href="https://zhuanlan.zhihu.com/p/21673805" target="_blank" rel="noopener">Java 8系列之重新认识HashMap</a></p>
-
+<h2 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Stack;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TwoStackOneQueue</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">         QueueTest queue = <span class="keyword">new</span> QueueTest();</span><br><span class="line">         queue.push(<span class="number">10</span>);</span><br><span class="line">         queue.push(<span class="number">20</span>);</span><br><span class="line">        System.out.println(queue.pop());</span><br><span class="line">        System.out.println(queue.pop());</span><br><span class="line"></span><br><span class="line">        queue.push(<span class="number">30</span>);</span><br><span class="line">        queue.push(<span class="number">40</span>);</span><br><span class="line">        System.out.println(queue.pop());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 提交代码</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">QueueTest</span> </span>&#123;</span><br><span class="line">    Stack&lt;Integer&gt; stack1 = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">    Stack&lt;Integer&gt; stack2 = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// stack1 用于直接入队</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> node)</span> </span>&#123;</span><br><span class="line">        stack1.push(node);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// stack2 用于出队</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 如果stack1 和 stack2 都为空，则队列中没有数据</span></span><br><span class="line">        <span class="keyword">if</span> (stack1.empty() &amp;&amp; stack2.empty())&#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// stack2 为空，就把stack1 中的内容倒置到stack2 中</span></span><br><span class="line">        <span class="keyword">if</span> (stack2.empty()) &#123;</span><br><span class="line">            <span class="keyword">while</span> (!stack1.empty()) &#123;</span><br><span class="line">                stack2.push(stack1.pop());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> stack2.pop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       <!-- 版权开始 -->
@@ -287,7 +230,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          http://sick-cat.github.io/java/base/Set/
+          http://sick-cat.github.io/acm/TwoStackOneQueue/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -342,7 +285,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
         		</li>
       		
 		</ul>
@@ -354,11 +297,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/base//" class="article-tag-list-link color5">base</a>
+        			<a href="/categories/acm//" class="article-tag-list-link color4">acm</a>
         		</li>
       		
 		</ul>
@@ -413,7 +352,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/java/base/Set/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/acm/TwoStackOneQueue/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -427,18 +366,9 @@
   
 <nav id="article-nav">
   
-    <a href="/java/base/Exception/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          异常
-        
-      </div>
-    </a>
   
-  
-    <a href="/java/base/List/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">List</div>
+    <a href="/acm/refactoringBinaryTree/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">重建二叉树</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -465,7 +395,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#继承结构"><span class="toc-number">1.</span> <span class="toc-text">继承结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HashSet-和-HashMap-的关系"><span class="toc-number">2.</span> <span class="toc-text">HashSet 和 HashMap 的关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HashSet加载和扩充过程"><span class="toc-number">3.</span> <span class="toc-text">HashSet加载和扩充过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化"><span class="toc-number">3.1.</span> <span class="toc-text">初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#向集合中添加对象"><span class="toc-number">3.2.</span> <span class="toc-text">向集合中添加对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#集合扩容（其实是HashMap）"><span class="toc-number">3.3.</span> <span class="toc-text">集合扩容（其实是HashMap）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">3.4.</span> <span class="toc-text">参考</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路"><span class="toc-number">2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java代码"><span class="toc-number">3.</span> <span class="toc-text">java代码</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -490,7 +420,7 @@
 <script src="https://jjeejj.github.io/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Tue Jul 30 2019 00:17:39 GMT+0000",
+  id: "Thu Aug 08 2019 21:39:14 GMT+0000",
   owner: 'sick-cat',
   repo: 'sick-cat.github.io',
   oauth: {
