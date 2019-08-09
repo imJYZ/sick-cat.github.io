@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>二进制中1的个数 | SickCat的博客</title>
+  <title>数值的正数次方 | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目来源：牛客网–二进制中1的个数 题目描述 输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。">
-<meta name="keywords" content="剑指offer,牛客,二进制中1的个数">
+  <meta name="description" content="题目来源：牛客网–数值的正数次方 题目描述 给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方。">
+<meta name="keywords" content="剑指offer,牛客,数值的正数次方">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二进制中1的个数">
-<meta property="og:url" content="http://sick-cat.github.io/acm/theNumberOf1/index.html">
+<meta property="og:title" content="数值的正数次方">
+<meta property="og:url" content="http://sick-cat.github.io/acm/数值的正数次方/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="题目来源：牛客网–二进制中1的个数 题目描述 输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。">
+<meta property="og:description" content="题目来源：牛客网–数值的正数次方 题目描述 给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-25T15:20:45.768Z">
+<meta property="og:updated_time" content="2019-08-09T11:25:34.162Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二进制中1的个数">
-<meta name="twitter:description" content="题目来源：牛客网–二进制中1的个数 题目描述 输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。">
+<meta name="twitter:title" content="数值的正数次方">
+<meta name="twitter:description" content="题目来源：牛客网–数值的正数次方 题目描述 给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方。">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -38,7 +38,7 @@
   
 
   
-    <meta name="keywords" content="剑指offer,牛客,二进制中1的个数,java开发,安全,爬虫,程序员,码农,sickcat">
+    <meta name="keywords" content="剑指offer,牛客,数值的正数次方,java开发,安全,爬虫,程序员,码农,sickcat">
   
 </head>
 </html>
@@ -176,14 +176,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-二进制中1的个数" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-数值的正数次方" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      二进制中1的个数
+      数值的正数次方
     </h1>
   
 
@@ -195,8 +195,8 @@
                 </span>
 
 
-<a href="/acm/theNumberOf1/" class="archive-article-date">
-  	<time datetime="2019-07-25T23:18:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
+<a href="/acm/数值的正数次方/" class="archive-article-date">
+  	<time datetime="2019-08-09T19:20:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
 </a>
         
       </header>
@@ -204,23 +204,24 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>题目来源：</strong><a href="https://www.nowcoder.com/questionTerminal/8ee967e43c2c4ec193b040ea7fbb10b8" target="_blank" rel="noopener">牛客网–二进制中1的个数</a></p>
+        <p><strong>题目来源：<a href="https://www.nowcoder.com/practice/1a834e5e3e1a4b7ba251417554e07c00?tpId=13&tqId=11165&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking" target="_blank" rel="noopener">牛客网–数值的正数次方</a></strong></p>
 <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。</p>
+<p>给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方。</p>
 </blockquote>
 <a id="more"></a>
 
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<p>使用java中内置的函数比较简单，会自动转换为二进制并返回一个字符串，之后只需要遍历字符串中 1 的个数就好了，或者把字符串中的0替换为空字符，对字符串求长。</p>
+<p>第一次我使用的是 Math.pow() ，看了评论区决定使用快速幂二刷。  </p>
+<p>记录一下使用快速幂的题解，关于快速幂，建议百度一下。<br>这里说一下几种情况：   </p>
+<ol>
+<li>底数为 0，指数为负。因为分母不能为 0 ，异常结束。</li>
+<li>底数为 0，指数非负。结果为 0。</li>
+<li>底数非 0，指数为正，正常使用快速幂进行运算。</li>
+<li>底数非 0，指数为负，先把指数变成正数，因为这样就不用考虑移位时符号位的问题，最终结果做一下倒数运算就好了（ 1/result）。</li>
+<li>底数非 0，指数为 0，结果为 1。</li>
+</ol>
 </blockquote>
-<h2 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">numberOfOne</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">		Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> n = in.nextInt();</span><br><span class="line">		<span class="comment">// 转换为二进制，返回值为字符串</span></span><br><span class="line">		String str = Integer.toBinaryString(n);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 把 0 替换成空值，求长度，得到 1 的个数</span></span><br><span class="line">		<span class="comment">// System.out.println(str.replaceAll("0", "").length());</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 遍历字符串，统计 1 的个数</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; str.length(); i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (str.charAt(i) == <span class="string">'1'</span>) &#123;</span><br><span class="line">				count++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(count);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>调用api属于耍赖？好吧，补上两种不耍赖的<br>这两种解法题目评论下边都有，翻了一下觉得挺好。</p>
-</blockquote>
-<h3 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (n !=<span class="number">0</span>) &#123;</span><br><span class="line">		count++;</span><br><span class="line">		<span class="comment">// 每次与运算都会把 n 最右边的 1 与掉，这样有多少 1 就循环多少次</span></span><br><span class="line">		<span class="comment">// 1001 &amp; 1000 值为 1000，最右边的 1 掉了</span></span><br><span class="line">		n = n &amp; (n-<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test2</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(n != <span class="number">0</span>) &#123;</span><br><span class="line">		count += n &amp; <span class="number">1</span>;</span><br><span class="line">		<span class="comment">// 无符号右移，这样就不用考虑负数自动补1了，有多少位循环多少次</span></span><br><span class="line">		<span class="comment">// 1001 &gt;&gt;&gt; 1 值为 100</span></span><br><span class="line">		n = n &gt;&gt;&gt; <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NumericalIntegerPower</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(poewr(<span class="number">0</span>, -<span class="number">2</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">double</span> <span class="title">poewr</span> <span class="params">(<span class="keyword">double</span> base, <span class="keyword">int</span> exponent)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">double</span> result = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> n;</span><br><span class="line">        <span class="comment">// 分母为 0 ，抛出异常。</span></span><br><span class="line">        <span class="keyword">if</span> (base ==<span class="number">0</span> &amp;&amp; exponent &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> ArithmeticException();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 0 的任何次幂都为 0</span></span><br><span class="line">        <span class="keyword">if</span> (base == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 一个数的 正数 次幂</span></span><br><span class="line">        <span class="keyword">if</span> (exponent &gt; <span class="number">0</span>)&#123;</span><br><span class="line">            n = exponent;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(exponent &lt; <span class="number">0</span>) &#123; <span class="comment">// 一个数的 负数 次幂</span></span><br><span class="line">            <span class="comment">// 先按正数次幂算，这样移位时就不用考虑符号问题。最后 1/result 就好了</span></span><br><span class="line">            n = -exponent;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123; <span class="comment">// 一个数的零次幂</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 快速幂 运算</span></span><br><span class="line">        <span class="keyword">while</span> (n != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((n &amp; <span class="number">1</span>) != <span class="number">0</span>) &#123;</span><br><span class="line">                result *= base;</span><br><span class="line">            &#125;</span><br><span class="line">            base *= base;</span><br><span class="line">            n &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> exponent &gt; <span class="number">0</span> ? result : <span class="number">1</span>/result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       <!-- 版权开始 -->
@@ -233,7 +234,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          http://sick-cat.github.io/acm/theNumberOf1/
+          http://sick-cat.github.io/acm/数值的正数次方/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -355,7 +356,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/acm/theNumberOf1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/acm/数值的正数次方/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -369,18 +370,9 @@
   
 <nav id="article-nav">
   
-    <a href="/acm/mirrorOfBinaryTree/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          二叉树的镜像
-        
-      </div>
-    </a>
   
-  
-    <a href="/acm/RectangleCover/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">矩形覆盖</div>
+    <a href="/acm/TwoStackOneQueue/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">两个栈实现队列</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -407,7 +399,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路"><span class="toc-number">2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java代码"><span class="toc-number">3.</span> <span class="toc-text">java代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一种"><span class="toc-number">3.1.</span> <span class="toc-text">第一种</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二种"><span class="toc-number">3.2.</span> <span class="toc-text">第二种</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路"><span class="toc-number">2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java代码"><span class="toc-number">3.</span> <span class="toc-text">java代码</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -432,7 +424,7 @@
 <script src="https://jjeejj.github.io/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Thu Jul 25 2019 23:18:54 GMT+0000",
+  id: "Fri Aug 09 2019 19:20:41 GMT+0000",
   owner: 'sick-cat',
   repo: 'sick-cat.github.io',
   oauth: {
