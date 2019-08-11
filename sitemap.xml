@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sick-cat.github.io/acm/FindKthToTail/</loc>
+    
+    <lastmod>2019-08-11T14:21:40.866Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://sick-cat.github.io/acm/reOrderArray/</loc>
     
     <lastmod>2019-08-10T01:18:43.165Z</lastmod>

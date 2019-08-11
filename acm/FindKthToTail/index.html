@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>二进制中1的个数 | SickCat的博客</title>
+  <title>链表中倒数第k个结点 | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目来源：牛客网–二进制中1的个数 题目描述 输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。">
-<meta name="keywords" content="剑指offer,牛客,二进制中1的个数">
+  <meta name="description" content="题目来源：牛客网–链表中倒数第k个结点 题目描述 输入一个链表，输出该链表中倒数第k个结点。  解题思路 整体思路就是两步走，两人刚开始都是1，第一个人走到K+1时，第二个人也开始走，两个人速度一样。当第一个人走完时，第二个人刚好比第一个人慢了 K">
+<meta name="keywords" content="剑指offer,牛客,链表中倒数第k个结点">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二进制中1的个数">
-<meta property="og:url" content="http://sick-cat.github.io/acm/theNumberOf1/index.html">
+<meta property="og:title" content="链表中倒数第k个结点">
+<meta property="og:url" content="http://sick-cat.github.io/acm/FindKthToTail/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="题目来源：牛客网–二进制中1的个数 题目描述 输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。">
+<meta property="og:description" content="题目来源：牛客网–链表中倒数第k个结点 题目描述 输入一个链表，输出该链表中倒数第k个结点。  解题思路 整体思路就是两步走，两人刚开始都是1，第一个人走到K+1时，第二个人也开始走，两个人速度一样。当第一个人走完时，第二个人刚好比第一个人慢了 K">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-25T15:20:45.768Z">
+<meta property="og:updated_time" content="2019-08-11T14:21:40.866Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二进制中1的个数">
-<meta name="twitter:description" content="题目来源：牛客网–二进制中1的个数 题目描述 输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。">
+<meta name="twitter:title" content="链表中倒数第k个结点">
+<meta name="twitter:description" content="题目来源：牛客网–链表中倒数第k个结点 题目描述 输入一个链表，输出该链表中倒数第k个结点。  解题思路 整体思路就是两步走，两人刚开始都是1，第一个人走到K+1时，第二个人也开始走，两个人速度一样。当第一个人走完时，第二个人刚好比第一个人慢了 K">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -38,7 +38,7 @@
   
 
   
-    <meta name="keywords" content="剑指offer,牛客,二进制中1的个数,java开发,安全,爬虫,程序员,码农,sickcat">
+    <meta name="keywords" content="剑指offer,牛客,链表中倒数第k个结点,java开发,安全,爬虫,程序员,码农,sickcat">
   
 </head>
 </html>
@@ -176,14 +176,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-二进制中1的个数" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-链表中倒数第k个结点" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      二进制中1的个数
+      链表中倒数第k个结点
     </h1>
   
 
@@ -195,8 +195,8 @@
                 </span>
 
 
-<a href="/acm/theNumberOf1/" class="archive-article-date">
-  	<time datetime="2019-07-25T23:18:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
+<a href="/acm/FindKthToTail/" class="archive-article-date">
+  	<time datetime="2019-08-11T22:18:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
 </a>
         
       </header>
@@ -204,23 +204,18 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>题目来源：</strong><a href="https://www.nowcoder.com/questionTerminal/8ee967e43c2c4ec193b040ea7fbb10b8" target="_blank" rel="noopener">牛客网–二进制中1的个数</a></p>
+        <p><strong>题目来源：<a href="https://www.nowcoder.com/practice/529d3ae5a407492994ad2a246518148a?tpId=13&tqId=11167&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking" target="_blank" rel="noopener">牛客网–链表中倒数第k个结点</a></strong></p>
 <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。</p>
+<p>输入一个链表，输出该链表中倒数第k个结点。</p>
+</blockquote>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
+<p>整体思路就是两步走，两人刚开始都是1，<br>第一个人走到K+1时，第二个人也开始走，两个人速度一样。<br>当第一个人走完时，第二个人刚好比第一个人慢了 K</p>
 </blockquote>
 <a id="more"></a>
 
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<p>使用java中内置的函数比较简单，会自动转换为二进制并返回一个字符串，之后只需要遍历字符串中 1 的个数就好了，或者把字符串中的0替换为空字符，对字符串求长。</p>
-</blockquote>
-<h2 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">numberOfOne</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">		Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> n = in.nextInt();</span><br><span class="line">		<span class="comment">// 转换为二进制，返回值为字符串</span></span><br><span class="line">		String str = Integer.toBinaryString(n);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 把 0 替换成空值，求长度，得到 1 的个数</span></span><br><span class="line">		<span class="comment">// System.out.println(str.replaceAll("0", "").length());</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 遍历字符串，统计 1 的个数</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; str.length(); i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (str.charAt(i) == <span class="string">'1'</span>) &#123;</span><br><span class="line">				count++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(count);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="提交代码"><a href="#提交代码" class="headerlink" title="提交代码"></a>提交代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 整体思路就是两步走，两人刚开始都是1，</span></span><br><span class="line"><span class="comment">// 第一个人走到K+1时，第二个人也开始走，两个人速度一样。</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> ListNode <span class="title">method</span><span class="params">(ListNode head, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 非法输入</span></span><br><span class="line">    <span class="keyword">if</span> (k &lt;= <span class="number">0</span> || head == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ListNode result = head;</span><br><span class="line">    ListNode current = head;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (; current != <span class="keyword">null</span>; i++) &#123;</span><br><span class="line">        <span class="comment">// 如果current已经走到了第 K+1 个，result开始往后移</span></span><br><span class="line">        <span class="comment">// 因为 result 本来就指向第 1 个</span></span><br><span class="line">        <span class="keyword">if</span> (i &gt; k) &#123;</span><br><span class="line">            result = result.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 链表向后移动</span></span><br><span class="line">        current = current.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> i &gt; k ? result : <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>调用api属于耍赖？好吧，补上两种不耍赖的<br>这两种解法题目评论下边都有，翻了一下觉得挺好。</p>
-</blockquote>
-<h3 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (n !=<span class="number">0</span>) &#123;</span><br><span class="line">		count++;</span><br><span class="line">		<span class="comment">// 每次与运算都会把 n 最右边的 1 与掉，这样有多少 1 就循环多少次</span></span><br><span class="line">		<span class="comment">// 1001 &amp; 1000 值为 1000，最右边的 1 掉了</span></span><br><span class="line">		n = n &amp; (n-<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test2</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(n != <span class="number">0</span>) &#123;</span><br><span class="line">		count += n &amp; <span class="number">1</span>;</span><br><span class="line">		<span class="comment">// 无符号右移，这样就不用考虑负数自动补1了，有多少位循环多少次</span></span><br><span class="line">		<span class="comment">// 1001 &gt;&gt;&gt; 1 值为 100</span></span><br><span class="line">		n = n &gt;&gt;&gt; <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="本地测试代码"><a href="#本地测试代码" class="headerlink" title="本地测试代码"></a>本地测试代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FindKthToTail</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ListNode head = <span class="keyword">new</span> ListNode(<span class="number">1</span>);</span><br><span class="line">        ListNode current = head;</span><br><span class="line">        <span class="comment">// 生成长度为5的链表</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= <span class="number">5</span>; i++) &#123;</span><br><span class="line">            current.next = <span class="keyword">new</span> ListNode(i);</span><br><span class="line">            current = current.next;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(method(head,<span class="number">0</span>).val);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 整体思路就是两步走，两人刚开始都是1，第一个人走到K+1时，第二个人也开始走，两个人速度一样。</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> ListNode <span class="title">method</span><span class="params">(ListNode head, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 非法输入</span></span><br><span class="line">        <span class="keyword">if</span> (k &lt;= <span class="number">0</span> || head == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ListNode result = head;</span><br><span class="line">        ListNode current = head;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (; current != <span class="keyword">null</span>; i++) &#123;</span><br><span class="line">            <span class="comment">// 如果current已经走到了第 K+1 个，result开始往后移</span></span><br><span class="line">            <span class="comment">// 因为 result 本来就指向第 1 个</span></span><br><span class="line">            <span class="keyword">if</span> (i &gt; k) &#123;</span><br><span class="line">                result = result.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 链表向后移动</span></span><br><span class="line">            current = current.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> i &gt; k ? result : <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    ListNode next = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    ListNode(<span class="keyword">int</span> val) &#123;</span><br><span class="line">        <span class="keyword">this</span>.val = val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       <!-- 版权开始 -->
@@ -233,7 +228,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          http://sick-cat.github.io/acm/theNumberOf1/
+          http://sick-cat.github.io/acm/FindKthToTail/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -355,7 +350,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/acm/theNumberOf1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/acm/FindKthToTail/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -369,18 +364,9 @@
   
 <nav id="article-nav">
   
-    <a href="/acm/mirrorOfBinaryTree/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          二叉树的镜像
-        
-      </div>
-    </a>
   
-  
-    <a href="/acm/RectangleCover/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">矩形覆盖</div>
+    <a href="/acm/reOrderArray/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">调整数组顺序使奇数位于偶数前面</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -407,7 +393,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路"><span class="toc-number">2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java代码"><span class="toc-number">3.</span> <span class="toc-text">java代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一种"><span class="toc-number">3.1.</span> <span class="toc-text">第一种</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二种"><span class="toc-number">3.2.</span> <span class="toc-text">第二种</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路"><span class="toc-number">2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#提交代码"><span class="toc-number">3.</span> <span class="toc-text">提交代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地测试代码"><span class="toc-number">4.</span> <span class="toc-text">本地测试代码</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -432,7 +418,7 @@
 <script src="https://jjeejj.github.io/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Thu Jul 25 2019 23:18:54 GMT+0000",
+  id: "Sun Aug 11 2019 22:18:02 GMT+0000",
   owner: 'sick-cat',
   repo: 'sick-cat.github.io',
   oauth: {
