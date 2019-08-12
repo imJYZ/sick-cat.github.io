@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>Archives: 2019 | SickCat的博客</title>
+  <title>抽象类和接口 | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一直在跑路的菜鸡">
-<meta name="keywords" content="java开发,安全,爬虫,程序员,码农,sickcat">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SickCat的博客">
-<meta property="og:url" content="http://sick-cat.github.io/archives/2019/index.html">
+  <meta name="description" content="抽象类特点 抽象类和抽象方法都需要使用abstract修饰 抽象类 abstract class test{}。 抽象方法 public abstract void test(); 。   抽象类和抽象方法的关系 抽象方法所在的类必须是抽象类。 抽象类中未必一定有抽象方法。   抽象类不能实例化，要通过定义子类，由子类实现父类的全部抽象方法，才能创建对象。 子类通过 extends 关键字继承父类">
+<meta name="keywords" content="adstract,interface,抽象类,接口">
+<meta property="og:type" content="article">
+<meta property="og:title" content="抽象类和接口">
+<meta property="og:url" content="http://sick-cat.github.io/java/base/adstract-interface/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="一直在跑路的菜鸡">
+<meta property="og:description" content="抽象类特点 抽象类和抽象方法都需要使用abstract修饰 抽象类 abstract class test{}。 抽象方法 public abstract void test(); 。   抽象类和抽象方法的关系 抽象方法所在的类必须是抽象类。 抽象类中未必一定有抽象方法。   抽象类不能实例化，要通过定义子类，由子类实现父类的全部抽象方法，才能创建对象。 子类通过 extends 关键字继承父类">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-12T09:28:34.624Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SickCat的博客">
-<meta name="twitter:description" content="一直在跑路的菜鸡">
+<meta name="twitter:title" content="抽象类和接口">
+<meta name="twitter:description" content="抽象类特点 抽象类和抽象方法都需要使用abstract修饰 抽象类 abstract class test{}。 抽象方法 public abstract void test(); 。   抽象类和抽象方法的关系 抽象方法所在的类必须是抽象类。 抽象类中未必一定有抽象方法。   抽象类不能实例化，要通过定义子类，由子类实现父类的全部抽象方法，才能创建对象。 子类通过 extends 关键字继承父类">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -37,7 +38,7 @@
   
 
   
-    <meta name="keywords" content="java开发,安全,爬虫,程序员,码农,sickcat">
+    <meta name="keywords" content="adstract,interface,抽象类,接口,java开发,安全,爬虫,程序员,码农,sickcat">
   
 </head>
 </html>
@@ -175,39 +176,161 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-java-第一阶段：javaEE基础-抽象类和接口" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      抽象类和接口
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!-- 不蒜子统计 -->
+
+        
+        <!-- 不蒜子统计 -->
+  
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+                </span>
 
 
 <a href="/java/base/adstract-interface/" class="archive-article-date">
   	<time datetime="2019-08-12T17:21:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-12</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/java/base/adstract-interface/">抽象类和接口</a>
-    </h1>
-  
+        
+      </header>
+    
 
-        <div class="article-info info-on-right">
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="抽象类特点"><a href="#抽象类特点" class="headerlink" title="抽象类特点"></a>抽象类特点</h2><ol>
+<li>抽象类和抽象方法都需要使用abstract修饰<ol>
+<li>抽象类 <code>abstract class test{}</code>。</li>
+<li>抽象方法 <code>public abstract void test();</code> 。</li>
+</ol>
+</li>
+<li>抽象类和抽象方法的关系<ol>
+<li>抽象方法所在的类必须是抽象类。</li>
+<li>抽象类中未必一定有抽象方法。</li>
+</ol>
+</li>
+<li>抽象类不能实例化，要通过定义子类，由子类实现父类的全部抽象方法，才能创建对象。</li>
+<li>子类通过 extends 关键字继承父类 <code>class 子类名 extends 父类名{}</code>。</li>
+<li>抽象类的子类<ol>
+<li>是一个抽象类，该类没有实现抽象类中的所有抽象方法。</li>
+<li>是一个普通类，该类实现了抽象类中的所有抽象方法。</li>
+</ol>
+</li>
+</ol>
+<a id="more"></a>
+
+<h2 id="抽象类成员特点"><a href="#抽象类成员特点" class="headerlink" title="抽象类成员特点"></a>抽象类成员特点</h2><ol>
+<li>成员变量：可以定义变量，也可以定义常量，但是不能被抽象。</li>
+<li>构造方法：可以有，有无构造方法，不取决于是否可以创建对象，而是取决于是否可以定义成员变量。</li>
+<li>成员方法：<ol>
+<li>可以是抽象方法，强制子类重写。</li>
+<li>也可以是非抽象方法，用于给子类继承，提高代码复用性。</li>
+</ol>
+</li>
+</ol>
+<h2 id="接口特点"><a href="#接口特点" class="headerlink" title="接口特点"></a>接口特点</h2><ol>
+<li>使用interface关键字修饰（编译后为 .class文件）<code>interface name { 方法声明 }</code>。</li>
+<li>接口中，<strong>只可以声明抽象方法</strong>。</li>
+<li>子类通过 implement 关键字实现接口<code>class 类名 implement 接口名{ }</code>。</li>
+<li>接口不能实例化，要通过定义实现类，实现接口中的所有抽象方法，才可以创建对象。</li>
+<li>接口的实现类<ol>
+<li>是一个抽象类，该类没有实现接口中的所有抽象方法。</li>
+<li>是一个普通类，该类实现了接口中的所有抽象方法。</li>
+</ol>
+</li>
+</ol>
+<h2 id="接口中成员的特点"><a href="#接口中成员的特点" class="headerlink" title="接口中成员的特点"></a>接口中成员的特点</h2><ol>
+<li>成员变量：只能是常量，不能是变量 默认加上<code>public static final</code>,建议手动加上。</li>
+<li>构造方法：没有构造方法，接口中无法定义成员变量。实现类不去访问接口中的构造方法（访问也没有），而是父类的构造方法。</li>
+<li>成员方法：只能是抽象方法，默认加上<code>public abstract</code>，建议手动加上。</li>
+</ol>
+<h2 id="类与类的关系"><a href="#类与类的关系" class="headerlink" title="类与类的关系"></a>类与类的关系</h2><blockquote>
+<p>继承关系，使用extends关键字。可以单继承，不可以多继承，可以多层继承。</p>
+</blockquote>
+<h2 id="类与接口的关系"><a href="#类与接口的关系" class="headerlink" title="类与接口的关系"></a>类与接口的关系</h2><blockquote>
+<p>实现关系，使用implement关键字。可以单实现，也可以多实现，不能多层实现。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 多实现</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> 类名 <span class="title">implement</span> 接口1, 接口2, 接口3...</span>&#123;</span><br><span class="line">    <span class="comment">// 重写所有接口中的所有抽象方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>一个类可以继承一个类的情况下同时实现多个类</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> 子类名 <span class="keyword">extends</span> 父类名 <span class="title">implement</span> 接口1, 接口2...</span>&#123;</span><br><span class="line">    <span class="comment">// 重写父类和接口中的所有抽象方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="接口与接口的关系"><a href="#接口与接口的关系" class="headerlink" title="接口与接口的关系"></a>接口与接口的关系</h2><blockquote>
+<p>继承关系，使用extends关键字。可以单继承，也可以多继承，可以多层继承</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> 接口名 <span class="keyword">extends</span> 接口1, 接口2...</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      <!-- 版权开始 -->
+      
+      
+        <div class="declare">
+          <strong>本文作者：</strong>
           
+            Sick Cat
+          
+          <br>
+          <strong>本文链接：</strong>
+          http://sick-cat.github.io/java/base/adstract-interface/
+          <br>
+          <strong>版权声明：</strong>
+          本作品采用
+          <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+          进行许可。转载请注明出处！
+          <!-- 
+            <br/>
+            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+           -->
+        </div>
+      
+      <!-- 版权结束 -->
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/txpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -219,7 +342,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -236,392 +359,132 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/java/base/adstract-interface/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!-- 不蒜子统计 -->
+<nav id="article-nav">
+  
+  
+    <a href="/java/base/final/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">final关键字</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
-<a href="/java/base/final/" class="archive-article-date">
-  	<time datetime="2019-08-12T17:16:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-12</time>
-</a>
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/java/base/final/">final关键字</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/base//" class="article-tag-list-link color5">base</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#抽象类特点"><span class="toc-number">1.</span> <span class="toc-text">抽象类特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#抽象类成员特点"><span class="toc-number">2.</span> <span class="toc-text">抽象类成员特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#接口特点"><span class="toc-number">3.</span> <span class="toc-text">接口特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#接口中成员的特点"><span class="toc-number">4.</span> <span class="toc-text">接口中成员的特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类与类的关系"><span class="toc-number">5.</span> <span class="toc-text">类与类的关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类与接口的关系"><span class="toc-number">6.</span> <span class="toc-text">类与接口的关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#接口与接口的关系"><span class="toc-number">7.</span> <span class="toc-text">接口与接口的关系</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!-- 不蒜子统计 -->
+        
+    </div>
+</aside>
 
 
-<a href="/acm/FindKthToTail/" class="archive-article-date">
-  	<time datetime="2019-08-11T22:18:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/acm/FindKthToTail/">链表中倒数第k个结点</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/acm//" class="article-tag-list-link color4">acm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!-- 不蒜子统计 -->
-
-
-<a href="/acm/reOrderArray/" class="archive-article-date">
-  	<time datetime="2019-08-10T09:12:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/acm/reOrderArray/">调整数组顺序使奇数位于偶数前面</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/acm//" class="article-tag-list-link color4">acm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!-- 不蒜子统计 -->
-
-
-<a href="/acm/数值的正数次方/" class="archive-article-date">
-  	<time datetime="2019-08-09T19:20:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/acm/数值的正数次方/">数值的正数次方</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/acm//" class="article-tag-list-link color4">acm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!-- 不蒜子统计 -->
-
-
-<a href="/acm/TwoStackOneQueue/" class="archive-article-date">
-  	<time datetime="2019-08-08T21:39:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/acm/TwoStackOneQueue/">两个栈实现队列</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/acm//" class="article-tag-list-link color4">acm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!-- 不蒜子统计 -->
-
-
-<a href="/acm/refactoringBinaryTree/" class="archive-article-date">
-  	<time datetime="2019-08-07T21:44:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/acm/refactoringBinaryTree/">重建二叉树</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/acm//" class="article-tag-list-link color4">acm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!-- 不蒜子统计 -->
-
-
-<a href="/java/base/IOspeed/" class="archive-article-date">
-  	<time datetime="2019-08-02T23:10:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/java/base/IOspeed/">java输入输出速度对比</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/base//" class="article-tag-list-link color5">base</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2019/page/2/">2</a><a class="page-number" href="/archives/2019/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2019/page/5/">5</a><a class="extend next" rel="next" href="/archives/2019/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="https://jjeejj.github.io/js/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "Mon Aug 12 2019 17:21:55 GMT+0000",
+  owner: 'sick-cat',
+  repo: 'sick-cat.github.io',
+  oauth: {
+    client_id: '2258b2b846d866f677f9',
+    client_secret: '4993de220a7d7849446b3ceb90aea004ce18e935',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
 
 
@@ -680,8 +543,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

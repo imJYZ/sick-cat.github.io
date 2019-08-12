@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sick-cat.github.io/java/base/final/</loc>
+    
+    <lastmod>2019-08-12T09:28:37.661Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://sick-cat.github.io/java/base/adstract-interface/</loc>
+    
+    <lastmod>2019-08-12T09:28:34.624Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://sick-cat.github.io/java/base/DataTypeAndMAX+1/</loc>
     
     <lastmod>2019-08-12T06:20:27.388Z</lastmod>
