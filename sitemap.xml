@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sick-cat.github.io/java/base/Set/</loc>
+    
+    <lastmod>2019-08-12T12:43:07.133Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://sick-cat.github.io/java/index.html</loc>
+    
+    <lastmod>2019-08-12T12:42:51.735Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://sick-cat.github.io/java/base/final/</loc>
     
     <lastmod>2019-08-12T09:28:37.661Z</lastmod>
@@ -93,23 +107,9 @@
   </url>
   
   <url>
-    <loc>http://sick-cat.github.io/java/index.html</loc>
-    
-    <lastmod>2019-08-05T10:39:46.621Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://sick-cat.github.io/java/base/Exception/</loc>
     
     <lastmod>2019-07-31T15:30:54.523Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://sick-cat.github.io/java/base/Set/</loc>
-    
-    <lastmod>2019-07-30T06:37:21.514Z</lastmod>
     
   </url>
   
