@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sick-cat.github.io/java/base/DataTypeAndMAX+1/</loc>
+    
+    <lastmod>2019-08-12T06:20:27.388Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://sick-cat.github.io/java/base/IdentifiersAndOperators/</loc>
+    
+    <lastmod>2019-08-12T06:20:24.066Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://sick-cat.github.io/acm/FindKthToTail/</loc>
     
     <lastmod>2019-08-11T14:21:40.866Z</lastmod>
@@ -180,20 +194,6 @@
     <loc>http://sick-cat.github.io/c/freeFunction/</loc>
     
     <lastmod>2019-07-23T07:35:53.859Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://sick-cat.github.io/java/base/DataTypeAndMAX+1/</loc>
-    
-    <lastmod>2019-07-23T07:35:14.251Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://sick-cat.github.io/java/base/IdentifiersAndOperators/</loc>
-    
-    <lastmod>2019-07-23T07:34:54.902Z</lastmod>
     
   </url>
   
