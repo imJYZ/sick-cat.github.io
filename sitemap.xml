@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://sick-cat.github.io/java/base/ArrayList-toArray/</loc>
+    <loc>http://sick-cat.github.io/java/base/StringBuilder-StringBuffer/</loc>
     
-    <lastmod>2019-08-13T14:25:44.340Z</lastmod>
+    <lastmod>2019-08-14T12:05:06.002Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://sick-cat.github.io/java/index.html</loc>
     
-    <lastmod>2019-08-13T14:25:41.016Z</lastmod>
+    <lastmod>2019-08-14T10:36:36.566Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://sick-cat.github.io/java/base/ArrayList-toArray/</loc>
+    
+    <lastmod>2019-08-13T14:25:44.340Z</lastmod>
     
   </url>
   

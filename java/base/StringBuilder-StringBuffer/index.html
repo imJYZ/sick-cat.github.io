@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>两个栈实现队列 | SickCat的博客</title>
+  <title>StringBuilder和StringBuffer | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目来源：牛客网–用两个栈实现队列 题目描述 用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。  解题思路  stack1 用于直接入队存储。 需要出队操作时，把stack1 中的内容逐个出栈，并入栈到stack2 中；这样stack2 (相对入队顺序)就是倒序的，stack1 也已经清空。 再次出队时，直接从stack2 中取，如果stack2 为空，重复 2">
-<meta name="keywords" content="剑指offer,牛客,两个栈实现队列">
+  <meta name="description" content="区别 StringBuffer：jdk 1.0出现，线程安全，效率低   StringBuilder: jdk 1.5出现，线程不安全，效率高  StringBuilder怎么实现的线程安全 StringBuilder 中的大量方法都使用 synchronized 修饰，来实现线程安全，就是因为这样速度才会慢。二者的实现几乎没什么区别，具有相同的父类和接口，具体实现方法都由父类完成。">
+<meta name="keywords" content="StringBuilder和StringBuffer,StringBuilder,StringBuffer,StringBuffer安全">
 <meta property="og:type" content="article">
-<meta property="og:title" content="两个栈实现队列">
-<meta property="og:url" content="http://sick-cat.github.io/acm/TwoStackOneQueue/index.html">
+<meta property="og:title" content="StringBuilder和StringBuffer">
+<meta property="og:url" content="http://sick-cat.github.io/java/base/StringBuilder-StringBuffer/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="题目来源：牛客网–用两个栈实现队列 题目描述 用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。  解题思路  stack1 用于直接入队存储。 需要出队操作时，把stack1 中的内容逐个出栈，并入栈到stack2 中；这样stack2 (相对入队顺序)就是倒序的，stack1 也已经清空。 再次出队时，直接从stack2 中取，如果stack2 为空，重复 2">
+<meta property="og:description" content="区别 StringBuffer：jdk 1.0出现，线程安全，效率低   StringBuilder: jdk 1.5出现，线程不安全，效率高  StringBuilder怎么实现的线程安全 StringBuilder 中的大量方法都使用 synchronized 修饰，来实现线程安全，就是因为这样速度才会慢。二者的实现几乎没什么区别，具有相同的父类和接口，具体实现方法都由父类完成。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-08T13:46:19.475Z">
+<meta property="og:updated_time" content="2019-08-14T12:05:06.002Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="两个栈实现队列">
-<meta name="twitter:description" content="题目来源：牛客网–用两个栈实现队列 题目描述 用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。  解题思路  stack1 用于直接入队存储。 需要出队操作时，把stack1 中的内容逐个出栈，并入栈到stack2 中；这样stack2 (相对入队顺序)就是倒序的，stack1 也已经清空。 再次出队时，直接从stack2 中取，如果stack2 为空，重复 2">
+<meta name="twitter:title" content="StringBuilder和StringBuffer">
+<meta name="twitter:description" content="区别 StringBuffer：jdk 1.0出现，线程安全，效率低   StringBuilder: jdk 1.5出现，线程不安全，效率高  StringBuilder怎么实现的线程安全 StringBuilder 中的大量方法都使用 synchronized 修饰，来实现线程安全，就是因为这样速度才会慢。二者的实现几乎没什么区别，具有相同的父类和接口，具体实现方法都由父类完成。">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -38,7 +38,7 @@
   
 
   
-    <meta name="keywords" content="剑指offer,牛客,两个栈实现队列,java开发,安全,爬虫,程序员,码农,sickcat">
+    <meta name="keywords" content="StringBuilder和StringBuffer,StringBuilder,StringBuffer,StringBuffer安全,java开发,安全,爬虫,程序员,码农,sickcat">
   
 </head>
 </html>
@@ -176,14 +176,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-两个栈实现队列" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-java-第一阶段：javaEE基础-StringBuilder和StringBuffer" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      两个栈实现队列
+      StringBuilder和StringBuffer
     </h1>
   
 
@@ -195,8 +195,8 @@
                 </span>
 
 
-<a href="/acm/TwoStackOneQueue/" class="archive-article-date">
-  	<time datetime="2019-08-08T21:39:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
+<a href="/java/base/StringBuilder-StringBuffer/" class="archive-article-date">
+  	<time datetime="2019-08-14T20:01:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-14</time>
 </a>
         
       </header>
@@ -204,20 +204,25 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>题目来源：<a href="https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6?tpId=13&tqId=11158&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking" target="_blank" rel="noopener">牛客网–用两个栈实现队列</a></strong></p>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。</p>
+        <h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><blockquote>
+<p>StringBuffer：jdk 1.0出现，线程安全，效率低</p>
 </blockquote>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<ol>
-<li>stack1 用于直接入队存储。</li>
-<li>需要出队操作时，把stack1 中的内容逐个出栈，并入栈到stack2 中；这样stack2 (相对入队顺序)就是倒序的，stack1 也已经清空。</li>
-<li>再次出队时，直接从stack2 中取，如果stack2 为空，重复 2 操作，如果stack1 也为空，说明队列中已经没有数据，返回-1。</li>
-</ol>
+<blockquote>
+<p>StringBuilder: jdk 1.5出现，线程不安全，效率高</p>
+</blockquote>
+<h2 id="StringBuilder怎么实现的线程安全"><a href="#StringBuilder怎么实现的线程安全" class="headerlink" title="StringBuilder怎么实现的线程安全"></a>StringBuilder怎么实现的线程安全</h2><blockquote>
+<p>StringBuilder 中的大量方法都使用 synchronized 修饰，来实现线程安全，就是因为这样速度才会慢。<br>二者的实现几乎没什么区别，具有相同的父类和接口，具体实现方法都由父类完成。</p>
 </blockquote>
 <a id="more"></a>
 
-<h2 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Stack;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TwoStackOneQueue</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">         QueueTest queue = <span class="keyword">new</span> QueueTest();</span><br><span class="line">         queue.push(<span class="number">10</span>);</span><br><span class="line">         queue.push(<span class="number">20</span>);</span><br><span class="line">        System.out.println(queue.pop());</span><br><span class="line">        System.out.println(queue.pop());</span><br><span class="line"></span><br><span class="line">        queue.push(<span class="number">30</span>);</span><br><span class="line">        queue.push(<span class="number">40</span>);</span><br><span class="line">        System.out.println(queue.pop());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 提交代码</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">QueueTest</span> </span>&#123;</span><br><span class="line">    Stack&lt;Integer&gt; stack1 = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">    Stack&lt;Integer&gt; stack2 = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// stack1 用于直接入队</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> node)</span> </span>&#123;</span><br><span class="line">        stack1.push(node);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// stack2 用于出队</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 如果stack1 和 stack2 都为空，则队列中没有数据</span></span><br><span class="line">        <span class="keyword">if</span> (stack1.empty() &amp;&amp; stack2.empty())&#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// stack2 为空，就把stack1 中的内容倒置到stack2 中</span></span><br><span class="line">        <span class="keyword">if</span> (stack2.empty()) &#123;</span><br><span class="line">            <span class="keyword">while</span> (!stack1.empty()) &#123;</span><br><span class="line">                stack2.push(stack1.pop());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> stack2.pop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="StringBuffer-部分源码"><a href="#StringBuffer-部分源码" class="headerlink" title="StringBuffer 部分源码"></a>StringBuffer 部分源码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">StringBuffer</span></span></span><br><span class="line"><span class="class">    <span class="keyword">extends</span> <span class="title">AbstractStringBuilder</span></span></span><br><span class="line"><span class="class">    <span class="keyword">implements</span> <span class="title">java</span>.<span class="title">io</span>.<span class="title">Serializable</span>, <span class="title">CharSequence</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">// toString返回的最后一个值的缓存。每当修改StringBuffer时清除。</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">transient</span> <span class="keyword">char</span>[] toStringCache;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 默认初始化容量为16个字符</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">StringBuffer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(<span class="number">16</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 如果构造方法中传入了一个字符串，长度为字符串长度加16</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">StringBuffer</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(str.length() + <span class="number">16</span>);</span><br><span class="line">        append(str);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 被 synchronized 修饰方法还有很多，不再一一列举</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> StringBuffer <span class="title">append</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// StringBuffer将会被修改，清除 toStringCache</span></span><br><span class="line">        toStringCache = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">super</span>.append(str);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 重写toString方法</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (toStringCache == <span class="keyword">null</span>) &#123;</span><br><span class="line">            toStringCache = Arrays.copyOfRange(value, <span class="number">0</span>, count);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> String(toStringCache, <span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="StringBuilder-部分源码"><a href="#StringBuilder-部分源码" class="headerlink" title="StringBuilder 部分源码"></a>StringBuilder 部分源码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">StringBuilder</span></span></span><br><span class="line"><span class="class">    <span class="keyword">extends</span> <span class="title">AbstractStringBuilder</span></span></span><br><span class="line"><span class="class">    <span class="keyword">implements</span> <span class="title">java</span>.<span class="title">io</span>.<span class="title">Serializable</span>, <span class="title">CharSequence</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">// 默认初始化容量为16个字符</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">StringBuilder</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(<span class="number">16</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 如果构造方法中传入了一个字符串，长度为字符串长度加16</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">StringBuilder</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(str.length() + <span class="number">16</span>);</span><br><span class="line">        append(str);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 添加字符串方法</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> StringBuilder <span class="title">append</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.append(str);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// toString 方法</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 创建一个副本，不要共享数组</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> String(value, <span class="number">0</span>, count);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="扩容方法"><a href="#扩容方法" class="headerlink" title="扩容方法"></a>扩容方法</h2><blockquote>
+<p>先扩充为 原长度 * 2 + 2 的长度，然后判断扩充后的长度是否大于StringBuilder拼接字符串后的长度（新添加的+已有的长度），如果小于的话，就执行<code>newCapacity = StringBuilder</code>（StringBuilder为拼接后字符串的长度）。如果<code>newCapacity&lt;0</code>说明数组长度已经超出了范围，这时调用hugeCapacity方法，执行<code>newCapacity = Integer.MAX_VALUE</code>。<br><code>AbstractStringBuilder 部分源码</code></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 用于字符存储。</span></span><br><span class="line"><span class="keyword">char</span>[] value;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 数组最大长度</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> MAX_ARRAY_SIZE = Integer.MAX_VALUE - <span class="number">8</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 扩容方法</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">newCapacity</span><span class="params">(<span class="keyword">int</span> minCapacity)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 先扩充为 原长度 * 2 + 2 的长度</span></span><br><span class="line">    <span class="keyword">int</span> newCapacity = (value.length &lt;&lt; <span class="number">1</span>) + <span class="number">2</span>;</span><br><span class="line">    <span class="comment">// 判断扩充后的长度是否大于StringBuilder拼接字符串后的长度</span></span><br><span class="line">    <span class="keyword">if</span> (newCapacity - minCapacity &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        newCapacity = minCapacity;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (newCapacity &lt;= <span class="number">0</span> || MAX_ARRAY_SIZE - newCapacity &lt; <span class="number">0</span>)</span><br><span class="line">        ? hugeCapacity(minCapacity)</span><br><span class="line">        : newCapacity;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 数组再次扩容，但是长度不能超出int范围</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">hugeCapacity</span><span class="params">(<span class="keyword">int</span> minCapacity)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (Integer.MAX_VALUE - minCapacity &lt; <span class="number">0</span>) &#123; <span class="comment">// overflow</span></span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> OutOfMemoryError();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (minCapacity &gt; MAX_ARRAY_SIZE)</span><br><span class="line">        ? minCapacity : MAX_ARRAY_SIZE;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       <!-- 版权开始 -->
@@ -230,7 +235,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          http://sick-cat.github.io/acm/TwoStackOneQueue/
+          http://sick-cat.github.io/java/base/StringBuilder-StringBuffer/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -285,7 +290,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
@@ -297,7 +302,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/acm//" class="article-tag-list-link color4">acm</a>
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java/base//" class="article-tag-list-link color5">base</a>
         		</li>
       		
 		</ul>
@@ -352,7 +361,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/acm/TwoStackOneQueue/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/java/base/StringBuilder-StringBuffer/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -366,18 +375,9 @@
   
 <nav id="article-nav">
   
-    <a href="/acm/数值的正数次方/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          数值的正数次方
-        
-      </div>
-    </a>
   
-  
-    <a href="/acm/refactoringBinaryTree/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">重建二叉树</div>
+    <a href="/java/base/ArrayList-toArray/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ArrayList的toArray()和toArray(T[] a)方法</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -404,7 +404,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路"><span class="toc-number">2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java代码"><span class="toc-number">3.</span> <span class="toc-text">java代码</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#区别"><span class="toc-number">1.</span> <span class="toc-text">区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#StringBuilder怎么实现的线程安全"><span class="toc-number">2.</span> <span class="toc-text">StringBuilder怎么实现的线程安全</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#StringBuffer-部分源码"><span class="toc-number">2.1.</span> <span class="toc-text">StringBuffer 部分源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#StringBuilder-部分源码"><span class="toc-number">2.2.</span> <span class="toc-text">StringBuilder 部分源码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#扩容方法"><span class="toc-number">3.</span> <span class="toc-text">扩容方法</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -429,7 +429,7 @@
 <script src="https://jjeejj.github.io/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Thu Aug 08 2019 21:39:14 GMT+0000",
+  id: "Wed Aug 14 2019 20:01:42 GMT+0000",
   owner: 'sick-cat',
   repo: 'sick-cat.github.io',
   oauth: {
