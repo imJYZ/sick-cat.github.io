@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>Archives: 2019/8 | SickCat的博客</title>
+  <title>jQuery显示和隐藏 | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一直在跑路的菜鸡">
-<meta name="keywords" content="java开发,安全,爬虫,程序员,码农,sickcat">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SickCat的博客">
-<meta property="og:url" content="http://sick-cat.github.io/archives/2019/08/page/2/index.html">
+  <meta name="description" content="隐藏和显示 显示方向从左上角到右下角，隐藏方向相反。  show(speed, fn);  // 显示   hide(speed, fn);  // 隐藏   Toggle(speed, fn);  // 切换（隐藏/显示）">
+<meta name="keywords" content="jQuery显示和隐藏,slideDown,slideUp卡顿,slideDown原理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery显示和隐藏">
+<meta property="og:url" content="http://sick-cat.github.io/jQuery/hide-show/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="一直在跑路的菜鸡">
+<meta property="og:description" content="隐藏和显示 显示方向从左上角到右下角，隐藏方向相反。  show(speed, fn);  // 显示   hide(speed, fn);  // 隐藏   Toggle(speed, fn);  // 切换（隐藏/显示）">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-19T15:30:32.512Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SickCat的博客">
-<meta name="twitter:description" content="一直在跑路的菜鸡">
+<meta name="twitter:title" content="jQuery显示和隐藏">
+<meta name="twitter:description" content="隐藏和显示 显示方向从左上角到右下角，隐藏方向相反。  show(speed, fn);  // 显示   hide(speed, fn);  // 隐藏   Toggle(speed, fn);  // 切换（隐藏/显示）">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -37,7 +38,7 @@
   
 
   
-    <meta name="keywords" content="java开发,安全,爬虫,程序员,码农,sickcat">
+    <meta name="keywords" content="jQuery显示和隐藏,slideDown,slideUp卡顿,slideDown原理,java开发,安全,爬虫,程序员,码农,sickcat">
   
 </head>
 </html>
@@ -175,297 +176,298 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-jQuery显示和隐藏" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      jQuery显示和隐藏
+    </h1>
+  
+
+        
+        <!-- 不蒜子统计 -->
+  
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+                </span>
+
+
+<a href="/jQuery/hide-show/" class="archive-article-date">
+  	<time datetime="2019-08-19T23:21:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-19</time>
+</a>
+        
+      </header>
     
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="隐藏和显示"><a href="#隐藏和显示" class="headerlink" title="隐藏和显示"></a>隐藏和显示</h2><blockquote>
+<p>显示方向从左上角到右下角，隐藏方向相反。</p>
+<ul>
+<li>show(speed, fn);  // 显示  </li>
+<li>hide(speed, fn);  // 隐藏  </li>
+<li>Toggle(speed, fn);  // 切换（隐藏/显示）  </li>
+</ul>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="滑动效果"><a href="#滑动效果" class="headerlink" title="滑动效果"></a>滑动效果</h2><blockquote>
+<p>默认：显示从上到下滑入，隐藏从下到上滑出。<br>设置绝对定位top属性，没有设置bottom：同默认。<br>设置绝对定位bottom属性，没有设置top： 显示从下到上滑入，隐藏从上到下滑出。   </p>
+<ul>
+<li>slideDown(speed, fn);  // 显示</li>
+<li>slideUp(speed, fn);  // 隐藏</li>
+<li>slideToggle(speed, fn);  // 切换（显示/隐藏）</li>
+</ul>
+</blockquote>
+<h2 id="淡入淡出"><a href="#淡入淡出" class="headerlink" title="淡入淡出"></a>淡入淡出</h2><blockquote>
+<p>这个没什么好说的，直观感受就是调节透明态度。</p>
+<ul>
+<li>fadeIn(speed, fn);  // 显示</li>
+<li>fadeOut(speed, fn);  // 隐藏</li>
+<li>fadeToggle(speed, fn);  // 切换（显示/隐藏）</li>
+<li>fadeTo(speed, opacity, [fn]);  // 可以指定透明度，opacity：指定一个0-1之间透明度数字。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>speed：</strong> 速度，单位：毫秒。也可以传递固定字符串：slow、mormal、fast。<br><strong>fn：</strong> 显示成功后回调函数。可以不使用。</p>
+</blockquote>
+<h2 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h2><blockquote>
+<p>使用show、hide、Toggle、slideDown、slideUp、slideToggle函数来操作行标签的时候，会有卡顿，操作图片（img标签）能明显感觉到卡顿。而对于块标签，没有任何问题。</p>
+</blockquote>
+<blockquote>
+<p>行标签：包含a、span、em、strong、img、var；<br>块标签：包含p、div、ul、ol、li、dl、dt、dd、h1~h6；   </p>
+</blockquote>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><blockquote>
+<p>jQuery的隐藏和显示，是通过控制高度实现的，对于行标签，有默认高度（<strong><em>默认高度不等于行高</em></strong>），以图片为例，一旦图片的高度小于默认高度，就会以图片上下对齐的方式展示（vertical-align）。   </p>
+</blockquote>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><blockquote>
+<p>使用一个块标签，把行标签包裹起来，操作块标签就可以纵享丝滑。 </p>
+</blockquote>
+<h2 id="问题二"><a href="#问题二" class="headerlink" title="问题二"></a>问题二</h2><blockquote>
+<p>对图片进行 slideDown 和 slideUp 操作，出现的效果类似于 hide 和 show 的效果</p>
+</blockquote>
+<h2 id="分析-1"><a href="#分析-1" class="headerlink" title="分析"></a>分析</h2><blockquote>
+<p>因为没有对图片宽度进行设置。在单方面缩小高度时，会等比缩小宽度。   </p>
+</blockquote>
+<h2 id="解决方法-1"><a href="#解决方法-1" class="headerlink" title="解决方法"></a>解决方法</h2><blockquote>
+<p>对图片设置宽度。</p>
+</blockquote>
+
+      
+
+      <!-- 版权开始 -->
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!-- 不蒜子统计 -->
-
-
-<a href="/acm/TwoStackOneQueue/" class="archive-article-date">
-  	<time datetime="2019-08-08T21:39:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/acm/TwoStackOneQueue/">两个栈实现队列</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
+        <div class="declare">
+          <strong>本文作者：</strong>
           
+            Sick Cat
+          
+          <br>
+          <strong>本文链接：</strong>
+          http://sick-cat.github.io/jQuery/hide-show/
+          <br>
+          <strong>版权声明：</strong>
+          本作品采用
+          <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+          进行许可。转载请注明出处！
+          <!-- 
+            <br/>
+            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+           -->
+        </div>
+      
+      <!-- 版权结束 -->
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/txpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">essays</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/acm//" class="article-tag-list-link color4">acm</a>
+        			<a href="/categories/jQuery//" class="article-tag-list-link color2">jQuery</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/jQuery/hide-show/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!-- 不蒜子统计 -->
+<nav id="article-nav">
+  
+  
+    <a href="/java/base/StringBuilder-StringBuffer/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">StringBuilder和StringBuffer</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
-<a href="/acm/refactoringBinaryTree/" class="archive-article-date">
-  	<time datetime="2019-08-07T21:44:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
-</a>
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/acm/refactoringBinaryTree/">重建二叉树</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/acm//" class="article-tag-list-link color4">acm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#隐藏和显示"><span class="toc-number">1.</span> <span class="toc-text">隐藏和显示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#滑动效果"><span class="toc-number">2.</span> <span class="toc-text">滑动效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#淡入淡出"><span class="toc-number">3.</span> <span class="toc-text">淡入淡出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题一"><span class="toc-number">4.</span> <span class="toc-text">问题一</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析"><span class="toc-number">5.</span> <span class="toc-text">分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决方法"><span class="toc-number">6.</span> <span class="toc-text">解决方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题二"><span class="toc-number">7.</span> <span class="toc-text">问题二</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析-1"><span class="toc-number">8.</span> <span class="toc-text">分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决方法-1"><span class="toc-number">9.</span> <span class="toc-text">解决方法</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!-- 不蒜子统计 -->
+        
+    </div>
+</aside>
 
 
-<a href="/java/base/IOspeed/" class="archive-article-date">
-  	<time datetime="2019-08-02T23:10:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/java/base/IOspeed/">java输入输出速度对比</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/base//" class="article-tag-list-link color5">base</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!-- 不蒜子统计 -->
-
-
-<a href="/java/base/File/" class="archive-article-date">
-  	<time datetime="2019-07-31T23:34:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/java/base/File/">File</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/base//" class="article-tag-list-link color5">base</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!-- 不蒜子统计 -->
-
-
-<a href="/java/base/Exception/" class="archive-article-date">
-  	<time datetime="2019-07-31T23:27:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/java/base/Exception/">异常</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/base//" class="article-tag-list-link color5">base</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2019/08/">&laquo; Prev</a><a class="page-number" href="/archives/2019/08/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="https://jjeejj.github.io/js/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "Mon Aug 19 2019 23:21:55 GMT+0000",
+  owner: 'sick-cat',
+  repo: 'sick-cat.github.io',
+  oauth: {
+    client_id: '2258b2b846d866f677f9',
+    client_secret: '4993de220a7d7849446b3ceb90aea004ce18e935',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
 
 
@@ -524,8 +526,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
