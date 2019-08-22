@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sick-cat.github.io/acm/ReverseList/</loc>
+    
+    <lastmod>2019-08-22T16:31:05.184Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://sick-cat.github.io/jQuery/hide-show/</loc>
     
     <lastmod>2019-08-19T15:30:32.512Z</lastmod>
