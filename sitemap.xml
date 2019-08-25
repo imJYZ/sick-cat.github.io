@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sick-cat.github.io/acm/HasSubtree/</loc>
+    
+    <lastmod>2019-08-25T06:39:38.666Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://sick-cat.github.io/acm/mergeList/</loc>
+    
+    <lastmod>2019-08-24T02:29:49.684Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://sick-cat.github.io/acm/ReverseList/</loc>
     
     <lastmod>2019-08-22T16:31:05.184Z</lastmod>
