@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>Archives: 2019 | SickCat的博客</title>
+  <title>顺时针打印矩阵 | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一直在跑路的菜鸡">
-<meta name="keywords" content="java开发,安全,爬虫,程序员,码农,sickcat">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SickCat的博客">
-<meta property="og:url" content="http://sick-cat.github.io/archives/2019/page/6/index.html">
+  <meta name="description" content="题目来源：牛客网–顺时针打印矩阵 题目描述 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.  解题思路 分别设置上下左右四个墙壁，当一行或一列全部输出时，就把对应墙壁向内移动。">
+<meta name="keywords" content="牛客网,顺时针打印矩阵,剑指offer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="顺时针打印矩阵">
+<meta property="og:url" content="http://sick-cat.github.io/acm/printMatrix/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="一直在跑路的菜鸡">
+<meta property="og:description" content="题目来源：牛客网–顺时针打印矩阵 题目描述 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.  解题思路 分别设置上下左右四个墙壁，当一行或一列全部输出时，就把对应墙壁向内移动。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-27T16:01:33.358Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SickCat的博客">
-<meta name="twitter:description" content="一直在跑路的菜鸡">
+<meta name="twitter:title" content="顺时针打印矩阵">
+<meta name="twitter:description" content="题目来源：牛客网–顺时针打印矩阵 题目描述 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.  解题思路 分别设置上下左右四个墙壁，当一行或一列全部输出时，就把对应墙壁向内移动。">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -37,7 +38,7 @@
   
 
   
-    <meta name="keywords" content="java开发,安全,爬虫,程序员,码农,sickcat">
+    <meta name="keywords" content="牛客网,顺时针打印矩阵,剑指offer,java开发,安全,爬虫,程序员,码农,sickcat">
   
 </head>
 </html>
@@ -175,39 +176,108 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-顺时针打印矩阵" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      顺时针打印矩阵
+    </h1>
+  
+
+        
+        <!-- 不蒜子统计 -->
+  
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+                </span>
+
+
+<a href="/acm/printMatrix/" class="archive-article-date">
+  	<time datetime="2019-08-27T23:59:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-27</time>
+</a>
+        
+      </header>
     
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>题目来源：</strong><a href="https://www.nowcoder.com/practice/9b4c81a02cd34f76be2659fa0d54342a?tpId=13&tqId=11172&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking" target="_blank" rel="noopener">牛客网–顺时针打印矩阵</a></p>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
+<p>输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.</p>
+</blockquote>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
+<p>分别设置上下左右四个墙壁，当一行或一列全部输出时，就把对应墙壁向内移动。<br>设置flag，标志着现在该横向还是纵向移动。设置colFlag和rowFlag，分别代表着横向和纵向移动的方向(向左，向右，向下，向上)。<br>当移动到转换横纵移动方向时，要把循环最后越界的数据下标，恢复到转换方向后正确的下标。<br>每次循环后，判断墙壁是否重复，重复就证明矩阵中数字已经遍历完全。</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="提交代码"><a href="#提交代码" class="headerlink" title="提交代码"></a>提交代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ArrayList&lt;Integer&gt; <span class="title">printMatrix</span><span class="params">(<span class="keyword">int</span> [][] matrix)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (matrix.length == <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 四个边界值</span></span><br><span class="line">    <span class="keyword">int</span> top = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> right = matrix[<span class="number">0</span>].length;</span><br><span class="line">    <span class="keyword">int</span> bottom = matrix.length;</span><br><span class="line">    <span class="comment">// 横着和竖着相加的值（1/-1）</span></span><br><span class="line">    <span class="keyword">int</span> colFlage = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> rowFlage = <span class="number">1</span>;</span><br><span class="line">    <span class="comment">//  现在是否是横着移动</span></span><br><span class="line">    <span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (bottom != top &amp;&amp; right != left)&#123;</span><br><span class="line">        <span class="comment">// 横向移动</span></span><br><span class="line">        <span class="keyword">if</span> (flag)&#123;</span><br><span class="line">            <span class="keyword">for</span> (; j &lt; right &amp;&amp; j &gt;= left; j += rowFlage) &#123;</span><br><span class="line">                list.add(matrix[i][j]);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 缩小墙壁</span></span><br><span class="line">            <span class="keyword">if</span> (rowFlage &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                top++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                bottom--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 指针恢复</span></span><br><span class="line">            i += rowFlage;</span><br><span class="line">            <span class="comment">// 切换下次横向移动方向</span></span><br><span class="line">            rowFlage = -rowFlage;</span><br><span class="line">            j += rowFlage;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 纵向移动</span></span><br><span class="line">        <span class="keyword">if</span> (!flag)&#123;</span><br><span class="line">            <span class="keyword">for</span> (; i &lt; bottom &amp;&amp; i &gt;= top; i += colFlage) &#123;</span><br><span class="line">                list.add(matrix[i][j]);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 缩小墙壁</span></span><br><span class="line">            <span class="keyword">if</span> (colFlage &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                right--;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                left++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 切换下次纵向移动方向</span></span><br><span class="line">            colFlage = -colFlage;</span><br><span class="line">            <span class="comment">// 恢复指针位置</span></span><br><span class="line">            i += colFlage;</span><br><span class="line">            j += colFlage;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 切换横向和竖向移动</span></span><br><span class="line">        flag = !flag;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> list;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="本地测试代码"><a href="#本地测试代码" class="headerlink" title="本地测试代码"></a>本地测试代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> three;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.PrintStream;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> jiayanzhao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@creation</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PrintMatrix</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[][] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>][<span class="number">4</span>];</span><br><span class="line">        <span class="keyword">int</span> val = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">4</span>; j++) &#123;</span><br><span class="line">                arr[i][j] = val;</span><br><span class="line">                val++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            System.out.println(Arrays.toString(arr[i]));</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        ArrayList&lt;Integer&gt; list = printMatrix(arr);</span><br><span class="line">        System.out.println(list.toString());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ArrayList&lt;Integer&gt; <span class="title">printMatrix</span><span class="params">(<span class="keyword">int</span> [][] matrix)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (matrix.length == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 四个边界值</span></span><br><span class="line">        <span class="keyword">int</span> top = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right = matrix[<span class="number">0</span>].length;</span><br><span class="line">        <span class="keyword">int</span> bottom = matrix.length;</span><br><span class="line">        <span class="comment">// 横着和竖着相加的值（1/-1）</span></span><br><span class="line">        <span class="keyword">int</span> colFlage = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> rowFlage = <span class="number">1</span>;</span><br><span class="line">        <span class="comment">//  现在是否是横着移动</span></span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (bottom != top &amp;&amp; right != left)&#123;</span><br><span class="line">            <span class="comment">// 横向移动</span></span><br><span class="line">            <span class="keyword">if</span> (flag)&#123;</span><br><span class="line">                <span class="keyword">for</span> (; j &lt; right &amp;&amp; j &gt;= left; j += rowFlage) &#123;</span><br><span class="line">                    list.add(matrix[i][j]);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 缩小墙壁</span></span><br><span class="line">                <span class="keyword">if</span> (rowFlage &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    top++;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    bottom--;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 指针恢复</span></span><br><span class="line">                i += rowFlage;</span><br><span class="line">                <span class="comment">// 切换下次横向移动方向</span></span><br><span class="line">                rowFlage = -rowFlage;</span><br><span class="line">                j += rowFlage;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 纵向移动</span></span><br><span class="line">            <span class="keyword">if</span> (!flag)&#123;</span><br><span class="line">                <span class="keyword">for</span> (; i &lt; bottom &amp;&amp; i &gt;= top; i += colFlage) &#123;</span><br><span class="line">                    list.add(matrix[i][j]);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 缩小墙壁</span></span><br><span class="line">                <span class="keyword">if</span> (colFlage &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    right--;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    left++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 切换下次纵向移动方向</span></span><br><span class="line">                colFlage = -colFlage;</span><br><span class="line">                <span class="comment">// 恢复指针位置</span></span><br><span class="line">                i += colFlage;</span><br><span class="line">                j += colFlage;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 切换横向和竖向移动</span></span><br><span class="line">            flag = !flag;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      <!-- 版权开始 -->
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!-- 不蒜子统计 -->
-
-
-<a href="/acm/matrixFind/" class="archive-article-date">
-  	<time datetime="2019-07-10T00:39:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/acm/matrixFind/">二维数组查找</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
+        <div class="declare">
+          <strong>本文作者：</strong>
           
+            Sick Cat
+          
+          <br>
+          <strong>本文链接：</strong>
+          http://sick-cat.github.io/acm/printMatrix/
+          <br>
+          <strong>版权声明：</strong>
+          本作品采用
+          <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+          进行许可。转载请注明出处！
+          <!-- 
+            <br/>
+            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+           -->
+        </div>
+      
+      <!-- 版权结束 -->
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/txpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -219,7 +289,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -232,176 +302,132 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/acm/printMatrix/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!-- 不蒜子统计 -->
+<nav id="article-nav">
+  
+  
+    <a href="/acm/HasSubtree/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">树的子结构</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
-<a href="/acm/replaceBlank/" class="archive-article-date">
-  	<time datetime="2019-07-10T00:39:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/acm/replaceBlank/">替换空格</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/acm//" class="article-tag-list-link color4">acm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路"><span class="toc-number">2.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#提交代码"><span class="toc-number">3.</span> <span class="toc-text">提交代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地测试代码"><span class="toc-number">4.</span> <span class="toc-text">本地测试代码</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!-- 不蒜子统计 -->
+        
+    </div>
+</aside>
 
 
-<a href="/acm/evenString/" class="archive-article-date">
-  	<time datetime="2019-07-10T00:37:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/acm/evenString/">偶串</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/acm//" class="article-tag-list-link color4">acm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!-- 不蒜子统计 -->
-
-
-<a href="/acm/manufacturingPalindrome/" class="archive-article-date">
-  	<time datetime="2019-07-10T00:33:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/acm/manufacturingPalindrome/">制造回文</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/acm//" class="article-tag-list-link color4">acm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2019/page/5/">&laquo; Prev</a><a class="page-number" href="/archives/2019/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2019/page/4/">4</a><a class="page-number" href="/archives/2019/page/5/">5</a><span class="page-number current">6</span>
-    </nav>
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="https://jjeejj.github.io/js/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "Tue Aug 27 2019 23:59:08 GMT+0000",
+  owner: 'sick-cat',
+  repo: 'sick-cat.github.io',
+  oauth: {
+    client_id: '2258b2b846d866f677f9',
+    client_secret: '4993de220a7d7849446b3ceb90aea004ce18e935',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
 
 
@@ -460,8 +486,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
