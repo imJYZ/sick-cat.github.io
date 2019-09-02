@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
   <title>java new File路径 | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java项目中,相对路径的参照路径是Java项目根目录，而不是Java源码文件所在目录 举个例子：">
+  <meta name="description" content="结论 Java项目使用相对路径new File(&amp;quot;file.test&amp;quot;)创建文件，会从程序启动的地方去创建文件  java Applet 程序">
 <meta name="keywords" content="java,路径,new file">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java new File路径">
 <meta property="og:url" content="http://sick-cat.github.io/java/javaNewFilePath/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="Java项目中,相对路径的参照路径是Java项目根目录，而不是Java源码文件所在目录 举个例子：">
+<meta property="og:description" content="结论 Java项目使用相对路径new File(&amp;quot;file.test&amp;quot;)创建文件，会从程序启动的地方去创建文件  java Applet 程序">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-23T07:36:07.609Z">
+<meta property="og:updated_time" content="2019-09-02T11:08:31.188Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java new File路径">
-<meta name="twitter:description" content="Java项目中,相对路径的参照路径是Java项目根目录，而不是Java源码文件所在目录 举个例子：">
+<meta name="twitter:description" content="结论 Java项目使用相对路径new File(&amp;quot;file.test&amp;quot;)创建文件，会从程序启动的地方去创建文件  java Applet 程序">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -204,14 +204,31 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p><b> Java项目中,相对路径的参照路径是<font color="#FFA500">Java项目根目录</font>，而不是Java源码文件所在目录</b></p>
-<h3 id="举个例子："><a href="#举个例子：" class="headerlink" title="举个例子："></a>举个例子：</h3><a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">package File;</span><br><span class="line"></span><br><span class="line">import java.io.File;</span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">public class PathTest &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		File pt = new File(&quot;pathtest.txt&quot;);</span><br><span class="line">		if(!pt.exists())&#123;</span><br><span class="line">			try &#123;</span><br><span class="line">				pt.createNewFile();</span><br><span class="line">				System.out.println(&quot;文件已创建&quot;);</span><br><span class="line">			&#125; catch (IOException e) &#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;	</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;绝对路径：&quot;+pt.getAbsolutePath());</span><br><span class="line">		System.out.println(&quot;相对路径：&quot;+pt.getPath());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><blockquote>
+<p>Java项目使用相对路径<code>new File(&quot;file.test&quot;)</code>创建文件，会从<strong>程序启动的地方</strong>去创建文件</p>
+</blockquote>
+<h2 id="java-Applet-程序"><a href="#java-Applet-程序" class="headerlink" title="java Applet 程序"></a>java Applet 程序</h2><a id="more"></a>
 
-<p>我的Java测试源码路径为:<br>  <code>D:\java\ChapterEight\src\File\PathTest.java</code></p>
-<h3 id="运行结果为："><a href="#运行结果为：" class="headerlink" title="运行结果为："></a>运行结果为：</h3><pre><code>绝对路径：D:\java\ChapterEight\pathtest.txt
-相对路径：pathtest.txt
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ServletOutputStream outputStream = resp.getOutputStream();</span><br><span class="line">File file = <span class="keyword">new</span> File(<span class="string">"file.test"</span>);</span><br><span class="line">String testPath = file.getAbsolutePath();</span><br><span class="line">outputStream.write(testPath.getBytes());</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>使用eclipse运行项目,浏览器访问结果：</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// eclipse安装路径：     D:\Program Files\eclipse</span></span><br><span class="line">D:\Program Files\eclipse\file.test</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>关闭eclipse，只打开tomcat，浏览器访问结果：</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// tomcat安装路径：    D:\Program Files\Tomcat\apache-tomcat-8.5.45</span></span><br><span class="line">D:\Program Files\Tomcat\apache-tomcat-<span class="number">8.5</span>.45\bin\file.test</span><br></pre></td></tr></table></figure>
+
+<h2 id="Java-Application-程序"><a href="#Java-Application-程序" class="headerlink" title="Java Application 程序"></a>Java Application 程序</h2><blockquote>
+<p>Java Application项目中,相对路径的参照物是==Java项目路径==，而不是Java源码文件路径</p>
+</blockquote>
+<p>举个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">File file = new File(&quot;file.test&quot;);</span><br><span class="line">String testPath = file.getAbsolutePath();</span><br><span class="line">System.out.println(testPath);</span><br></pre></td></tr></table></figure>
+
+<p>运行结果为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//项目路径：    D:\java\JavaObject</span><br><span class="line"></span><br><span class="line">D:\java\JavaObject\pathtest.txt</span><br></pre></td></tr></table></figure>
       
 
       <!-- 版权开始 -->
@@ -398,7 +415,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#举个例子："><span class="toc-number">1.</span> <span class="toc-text">举个例子：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行结果为："><span class="toc-number">2.</span> <span class="toc-text">运行结果为：</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#结论"><span class="toc-number">1.</span> <span class="toc-text">结论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java-Applet-程序"><span class="toc-number">2.</span> <span class="toc-text">java Applet 程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-Application-程序"><span class="toc-number">3.</span> <span class="toc-text">Java Application 程序</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -557,11 +574,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
