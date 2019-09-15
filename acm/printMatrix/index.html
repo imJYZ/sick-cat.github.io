@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
   <title>顺时针打印矩阵 | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目来源：牛客网–顺时针打印矩阵 题目描述 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.  解题思路 分别设置上下左右四个墙壁，当一行或一列全部输出时，就把对应墙壁向内移动。">
+  <meta name="description" content="题目来源：牛客网–顺时针打印矩阵 题目描述 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。例如：输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.  解题思路 分别设置上下左右四个墙壁，当一行或一列全部输出时，就把对应墙壁向内移动。设置f">
 <meta name="keywords" content="牛客网,顺时针打印矩阵,剑指offer">
 <meta property="og:type" content="article">
 <meta property="og:title" content="顺时针打印矩阵">
 <meta property="og:url" content="http://sick-cat.github.io/acm/printMatrix/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="题目来源：牛客网–顺时针打印矩阵 题目描述 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.  解题思路 分别设置上下左右四个墙壁，当一行或一列全部输出时，就把对应墙壁向内移动。">
+<meta property="og:description" content="题目来源：牛客网–顺时针打印矩阵 题目描述 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。例如：输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.  解题思路 分别设置上下左右四个墙壁，当一行或一列全部输出时，就把对应墙壁向内移动。设置f">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-27T16:01:33.358Z">
+<meta property="og:updated_time" content="2019-09-15T07:58:01.437Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="顺时针打印矩阵">
-<meta name="twitter:description" content="题目来源：牛客网–顺时针打印矩阵 题目描述 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.  解题思路 分别设置上下左右四个墙壁，当一行或一列全部输出时，就把对应墙壁向内移动。">
+<meta name="twitter:description" content="题目来源：牛客网–顺时针打印矩阵 题目描述 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。例如：输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.  解题思路 分别设置上下左右四个墙壁，当一行或一列全部输出时，就把对应墙壁向内移动。设置f">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -206,7 +206,7 @@
       
         <p><strong>题目来源：</strong><a href="https://www.nowcoder.com/practice/9b4c81a02cd34f76be2659fa0d54342a?tpId=13&tqId=11172&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking" target="_blank" rel="noopener">牛客网–顺时针打印矩阵</a></p>
 <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.</p>
+<p>输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。<br>例如：<br>输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16<br>则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.</p>
 </blockquote>
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
 <p>分别设置上下左右四个墙壁，当一行或一列全部输出时，就把对应墙壁向内移动。<br>设置flag，标志着现在该横向还是纵向移动。设置colFlag和rowFlag，分别代表着横向和纵向移动的方向(向左，向右，向下，向上)。<br>当移动到转换横纵移动方向时，要把循环最后越界的数据下标，恢复到转换方向后正确的下标。<br>每次循环后，判断墙壁是否重复，重复就证明矩阵中数字已经遍历完全。</p>
@@ -561,11 +561,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">

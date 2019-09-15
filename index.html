@@ -177,6 +177,115 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-栈的压入、弹出序列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/acm/isPopOrder/">栈的压入、弹出序列</a>
+    </h1>
+  
+
+        
+        <!-- 不蒜子统计 -->
+
+
+<a href="/acm/isPopOrder/" class="archive-article-date">
+  	<time datetime="2019-09-15T22:04:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-15</time>
+</a>
+        
+      </header>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>题目来源：</strong><a href="https://www.nowcoder.com/practice/d77d11405cc7470d82554cb392585106?tpId=13&tqId=11174&tPage=2&rp=2&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking" target="_blank" rel="noopener">牛客网—栈的压入、弹出序列</a></p>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
+<p>输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否可能为该栈的弹出顺序。假设压入栈的所有数字均不相等。例如序列1,2,3,4,5是某栈的压入顺序，序列4,5,3,2,1是该压栈序列对应的一个弹出序列，但4,3,5,1,2就不可能是该压栈序列的弹出序列。（注意：这两个序列的长度是相等的）</p>
+</blockquote>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
+<p>刚开始沙雕了，想要用数组来解，但是想来想去控制元素有点多，不好实现。看了眼评论，豁然开朗，栈的问题就应该用栈来解决嘛。   </p>
+<ol>
+<li>首先 new 一个栈对象，按照入栈顺序进行入栈操作，同时对比出栈顺序</li>
+<li>新元素入栈，如果此时栈顶元素等于下一个出栈元素，那就出栈，直到栈为空或者栈顶元素不等于下一个出栈元素。</li>
+<li>重复第二步，直到元素全部入栈。</li>
+</ol>
+</blockquote>
+        
+          <a class="article-more-a" href="/acm/isPopOrder/#more">more >></a>
+        
+      
+
+      <!-- 版权开始 -->
+      
+      
+        <div class="declare" hidden="hidden"></div>
+      
+      <!-- 版权结束 -->
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">剑指offer</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/acm//" class="article-tag-list-link color4">acm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/acm/isPopOrder/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-包含min函数的栈" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -206,7 +315,7 @@
 <p>定义栈的数据结构，请在该类型中实现一个能够得到栈中所含最小元素的min函数（时间复杂度应为O（1））。</p>
 </blockquote>
 <blockquote>
-<p>说实话，一开始没读懂题意。其实就是让你实现一个，包含题目给出方法的栈结构（功能对比现在的栈）。但是题目已经给 import 了 Stack，所以解题时我就直接用了Stack。</p>
+<p>说实话，一开始没读懂题意。其实就是让你实现一个，包含题目给出方法的栈结构（功能对比现在的栈）。因为题目已经 import Stack，所以解题时我就直接用了Stack。</p>
 </blockquote>
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
 <p>使用两个栈stack、minstack，stack用来正常存储，minstack用来记录当前栈中的最小值。这样minstack的栈顶元素就是最小值。<br>进栈操作时，stack直接入栈，如果新增值小于等于最小值，就对minstack进行入栈操作。<br>出栈操作时，对比两个栈的栈顶，如果相同，第二个栈也要进行出栈操作。<br>举个例子  </p>
@@ -310,7 +419,7 @@
       
         <p><strong>题目来源：</strong><a href="https://www.nowcoder.com/practice/9b4c81a02cd34f76be2659fa0d54342a?tpId=13&tqId=11172&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking" target="_blank" rel="noopener">牛客网–顺时针打印矩阵</a></p>
 <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.</p>
+<p>输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。<br>例如：<br>输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16<br>则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.</p>
 </blockquote>
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
 <p>分别设置上下左右四个墙壁，当一行或一列全部输出时，就把对应墙壁向内移动。<br>设置flag，标志着现在该横向还是纵向移动。设置colFlag和rowFlag，分别代表着横向和纵向移动的方向(向左，向右，向下，向上)。<br>当移动到转换横纵移动方向时，要把循环最后越界的数据下标，恢复到转换方向后正确的下标。<br>每次循环后，判断墙壁是否重复，重复就证明矩阵中数字已经遍历完全。</p>
@@ -921,126 +1030,6 @@
 
 
   
-    <article id="post-java-第一阶段：javaEE基础-ArrayList的toArray方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/java/base/ArrayList-toArray/">ArrayList的toArray()和toArray(T[] a)方法</a>
-    </h1>
-  
-
-        
-        <!-- 不蒜子统计 -->
-
-
-<a href="/java/base/ArrayList-toArray/" class="archive-article-date">
-  	<time datetime="2019-08-13T21:59:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-13</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="API方法介绍"><a href="#API方法介绍" class="headerlink" title="API方法介绍"></a>API方法介绍</h2><table>
-<thead>
-<tr>
-<th>方法</th>
-<th>返回值类型</th>
-<th>方法描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>toArray()</td>
-<td>Object[]</td>
-<td>以正确的顺序（从第一个到最后一个元素）<br>返回一个包含此列表中所有元素的数组。</td>
-</tr>
-<tr>
-<td>toArray(T[] a)</td>
-<td><t> T[]</t></td>
-<td>以正确的顺序返回一个包含此列表中所有元素的数组（从第一个到最后一个元素）;<br> 返回的数组的运行时类型是指定数组的运行时类型。</td>
-</tr>
-</tbody></table>
-        
-          <a class="article-more-a" href="/java/base/ArrayList-toArray/#more">more >></a>
-        
-      
-
-      <!-- 版权开始 -->
-      
-      
-        <div class="declare" hidden="hidden"></div>
-      
-      <!-- 版权结束 -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java/base//" class="article-tag-list-link color5">base</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/java/base/ArrayList-toArray/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1169,11 +1158,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
