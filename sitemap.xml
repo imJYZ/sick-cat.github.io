@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sick-cat.github.io/sql/union/</loc>
+    
+    <lastmod>2019-12-27T13:15:47.147Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://sick-cat.github.io/jQuery/hide-show/</loc>
     
     <lastmod>2019-09-15T15:32:50.630Z</lastmod>
