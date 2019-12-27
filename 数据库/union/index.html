@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://sick-cat.github.io">
-  <title>list和tuple转换 | SickCat的博客</title>
+  <title>SQL合并两个结果集 union 和 union all | SickCat的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="list 相当于数组    tuple 相当于一个只读数组">
-<meta name="keywords" content="python,list,tuple,list和tuple转换">
+  <meta name="description" content="UNION 操作符用于合并两个或多个 SELECT 语句的结果集。UNION 内部的 SELECT 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每条 SELECT 语句中的列的顺序必须相同。   默认地，UNION 操作符会对合并后的结果集去重。如果允许重复的==行==，请使用 UNION ALL。   UNION 结果集中的列名总是等于 UNION 中第一个 SELECT 语句">
+<meta name="keywords" content="union,union all,sql合并结果集">
 <meta property="og:type" content="article">
-<meta property="og:title" content="list和tuple转换">
-<meta property="og:url" content="http://sick-cat.github.io/python/list-tuple/index.html">
+<meta property="og:title" content="SQL合并两个结果集 union 和 union all">
+<meta property="og:url" content="http://sick-cat.github.io/数据库/union/index.html">
 <meta property="og:site_name" content="SickCat的博客">
-<meta property="og:description" content="list 相当于数组    tuple 相当于一个只读数组">
+<meta property="og:description" content="UNION 操作符用于合并两个或多个 SELECT 语句的结果集。UNION 内部的 SELECT 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每条 SELECT 语句中的列的顺序必须相同。   默认地，UNION 操作符会对合并后的结果集去重。如果允许重复的==行==，请使用 UNION ALL。   UNION 结果集中的列名总是等于 UNION 中第一个 SELECT 语句">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-23T10:47:00.253Z">
+<meta property="og:updated_time" content="2019-12-27T13:20:56.492Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="list和tuple转换">
-<meta name="twitter:description" content="list 相当于数组    tuple 相当于一个只读数组">
+<meta name="twitter:title" content="SQL合并两个结果集 union 和 union all">
+<meta name="twitter:description" content="UNION 操作符用于合并两个或多个 SELECT 语句的结果集。UNION 内部的 SELECT 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每条 SELECT 语句中的列的顺序必须相同。   默认地，UNION 操作符会对合并后的结果集去重。如果允许重复的==行==，请使用 UNION ALL。   UNION 结果集中的列名总是等于 UNION 中第一个 SELECT 语句">
   
     <link rel="alternative" href="/atom.xml" title="SickCat的博客" type="application/atom+xml">
   
@@ -38,7 +38,7 @@
   
 
   
-    <meta name="keywords" content="python,list,tuple,list和tuple转换,java开发,安全,爬虫,程序员,码农,sickcat">
+    <meta name="keywords" content="union,union all,sql合并结果集,java开发,安全,爬虫,程序员,码农,sickcat">
   
 </head>
 </html>
@@ -176,14 +176,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-list和tuple转换" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-java-数据库-union-and-union-all" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      list和tuple转换
+      SQL合并两个结果集 union 和 union all
     </h1>
   
 
@@ -195,8 +195,8 @@
                 </span>
 
 
-<a href="/python/list-tuple/" class="archive-article-date">
-  	<time datetime="2019-07-11T01:10:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
+<a href="/数据库/union/" class="archive-article-date">
+  	<time datetime="2019-12-27T21:08:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-27</time>
 </a>
         
       </header>
@@ -204,24 +204,45 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <font color="#FFA500"> 
-list 相当于数组   
-tuple 相当于一个只读数组
-</font>
+        <blockquote>
+<p>UNION 操作符用于合并两个或多个 SELECT 语句的结果集。<br>UNION 内部的 SELECT 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每条 SELECT 语句中的列的顺序必须相同。</p>
+</blockquote>
+<blockquote>
+<p>默认地，UNION 操作符会对合并后的结果集去重。如果允许重复的==行==<br>，请使用 UNION ALL。</p>
+</blockquote>
+<blockquote>
+<p>UNION 结果集中的列名总是等于 UNION 中第一个 SELECT 语句中的列名。</p>
+</blockquote>
 <a id="more"></a>
 
-<ul>
-<li>强制类型转换：<ul>
-<li>list—-&gt;tuple    tuple(list_content)</li>
-<li>tuple—&gt;list     list(tuple_content)</li>
-</ul>
-</li>
-</ul>
-<h4 id="具体看代码"><a href="#具体看代码" class="headerlink" title="具体看代码"></a>具体看代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#要进行赋值，不然原变量内容和类型不变</span><br><span class="line">s = &apos;adkshfkjahkjadhjf&apos;</span><br><span class="line">print(list(s))</span><br><span class="line">print(tuple(s))</span><br><span class="line">#未进行赋值操作，s内容和类型不变</span><br><span class="line">print(s)</span><br><span class="line">print(type(s))</span><br><span class="line"></span><br><span class="line">print(&quot;\n----list-----&quot;)</span><br><span class="line">s = list(s)</span><br><span class="line">print(type(s))</span><br><span class="line">print(s)</span><br><span class="line"></span><br><span class="line">print(&quot;\n----tuple-----&quot;)</span><br><span class="line">s = tuple(s)</span><br><span class="line">print(type(s))</span><br><span class="line">print(s)</span><br></pre></td></tr></table></figure>
+<p><strong>sql语句：</strong></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> teaId <span class="keyword">id</span>,age <span class="keyword">FROM</span> teacher</span><br><span class="line"><span class="keyword">UNION</span> </span><br><span class="line"><span class="keyword">SELECT</span> stuId,age <span class="keyword">from</span> student</span><br></pre></td></tr></table></figure>
 
-<h4 id="输出结果："><a href="#输出结果：" class="headerlink" title="输出结果："></a>输出结果：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[&apos;a&apos;, &apos;d&apos;, &apos;k&apos;, &apos;s&apos;, &apos;h&apos;, &apos;f&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;h&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;d&apos;, &apos;h&apos;, &apos;j&apos;, &apos;f&apos;]</span><br><span class="line">(&apos;a&apos;, &apos;d&apos;, &apos;k&apos;, &apos;s&apos;, &apos;h&apos;, &apos;f&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;h&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;d&apos;, &apos;h&apos;, &apos;j&apos;, &apos;f&apos;)</span><br><span class="line">adkshfkjahkjadhjf</span><br><span class="line">&lt;class &apos;str&apos;&gt;</span><br><span class="line"></span><br><span class="line">----list-----</span><br><span class="line">&lt;class &apos;list&apos;&gt;</span><br><span class="line">[&apos;a&apos;, &apos;d&apos;, &apos;k&apos;, &apos;s&apos;, &apos;h&apos;, &apos;f&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;h&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;d&apos;, &apos;h&apos;, &apos;j&apos;, &apos;f&apos;]</span><br><span class="line"></span><br><span class="line">----tuple-----</span><br><span class="line">&lt;class &apos;tuple&apos;&gt;</span><br><span class="line">(&apos;a&apos;, &apos;d&apos;, &apos;k&apos;, &apos;s&apos;, &apos;h&apos;, &apos;f&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;h&apos;, &apos;k&apos;, &apos;j&apos;, &apos;a&apos;, &apos;d&apos;, &apos;h&apos;, &apos;j&apos;, &apos;f&apos;)</span><br></pre></td></tr></table></figure>
-
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p><font color="#FFA500">用list或tuble进行强转时，只有返回值，并不会在原数据上进行操作</font></p>
+<p><strong>结果：</strong></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>age</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>001</td>
+<td>36</td>
+</tr>
+<tr>
+<td>201</td>
+<td>13</td>
+</tr>
+<tr>
+<td>202</td>
+<td>15</td>
+</tr>
+<tr>
+<td>203</td>
+<td>12</td>
+</tr>
+</tbody></table>
 
       
 
@@ -235,7 +256,7 @@ tuple 相当于一个只读数组
           
           <br>
           <strong>本文链接：</strong>
-          http://sick-cat.github.io/python/list-tuple/
+          http://sick-cat.github.io/数据库/union/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -290,7 +311,7 @@ tuple 相当于一个只读数组
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">essays</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">sql</a>
         		</li>
       		
 		</ul>
@@ -302,7 +323,7 @@ tuple 相当于一个只读数组
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/python//" class="article-tag-list-link color2">python</a>
+        			<a href="/categories/数据库//" class="article-tag-list-link color4">数据库</a>
         		</li>
       		
 		</ul>
@@ -357,7 +378,7 @@ tuple 相当于一个只读数组
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/python/list-tuple/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://sick-cat.github.io/数据库/union/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -371,18 +392,9 @@ tuple 相当于一个只读数组
   
 <nav id="article-nav">
   
-    <a href="/c/freeFunction/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          free函数
-        
-      </div>
-    </a>
   
-  
-    <a href="/python/findall/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">findall</div>
+    <a href="/acm/isPopOrder/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">栈的压入、弹出序列</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -409,7 +421,7 @@ tuple 相当于一个只读数组
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#具体看代码"><span class="toc-number">1.</span> <span class="toc-text">具体看代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输出结果："><span class="toc-number">2.</span> <span class="toc-text">输出结果：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结"><span class="toc-number">3.</span> <span class="toc-text">总结</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -434,7 +446,7 @@ tuple 相当于一个只读数组
 <script src="https://jjeejj.github.io/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "Thu Jul 11 2019 01:10:36 GMT+0000",
+  id: "Fri Dec 27 2019 21:08:28 GMT+0000",
   owner: 'sick-cat',
   repo: 'sick-cat.github.io',
   oauth: {
